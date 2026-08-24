@@ -1,0 +1,63 @@
+[
+  {
+    "opportunity_name": "Resolve: Poor product quality, high pri...",
+    "problem": "Poor product quality, high prices, and terrible app experience",
+    "affected_segment": "General Shopper",
+    "journey_stage": "Evaluation / Purchase Postponement",
+    "scores": {
+      "frequency": 1,
+      "wishlist_relevance": 3,
+      "purchase_impact": 5,
+      "user_pain": 5,
+      "cross_source_consistency": 3,
+      "evidence_confidence": 2
+    },
+    "opportunity_score": 3.4,
+    "supporting_evidence": [
+      "User reported: Poor product quality, high prices, and terrible app experience"
+    ],
+    "key_uncertainty": "Requires deeper segment breakdown at scale"
+  },
+  {
+    "opportunity_name": "Enhance: High Product Quality and Service",
+    "problem": "High Product Quality and Service",
+    "affected_segment": "General Shopper",
+    "journey_stage": "Discovery",
+    "scores": {
+      "frequency": 5,
+      "wishlist_relevance": 3,
+      "purchase_impact": 3,
+      "user_pain": 2,
+      "cross_source_consistency": 3,
+      "evidence_confidence": 4
+    },
+    "opportunity_score": 3.2,
+    "supporting_evidence": [
+      "Veey Good services",
+      "worst app ever so expensive not good productss",
+      "The quality and fitting of the clothes is best. There are many good clothes brands available. And the price is also quite worth it."
+    ],
+    "key_uncertainty": "Requires deeper segment breakdown at scale"
+  },
+  {
+    "opportunity_name": "Enhance: Positive Shopping Experience",
+    "problem": "Positive Shopping Experience",
+    "affected_segment": "General Shopper",
+    "journey_stage": "Discovery",
+    "scores": {
+      "frequency": 3,
+      "wishlist_relevance": 3,
+      "purchase_impact": 3,
+      "user_pain": 2,
+      "cross_source_consistency": 3,
+      "evidence_confidence": 4
+    },
+    "opportunity_score": 3.0,
+    "supporting_evidence": [
+      "good experience",
+      "better experience",
+      "nice exp"
+    ],
+    "key_uncertainty": "Requires deeper segment breakdown at scale"
+  }
+]

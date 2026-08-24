@@ -1,0 +1,32 @@
+{
+  "total_processed": 200,
+  "total_valid": 160,
+  "dropped_by_reason": {
+    "Duplicate content": 39,
+    "Meaningless content": 1
+  },
+  "language_breakdown": {
+    "en": 110,
+    "da": 2,
+    "so": 6,
+    "ro": 7,
+    "no": 3,
+    "sk": 2,
+    "af": 4,
+    "cs": 2,
+    "nl": 2,
+    "ca": 1,
+    "it": 4,
+    "lt": 1,
+    "pl": 2,
+    "unknown": 1,
+    "sv": 1,
+    "hu": 1,
+    "cy": 2,
+    "tl": 3,
+    "fr": 2,
+    "id": 3,
+    "hr": 1
+  },
+  "duplicates_dropped": 39
+}

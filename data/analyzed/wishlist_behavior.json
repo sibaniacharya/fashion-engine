@@ -1,0 +1,11 @@
+{
+  "total_wishlist_mentions": 0,
+  "bookmarking_vs_intent": {
+    "bookmarking": 0,
+    "purchase_intent": 0
+  },
+  "postponement_reasons": {},
+  "by_source": {},
+  "by_segment": {},
+  "by_theme": {}
+}

@@ -1,0 +1,28 @@
+[
+  {
+    "theme_name": "High Product Quality and Service",
+    "description": "Customers express high satisfaction with the premium quality, fitting, attractive designs, good value for money, and fast delivery service.",
+    "frequency": 6,
+    "source_distribution": {
+      "GOOGLE_PLAY": 6
+    },
+    "supporting_evidence": [
+      "Veey Good services",
+      "worst app ever so expensive not good productss",
+      "The quality and fitting of the clothes is best. There are many good clothes brands available. And the price is also quite worth it."
+    ]
+  },
+  {
+    "theme_name": "Positive Shopping Experience",
+    "description": "Customers expressed general satisfaction, reporting enjoyable and improved overall experiences with the service.",
+    "frequency": 3,
+    "source_distribution": {
+      "GOOGLE_PLAY": 3
+    },
+    "supporting_evidence": [
+      "good experience",
+      "better experience",
+      "nice exp"
+    ]
+  }
+]

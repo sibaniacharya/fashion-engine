@@ -1,0 +1,28 @@
+{
+  "total_barriers_identified": 1,
+  "top_barriers": {
+    "Poor product quality, high prices, and terrible app experience": 1
+  },
+  "top_uncertainties": {},
+  "by_source": {
+    "GOOGLE_PLAY": {
+      "total": 1,
+      "barriers": [
+        "Poor product quality, high prices, and terrible app experience"
+      ]
+    }
+  },
+  "by_segment": {
+    "Unknown Segment": {
+      "total": 1,
+      "barriers": []
+    }
+  },
+  "by_theme": {
+    "Product and Pricing Dissatisfaction": {
+      "total": 1,
+      "barriers": []
+    }
+  },
+  "correlation_with_comparison": 0
+}

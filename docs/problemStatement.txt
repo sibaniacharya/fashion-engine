@@ -1,0 +1,576 @@
+GRADUATION PROJECT — AI-POWERED WISHLIST DISCOVERY ENGINE
+
+PRODUCT
+
+Chosen product: Myntra
+
+Role:
+Product Manager on the Growth Team at Myntra.
+
+BUSINESS CONTEXT
+
+Millions of users browse fashion products, save products they like, and add products to their wishlists.
+
+A wishlist represents an important user signal because the user has explicitly expressed interest in a product but has not yet purchased it.
+
+Over time, users can accumulate dozens or hundreds of wishlisted products, while only a small proportion may eventually result in purchases.
+
+The company's strategic goal is:
+
+Increase the percentage of users who purchase at least one item from their wishlist within 30 days of adding it.
+
+Improving wishlist-to-purchase conversion could:
+- increase purchase frequency
+- improve monetization from existing users
+- increase the value generated from existing high-intent demand
+
+IMPORTANT CONSTRAINT
+
+The final product solution cannot offer monetary incentives to users.
+
+The underlying user problem is NOT provided.
+
+The objective is to discover the underlying problem through research and evidence.
+
+
+==================================================
+PART 1 — AI-POWERED DISCOVERY ENGINE
+==================================================
+
+Before proposing any product solution, build an AI-powered Discovery Engine that analyzes user feedback at scale.
+
+The Discovery Engine should analyze publicly available conversations and feedback related to online fashion shopping.
+
+Potential sources include:
+
+- App Store reviews
+- Google Play reviews
+- Reddit discussions
+- Fashion and shopping communities
+- Social media conversations
+- YouTube comments
+- Product reviews
+- Product Q&A
+- Other publicly available conversations about online fashion shopping
+
+The system does NOT need to use every possible source.
+
+The architecture should support multiple sources, but the initial implementation should prioritize sources that are legally and technically accessible and provide useful evidence.
+
+Do not fabricate data.
+
+Do not scrape behind authentication.
+
+Do not bypass CAPTCHA, WAF, login restrictions, or Terms of Service.
+
+Use legitimate public APIs, exports, datasets, or permitted public access methods.
+
+
+==================================================
+DISCOVERY QUESTIONS
+==================================================
+
+The Discovery Engine should help answer:
+
+1. Why do users add fashion products to their wishlist?
+
+2. What prevents wishlisted products from eventually being purchased?
+
+3. What uncertainties remain after users have identified a product they like?
+
+4. What causes users to postpone a purchase?
+
+5. How do users compare multiple shortlisted products?
+
+6. What information do users seek outside Myntra before purchasing?
+
+7. What role do the following factors play?
+
+- fit
+- size
+- styling
+- price
+- reviews
+- quality
+- occasion
+- social validation
+
+8. When is the wishlist used as:
+
+- genuine purchase intent
+- active evaluation
+- future purchase intent
+- bookmarking
+- inspiration
+
+9. How do these behaviors differ across user segments?
+
+10. What unmet needs appear consistently across user conversations?
+
+11. What purchase barriers appear repeatedly?
+
+12. What information is missing at the point where users decide whether to purchase?
+
+13. What workarounds do users currently use?
+
+14. What happens outside the Myntra app before users make their final purchase decision?
+
+
+==================================================
+DISCOVERY ENGINE OBJECTIVE
+==================================================
+
+The system must go beyond:
+
+- simple review summarization
+- sentiment analysis
+- star-rating analysis
+- keyword frequency
+
+The system should identify, quantify where possible, compare, and prioritize potential opportunity areas that could influence wishlist-to-purchase conversion.
+
+
+==================================================
+EXPECTED DISCOVERY PIPELINE
+==================================================
+
+The system should follow approximately this pipeline:
+
+Public Feedback Sources
+        ↓
+Data Ingestion
+        ↓
+Raw Feedback Storage
+        ↓
+Cleaning & Normalization
+        ↓
+PII Removal
+        ↓
+Language Detection
+        ↓
+AI Signal Extraction
+        ↓
+Theme Discovery
+        ↓
+Wishlist Behavior Analysis
+        ↓
+Purchase Barrier Analysis
+        ↓
+External Information-Seeking Analysis
+        ↓
+User Segment Comparison
+        ↓
+Opportunity Identification
+        ↓
+Opportunity Scoring
+        ↓
+Opportunity Ranking
+        ↓
+Discovery Dashboard
+
+
+==================================================
+DATA INGESTION
+==================================================
+
+Create a modular ingestion architecture.
+
+Initial sources may include:
+
+1. Google Play reviews
+2. Reddit
+3. YouTube comments
+4. Public fashion/product reviews and Q&A
+
+The architecture should allow additional sources to be added later, including Apple App Store reviews where permitted.
+
+Each source should have an independent adapter.
+
+Normalize records into a common schema containing, where available:
+
+- internal_id
+- source
+- source_id
+- date
+- title
+- text
+- rating
+- URL
+- category
+- metadata
+
+
+==================================================
+DATA CLEANING
+==================================================
+
+The cleaning pipeline should:
+
+- remove exact duplicates
+- detect near duplicates where practical
+- remove empty records
+- identify spam
+- identify irrelevant content
+- detect language
+- normalize whitespace
+- normalize metadata
+- remove or mask PII
+- preserve original text
+- preserve source provenance
+
+IMPORTANT:
+
+Do NOT automatically remove all reviews with fewer than 8 words.
+
+Short reviews can contain valuable purchase signals.
+
+Examples:
+
+"Should I size up?"
+
+"Is this transparent?"
+
+"Anyone tried this?"
+
+"Does it fit well?"
+
+Meaningful short feedback must be retained.
+
+Do NOT remove meaningful text merely because it contains emojis.
+
+Emoji-only or meaningless content may be removed.
+
+Do not silently discard non-English feedback.
+
+Language should be detected and recorded.
+
+The initial AI analysis may focus on English if necessary, but excluded languages and counts must be documented.
+
+
+==================================================
+AI SIGNAL EXTRACTION
+==================================================
+
+For each normalized feedback item, identify signals where supported by the actual text.
+
+Potential fields include:
+
+- user_segment
+- shopping_intent
+- wishlist_intent
+- purchase_stage
+- pain_point
+- uncertainty
+- purchase_barrier
+- information_sought
+- comparison_behavior
+- fit_size_signal
+- styling_signal
+- price_signal
+- quality_signal
+- review_social_validation_signal
+- occasion_signal
+- external_research_behavior
+- theme_candidate
+- evidence_strength
+
+The AI must not invent unsupported information.
+
+If a signal cannot be determined from the text, return null or unknown.
+
+The system must preserve evidence traceability so that important findings can be linked back to real feedback.
+
+
+==================================================
+THEME DISCOVERY
+==================================================
+
+Themes should be discovered from the data rather than being completely hard-coded.
+
+The system should:
+
+- identify recurring patterns
+- cluster semantically similar feedback
+- generate candidate themes
+- merge highly similar themes
+- remove meaningless clusters
+- calculate frequency
+- calculate percentage
+- compare themes across sources
+- compare themes across user segments
+
+The final system should identify a manageable number of meaningful themes.
+
+Approximately 8–12 themes may be generated before prioritization.
+
+The system should retain evidence supporting each theme.
+
+
+==================================================
+WISHLIST BEHAVIOR ANALYSIS
+==================================================
+
+Analyze the shopping journey:
+
+Discovery
+→ Product Interest
+→ Wishlist
+→ Evaluation
+→ Comparison
+→ Purchase / Postponement / Abandonment
+
+Distinguish between:
+
+1. Wishlist as bookmarking
+
+2. Wishlist as inspiration
+
+3. Wishlist as future purchase intent
+
+4. Wishlist as active evaluation
+
+5. Wishlist as genuine purchase intent
+
+6. Wishlist followed by comparison
+
+7. Wishlist followed by postponement
+
+8. Wishlist followed by abandonment
+
+Do not assume that every wishlist mention represents strong purchase intent.
+
+
+==================================================
+PURCHASE BARRIER ANALYSIS
+==================================================
+
+Identify barriers that may prevent a user from moving from wishlist to purchase.
+
+Potential barriers may include:
+
+- fit uncertainty
+- size uncertainty
+- quality uncertainty
+- styling uncertainty
+- price uncertainty
+- lack of social validation
+- lack of reviews
+- occasion uncertainty
+- product comparison
+- uncertainty about whether the product will look as expected
+- uncertainty about material
+- uncertainty about return/replacement
+- waiting for more information
+- seeking external validation
+
+These are examples, NOT predetermined answers.
+
+The actual data should determine which barriers matter.
+
+
+==================================================
+EXTERNAL INFORMATION SEEKING
+==================================================
+
+Identify what users do outside the shopping platform before purchasing.
+
+Examples may include:
+
+- searching Google
+- checking Instagram
+- watching YouTube
+- reading Reddit
+- checking other marketplaces
+- asking friends
+- checking influencer content
+- looking for size/fit reviews
+- comparing products elsewhere
+
+Only classify behaviors that are supported by evidence.
+
+Do not infer external research without supporting evidence.
+
+
+==================================================
+USER SEGMENTATION
+==================================================
+
+Identify meaningful user segments where possible.
+
+Potential segments may include:
+
+- students
+- young professionals
+- frequent fashion shoppers
+- occasional shoppers
+- budget-conscious shoppers
+- trend-driven shoppers
+- users with high fit/size concerns
+
+These are hypotheses only.
+
+The data should determine whether meaningful segments can actually be identified.
+
+Compare:
+
+- wishlist behavior
+- purchase barriers
+- themes
+- information-seeking behavior
+
+across segments where sufficient evidence exists.
+
+
+==================================================
+OPPORTUNITY IDENTIFICATION
+==================================================
+
+The system should identify potential opportunity areas related to:
+
+Wishlist → Purchase within 30 days.
+
+An opportunity should represent:
+
+USER PROBLEM
++
+BEHAVIORAL BARRIER
++
+POTENTIAL PRODUCT OUTCOME
+
+Do NOT turn an opportunity directly into a product solution.
+
+For each opportunity evaluate:
+
+- frequency
+- wishlist relevance
+- potential purchase impact
+- user pain
+- cross-source consistency
+- evidence confidence
+
+Use transparent scoring.
+
+Opportunity scoring should be calculated programmatically rather than relying entirely on an LLM-generated score.
+
+Each opportunity should include:
+
+- opportunity_name
+- problem_statement
+- affected_segments
+- journey_stage
+- frequency
+- wishlist_relevance
+- purchase_impact
+- user_pain
+- cross_source_consistency
+- evidence_confidence
+- opportunity_score
+- supporting_evidence
+- key_uncertainty
+
+
+==================================================
+EVIDENCE REQUIREMENTS
+==================================================
+
+The Discovery Engine must be evidence-based.
+
+Do not fabricate:
+
+- reviews
+- quotes
+- statistics
+- themes
+- user behaviors
+- user segments
+- opportunity evidence
+
+Every important finding should be traceable to actual collected feedback.
+
+Representative quotes must be actual user-generated text.
+
+Remove or mask PII before displaying quotes.
+
+
+==================================================
+TECHNICAL REQUIREMENTS
+==================================================
+
+Backend:
+
+- Python
+- FastAPI
+- Pydantic
+- modular architecture
+
+Frontend:
+
+- React / Next.js
+
+AI:
+
+- LLM provider abstraction
+- structured output
+- JSON validation
+- retry handling
+- rate-limit handling
+- checkpointing
+- resume capability
+
+Storage:
+
+Design the architecture so it is PostgreSQL-ready.
+
+Deployment:
+
+Backend:
+Railway
+
+Frontend:
+Vercel
+
+
+==================================================
+EXPECTED OUTPUT
+==================================================
+
+The final Discovery Engine should provide a dashboard that allows a Product Manager to understand:
+
+1. What users care about
+2. Why users wishlist products
+3. Which wishlist behaviors indicate genuine purchase intent
+4. Why users postpone or abandon purchases
+5. What uncertainties users have
+6. What information users seek
+7. How behavior differs across segments
+8. What themes appear repeatedly
+9. Which purchase barriers are strongest
+10. Which opportunity areas appear most promising
+11. What evidence supports each opportunity
+
+
+==================================================
+PART 1 BOUNDARY
+==================================================
+
+This project context is specifically for Part 1 of the graduation project.
+
+Do NOT implement the following yet:
+
+- Business metric decomposition
+- User interviews
+- Primary research
+- Final problem definition
+- Final product solution
+- MVP
+- Success metrics
+- Experiment design
+- Risk mitigation
+
+Those will be handled after the Discovery Engine has produced evidence-backed opportunity areas.
+
+The output of Part 1 should be:
+
+"Evidence-backed opportunity areas that could influence wishlist-to-purchase conversion."
+
+The Product Manager will use these findings in Parts 2–7 to select and validate the final problem and build the MVP.
