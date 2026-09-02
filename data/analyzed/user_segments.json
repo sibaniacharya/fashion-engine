@@ -1,0 +1,57 @@
+{
+  "total_records_classified": 38,
+  "segments": {
+    "Segment unknown": {
+      "count": 33,
+      "source_distribution": {
+        "GOOGLE_PLAY": 33
+      },
+      "top_themes": [
+        "Positive Experience",
+        "App Satisfaction",
+        "Positive Feedback"
+      ],
+      "top_barriers": [
+        "Price / Value Uncertainty"
+      ],
+      "evidence_confidence": "strong"
+    },
+    "value-conscious shopper": {
+      "count": 2,
+      "source_distribution": {
+        "GOOGLE_PLAY": 2
+      },
+      "top_themes": [
+        "Budget Friendly",
+        "Affordability"
+      ],
+      "top_barriers": [],
+      "evidence_confidence": "weak"
+    },
+    "quality-conscious shopper": {
+      "count": 2,
+      "source_distribution": {
+        "GOOGLE_PLAY": 2
+      },
+      "top_themes": [
+        "Product Quality",
+        "Quality and Service"
+      ],
+      "top_barriers": [],
+      "evidence_confidence": "weak"
+    },
+    "brand-loyal shopper": {
+      "count": 1,
+      "source_distribution": {
+        "GOOGLE_PLAY": 1
+      },
+      "top_themes": [
+        "Login Issue"
+      ],
+      "top_barriers": [
+        "Login process issue preventing account creation and sign-in."
+      ],
+      "evidence_confidence": "unknown"
+    }
+  }
+}

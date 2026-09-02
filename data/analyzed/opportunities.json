@@ -1,63 +1,83 @@
 [
   {
-    "opportunity_name": "Resolve: Poor product quality, high pri...",
-    "problem": "Poor product quality, high prices, and terrible app experience",
-    "affected_segment": "General Shopper",
-    "journey_stage": "Evaluation / Purchase Postponement",
+    "opportunity_name": "Signal: Product Quality",
+    "problem": "Product Quality",
+    "structured_statement": "Users who are browsing or evaluating -> encounter friction from 'Product Quality' -> during the Discovery stage -> which may disrupt their discovery journey.",
+    "affected_segment": "Behavioral mapping recommended",
+    "journey_stage": "Discovery",
+    "classification": "EMERGING_SIGNAL",
     "scores": {
       "frequency": 1,
-      "wishlist_relevance": 3,
-      "purchase_impact": 5,
-      "user_pain": 5,
-      "cross_source_consistency": 3,
+      "wishlist_relevance": 2,
+      "purchase_impact": 3,
+      "user_pain": 2,
+      "cross_source_consistency": 1,
       "evidence_confidence": 2
     },
-    "opportunity_score": 3.4,
+    "opportunity_score": 2.1,
     "supporting_evidence": [
-      "User reported: Poor product quality, high prices, and terrible app experience"
-    ],
-    "key_uncertainty": "Requires deeper segment breakdown at scale"
+      {
+        "quote": "the quality of the products are fabulous everything feels so premium",
+        "source": "GOOGLE_PLAY",
+        "trace_id": "61bee6d3-5356-4cb1-9bd8-f3d729679e54",
+        "date": "2026-08-23T22:14:13"
+      },
+      {
+        "quote": "attractive quality product i 👍",
+        "source": "GOOGLE_PLAY",
+        "trace_id": "0ba7208e-1caa-42f2-ac1e-7db25e208d2c",
+        "date": "2026-08-23T22:14:10"
+      }
+    ]
   },
   {
-    "opportunity_name": "Enhance: High Product Quality and Service",
-    "problem": "High Product Quality and Service",
-    "affected_segment": "General Shopper",
-    "journey_stage": "Discovery",
+    "opportunity_name": "Signal: Price / Value Uncertainty",
+    "problem": "Price / Value Uncertainty",
+    "structured_statement": "Users who show strong product interest -> may postpone purchase when they encounter 'Price / Value Uncertainty' -> during the Evaluation / Purchase Postponement stage -> potentially leading to postponement.",
+    "affected_segment": "Behavioral mapping recommended",
+    "journey_stage": "Evaluation / Purchase Postponement",
+    "classification": "SIGNAL",
     "scores": {
-      "frequency": 5,
-      "wishlist_relevance": 3,
-      "purchase_impact": 3,
-      "user_pain": 2,
-      "cross_source_consistency": 3,
-      "evidence_confidence": 4
+      "frequency": 1,
+      "wishlist_relevance": 4,
+      "purchase_impact": 5,
+      "user_pain": 5,
+      "cross_source_consistency": 1,
+      "evidence_confidence": 1
     },
-    "opportunity_score": 3.2,
+    "opportunity_score": 1.9,
     "supporting_evidence": [
-      "Veey Good services",
-      "worst app ever so expensive not good productss",
-      "The quality and fitting of the clothes is best. There are many good clothes brands available. And the price is also quite worth it."
-    ],
-    "key_uncertainty": "Requires deeper segment breakdown at scale"
+      {
+        "quote": "worst app ever so expensive not good productss",
+        "source": "Unknown",
+        "trace_id": "Unknown",
+        "date": "Unknown"
+      }
+    ]
   },
   {
-    "opportunity_name": "Enhance: Positive Shopping Experience",
-    "problem": "Positive Shopping Experience",
-    "affected_segment": "General Shopper",
-    "journey_stage": "Discovery",
+    "opportunity_name": "Signal: Login process issue preventing",
+    "problem": "Login process issue preventing account creation and sign-in.",
+    "structured_statement": "Users who show strong product interest -> may postpone purchase when they encounter 'Login process issue preventing account creation and sign-in.' -> during the Evaluation / Purchase Postponement stage -> potentially leading to postponement.",
+    "affected_segment": "Behavioral mapping recommended",
+    "journey_stage": "Evaluation / Purchase Postponement",
+    "classification": "SIGNAL",
     "scores": {
-      "frequency": 3,
-      "wishlist_relevance": 3,
-      "purchase_impact": 3,
-      "user_pain": 2,
-      "cross_source_consistency": 3,
-      "evidence_confidence": 4
+      "frequency": 1,
+      "wishlist_relevance": 4,
+      "purchase_impact": 5,
+      "user_pain": 5,
+      "cross_source_consistency": 1,
+      "evidence_confidence": 1
     },
-    "opportunity_score": 3.0,
+    "opportunity_score": 1.9,
     "supporting_evidence": [
-      "good experience",
-      "better experience",
-      "nice exp"
-    ],
-    "key_uncertainty": "Requires deeper segment breakdown at scale"
+      {
+        "quote": "Myntra Review Myntra has been my favorite shopping platform for the past 7 years, and overall, I’ve always had a great experience. The product quality is really good, and I’ve been happy with most of my purchases. ❤️ Recently, I faced an issue while trying to create and log in to a new account. The login process isn’t working properly, which is quite frustrating. Please look into this issue and fix it as soon as possible. Apart from this, my overall experience with Myntra has been very good,",
+        "source": "Unknown",
+        "trace_id": "Unknown",
+        "date": "Unknown"
+      }
+    ]
   }
 ]

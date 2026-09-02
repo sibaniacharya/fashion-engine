@@ -1,0 +1,312 @@
+{
+  "total_records_classified": 117,
+  "unknown_segment_count": 247,
+  "segments": [
+    {
+      "segment_name": "QUALITY_CONSCIOUS",
+      "behavioral_definition": "Users primarily motivated by the durability, material, and overall quality of products.",
+      "unique_record_count": 61,
+      "percentage": 16.8,
+      "google_play_count": 45,
+      "youtube_count": 16,
+      "source_coverage": 2,
+      "dominant_themes": [
+        "Return and Refund Friction",
+        "Fit / Size Uncertainty",
+        "Returns / Exchange Friction"
+      ],
+      "purchase_barriers": [
+        "Price-Quality Mismatch",
+        "Customer Support Inaccessibility and Post-Purchase Friction",
+        "Return Policy & Process Friction"
+      ],
+      "wishlist_behavior": {
+        "ABANDONMENT": 4,
+        "GENERAL_PRODUCT_INTEREST": 7,
+        "EXPLICIT_PURCHASE_INTENT": 1,
+        "PURCHASE_EVALUATION": 2,
+        "EXPLICIT_WISHLIST": 1,
+        "COMPARISON": 1
+      },
+      "purchase_intent": {
+        "ABANDONMENT": 4,
+        "GENERAL_PRODUCT_INTEREST": 7,
+        "EXPLICIT_PURCHASE_INTENT": 1,
+        "PURCHASE_EVALUATION": 2,
+        "EXPLICIT_WISHLIST": 1,
+        "COMPARISON": 1
+      },
+      "comparison_behavior": 1,
+      "postponement_behavior": {},
+      "external_research": {
+        "NO EVIDENCE": 2,
+        "EXPLICIT_RESEARCH": 1,
+        "IMPLIED_RESEARCH": 3
+      },
+      "evidence_confidence": "strong",
+      "classification": "HIGH_CONFIDENCE_SEGMENT",
+      "supporting_evidence": [
+        {
+          "quote": "the quality of the products are fabulous everything feels so premium",
+          "source": "GOOGLE_PLAY",
+          "trace_id": "61bee6d3-5356-4cb1-9bd8-f3d729679e54",
+          "date": "2026-08-23T22:14:13"
+        },
+        {
+          "quote": "so quickly service and best quality i",
+          "source": "GOOGLE_PLAY",
+          "trace_id": "7909d029-a005-4a18-a8e3-3d5a49f524ff",
+          "date": "2026-08-23T22:12:20"
+        },
+        {
+          "quote": "wonderful quality. perfect size and giving glorious look.",
+          "source": "GOOGLE_PLAY",
+          "trace_id": "82f77acb-f12f-47ab-ae66-c072ed0210bd",
+          "date": "2026-08-23T21:25:42"
+        }
+      ]
+    },
+    {
+      "segment_name": "VALUE_CONSCIOUS",
+      "behavioral_definition": "Shoppers highly sensitive to pricing, discounts, and the perceived value of purchases.",
+      "unique_record_count": 34,
+      "percentage": 9.3,
+      "google_play_count": 20,
+      "youtube_count": 14,
+      "source_coverage": 2,
+      "dominant_themes": [
+        "App Performance / UX Issues",
+        "Delivery / Shipping Friction",
+        "Promotional Credit Application Issues"
+      ],
+      "purchase_barriers": [
+        "Price-Quality Mismatch",
+        "Pricing and Fee Friction",
+        "Brand Trust and Authenticity Concerns"
+      ],
+      "wishlist_behavior": {
+        "ABANDONMENT": 5,
+        "GENERAL_PRODUCT_INTEREST": 7,
+        "PURCHASE_EVALUATION": 2,
+        "EXPLICIT_PURCHASE_INTENT": 2
+      },
+      "purchase_intent": {
+        "ABANDONMENT": 5,
+        "GENERAL_PRODUCT_INTEREST": 7,
+        "PURCHASE_EVALUATION": 2,
+        "EXPLICIT_PURCHASE_INTENT": 2
+      },
+      "comparison_behavior": 0,
+      "postponement_behavior": {},
+      "external_research": {
+        "NO EVIDENCE": 2,
+        "IMPLIED_RESEARCH": 2,
+        "EXPLICIT_RESEARCH": 3
+      },
+      "evidence_confidence": "strong",
+      "classification": "HIGH_CONFIDENCE_SEGMENT",
+      "supporting_evidence": [
+        {
+          "quote": "Friendly App & Budget friendly app like family. 👌❤️",
+          "source": "GOOGLE_PLAY",
+          "trace_id": "d6762aa3-221a-47fe-a76f-2d82dace7534",
+          "date": "2026-08-23T22:21:30"
+        },
+        {
+          "quote": "good app and affordable and gen z",
+          "source": "GOOGLE_PLAY",
+          "trace_id": "045d6508-04cf-47d5-a655-b9d068e4b100",
+          "date": "2026-08-23T22:28:14"
+        },
+        {
+          "quote": "i hate purchasing clothes from myntra. Every time it either sends me the wrong product or a cheap quality product. Even after exchanging the product is still the same. The prices are also too high as compared to the product quality. Never buying clothes from myntra again. its a waste of money",
+          "source": "GOOGLE_PLAY",
+          "trace_id": "b8846795-a0ef-44f3-9bd9-0e8d71b6abd4",
+          "date": "2026-08-23T21:20:10"
+        }
+      ]
+    },
+    {
+      "segment_name": "FREQUENT",
+      "behavioral_definition": "Highly active shoppers who make regular purchases and engage deeply with the platform.",
+      "unique_record_count": 9,
+      "percentage": 2.5,
+      "google_play_count": 8,
+      "youtube_count": 1,
+      "source_coverage": 2,
+      "dominant_themes": [
+        "Delivery / Shipping Friction"
+      ],
+      "purchase_barriers": [],
+      "wishlist_behavior": {
+        "EXPLICIT_PURCHASE_INTENT": 1,
+        "GENERAL_PRODUCT_INTEREST": 2
+      },
+      "purchase_intent": {
+        "EXPLICIT_PURCHASE_INTENT": 1,
+        "GENERAL_PRODUCT_INTEREST": 2
+      },
+      "comparison_behavior": 0,
+      "postponement_behavior": {},
+      "external_research": {},
+      "evidence_confidence": "moderate",
+      "classification": "SUPPORTED_SEGMENT",
+      "supporting_evidence": [
+        {
+          "quote": "good app i really enjoyed and the quantity is so good i always used this app and its so good app",
+          "source": "GOOGLE_PLAY",
+          "trace_id": "4ce52ebc-365a-4ab2-ab71-d704ea570e1e",
+          "date": "2026-08-23T19:17:10"
+        },
+        {
+          "quote": "I’ve had a really good experience using Myntra. The app is easy to use, has a huge variety of clothes, footwear, accessories, and beauty products, and the filters make it easy to find what you’re looking for. I also like that there are plenty of reviews and size-related details before placing an order. The delivery is generally quick, and the overall shopping experience is smooth. There are occasional issues, but overall, Myntra is one of my go-to apps for online shopping.",
+          "source": "GOOGLE_PLAY",
+          "trace_id": "b51c9f70-a80e-4dee-aad8-f30eedc91fc0",
+          "date": "2026-08-23T19:14:20"
+        },
+        {
+          "quote": "all most my all purchases are good 😊",
+          "source": "GOOGLE_PLAY",
+          "trace_id": "d1618e54-d4e7-470c-8b37-61476c2e8e4b",
+          "date": "2026-08-24T17:25:59"
+        }
+      ]
+    },
+    {
+      "segment_name": "FIT_CONSCIOUS",
+      "behavioral_definition": "Users whose primary concern is sizing accuracy and how products fit their body type.",
+      "unique_record_count": 8,
+      "percentage": 2.2,
+      "google_play_count": 3,
+      "youtube_count": 5,
+      "source_coverage": 2,
+      "dominant_themes": [
+        "Fit / Size Uncertainty",
+        "Return and Refund Friction"
+      ],
+      "purchase_barriers": [
+        "Customer Support Inaccessibility and Post-Purchase Friction"
+      ],
+      "wishlist_behavior": {
+        "GENERAL_PRODUCT_INTEREST": 1,
+        "EXPLICIT_WISHLIST": 1,
+        "ABANDONMENT": 1,
+        "PURCHASE_EVALUATION": 3
+      },
+      "purchase_intent": {
+        "GENERAL_PRODUCT_INTEREST": 1,
+        "EXPLICIT_WISHLIST": 1,
+        "ABANDONMENT": 1,
+        "PURCHASE_EVALUATION": 3
+      },
+      "comparison_behavior": 0,
+      "postponement_behavior": {},
+      "external_research": {
+        "IMPLIED_RESEARCH": 4
+      },
+      "evidence_confidence": "moderate",
+      "classification": "SUPPORTED_SEGMENT",
+      "supporting_evidence": [
+        {
+          "quote": "very nice and fitting superrrr",
+          "source": "GOOGLE_PLAY",
+          "trace_id": "dc1227d1-2792-457d-aa54-c1ddcbaeaca1",
+          "date": "2026-08-23T21:13:13"
+        },
+        {
+          "quote": "If we have ordered a cloth and it is small or big and we are returning it, then what is our fault in it, should we pay the delivery charge as well as the code charge and when we refund it, why is it our loss?",
+          "source": "GOOGLE_PLAY",
+          "trace_id": "3d452962-2617-485b-a3f3-82a8dc0adb4e",
+          "date": "2026-08-24T16:20:54"
+        },
+        {
+          "quote": "Take the clothes are any other by seeing reviews and size that suits you",
+          "source": "GOOGLE_PLAY",
+          "trace_id": "5f4c68fe-636c-481e-9e06-3d6f2449b1d1",
+          "date": "2026-08-24T15:07:49"
+        }
+      ]
+    },
+    {
+      "segment_name": "COMPARISON",
+      "behavioral_definition": "Shoppers who heavily research and compare options across multiple platforms before purchasing.",
+      "unique_record_count": 4,
+      "percentage": 1.1,
+      "google_play_count": 3,
+      "youtube_count": 1,
+      "source_coverage": 2,
+      "dominant_themes": [
+        "Return and Refund Friction"
+      ],
+      "purchase_barriers": [
+        "Account Access and Security Issues",
+        "Customer Support Inaccessibility and Post-Purchase Friction"
+      ],
+      "wishlist_behavior": {
+        "ABANDONMENT": 1,
+        "GENERAL_PRODUCT_INTEREST": 1
+      },
+      "purchase_intent": {
+        "ABANDONMENT": 1,
+        "GENERAL_PRODUCT_INTEREST": 1
+      },
+      "comparison_behavior": 0,
+      "postponement_behavior": {},
+      "external_research": {
+        "IMPLIED_RESEARCH": 1
+      },
+      "evidence_confidence": "weak",
+      "classification": "EMERGING_SEGMENT",
+      "supporting_evidence": [
+        {
+          "quote": "worst shopping app in india. don't buy anything if products are damaged or the seller sent the wrong size products or any fault then your platform charged not refund. other platforms like flipkart or Amazon refund your platform charges but Myntra does not. Maximum time Myntra sent the wrong product and if you want to replace then your produce has not replaced only return and platform charges not refunded. Myntra is the worst playing games in the Online shopping market. Don't buy on Mantra.",
+          "source": "GOOGLE_PLAY",
+          "trace_id": "c3ab50b7-f5b5-4974-845f-18f1f82bdedd",
+          "date": "2026-08-23T19:36:26"
+        },
+        {
+          "quote": "better than other online shopping app",
+          "source": "GOOGLE_PLAY",
+          "trace_id": "ceda4b26-3285-43a1-b05a-f69e5ed8e3ac",
+          "date": "2026-08-24T19:06:09"
+        },
+        {
+          "quote": "They provide the worst Service compared to other e-commerce sites",
+          "source": "GOOGLE_PLAY",
+          "trace_id": "2d95d820-e534-47bb-819f-4f9a6d9e27f1",
+          "date": "2026-08-24T17:08:31"
+        }
+      ]
+    },
+    {
+      "segment_name": "BRAND_LOYAL",
+      "behavioral_definition": "Users demonstrating strong preference and trust toward specific brands or the platform itself.",
+      "unique_record_count": 1,
+      "percentage": 0.3,
+      "google_play_count": 1,
+      "youtube_count": 0,
+      "source_coverage": 1,
+      "dominant_themes": [],
+      "purchase_barriers": [
+        "Account Access and Security Issues"
+      ],
+      "wishlist_behavior": {},
+      "purchase_intent": {},
+      "comparison_behavior": 0,
+      "postponement_behavior": {},
+      "external_research": {
+        "NO EVIDENCE": 1
+      },
+      "evidence_confidence": "weak",
+      "classification": "SIGNAL",
+      "supporting_evidence": [
+        {
+          "quote": "Myntra Review Myntra has been my favorite shopping platform for the past 7 years, and overall, I’ve always had a great experience. The product quality is really good, and I’ve been happy with most of my purchases. ❤️ Recently, I faced an issue while trying to create and log in to a new account. The login process isn’t working properly, which is quite frustrating. Please look into this issue and fix it as soon as possible. Apart from this, my overall experience with Myntra has been very good,",
+          "source": "GOOGLE_PLAY",
+          "trace_id": "3a786d2f-6e4b-4899-9652-53f08d71ced6",
+          "date": "2026-08-23T21:48:27"
+        }
+      ]
+    }
+  ]
+}

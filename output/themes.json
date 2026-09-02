@@ -1,0 +1,455 @@
+[
+  {
+    "theme_name": "Return and Refund Friction",
+    "description": "Customers report severe difficulties with returning damaged or incorrect items and tracking refunds, exacerbated by automated, unresponsive, or unhelpful customer support.",
+    "unique_record_count": 25,
+    "frequency": 25,
+    "percentage_of_analyzed_records": 13.2,
+    "google_play_count": 46,
+    "youtube_count": 2,
+    "source_coverage": 2,
+    "source_distribution": {
+      "GOOGLE_PLAY": 46,
+      "YOUTUBE": 2
+    },
+    "evidence_confidence": "strong",
+    "representative_quotes": [
+      {
+        "quote": "Sir/Madam, I bought Campus Vacuum Men Lace-Up Running Shoes on the Myntra website on 22/01/2026 for Rs. 1205. I received the delivery on 27/01/2026, and I placed a return request on the same day because the shoe sole was very hard and the size was too small. At the same price, there are much better shoes available on other platforms, so I decided to return it. For that return, Myntra sent me a message saying that their delivery agent would come and collect the return order on or before 30/01/2026. However, the delivery agent did not come and wasted a lot of my time. I complained about this issue to customer care. When the delivery agent finally came today, he rejected the return, saying that there were stains on the shoes. I strongly feel that since I complained about your delivery agent, my return order is being deliberately delayed by rejecting it without any valid reason. Such behaviour is highly unprofessional. I expect this issue to be addressed immediately and the return to be processed without further delay. Additionally, I request you to kindly look into this matter, and please check the stains if any can be found in the attached photos of the shoes I received. If anything is found wrong, I will follow your advice; otherwise, you will be responsible and answerable to this issue in the consumer court.",
+        "source": "YOUTUBE",
+        "trace_id": "43455384-7e1e-44d1-93fa-df0adb8fcb6e",
+        "date": "2026-01-30T13:34:17"
+      },
+      {
+        "quote": "Very disappointing experience with Myntra. I ordered a dress, but I received the wrong product. I immediately raised a return request, but the return pickup is repeatedly being rescheduled without any proper resolution. I have contacted customer care multiple times, but I am not getting a satisfactory response. Every time I am asked to wait, while the pickup date keeps changing. This is extremely frustrating, especially when the mistake is clearly on Myntra’s side. I simply want my refund",
+        "source": "GOOGLE_PLAY",
+        "trace_id": "c033f5e8-2dc7-436f-946a-1f2cb92078d1",
+        "date": "2026-08-24T17:34:38"
+      },
+      {
+        "quote": "Very disappointing experience with Myntra. I ordered a dress, but I received the wrong product. I immediately raised a return request, but the return pickup is repeatedly being rescheduled without any proper resolution.I have contacted customer care multiple times, but I am not getting a satisfactory response. Every time I am asked to wait, while the pickup date keeps changing.This is extremely frustrating, especially when the mistake is clearly on Myntra’s side. I simply want my refund.",
+        "source": "GOOGLE_PLAY",
+        "trace_id": "774c4b5e-1920-41e6-b0f3-0aae51252afc",
+        "date": "2026-08-24T17:26:07"
+      },
+      {
+        "quote": "The worst app, when I returned or cancelled the order the app showed refund credited but when I checked my bank statement and upi history it said I didn't receive any amount, I even complained many times but my bank still says no amount received and I knew about this a few days ago. before I had many return parcels but didn't notice in my upi account history that whether I received any amount or not. I have complained multiple times that I have not received any refund amount in my bank.",
+        "source": "GOOGLE_PLAY",
+        "trace_id": "8e2a7eba-ff33-4bc6-8e76-4e5fa9a9825b",
+        "date": "2026-08-23T20:48:19"
+      },
+      {
+        "quote": "If there were an option to give 0 stars, I would definitely give 0. I am extremely disappointed with Myntra's customer support. I have a genuine issue with my order/exchange, but there is no proper customer care number, no accessible customer support, and no effective way to get help. I even raised the issue through the grievance email, but no one has responded despite multiple follow-ups. For a major e-commerce platform, this level of customer support is extremely disappointing.",
+        "source": "GOOGLE_PLAY",
+        "trace_id": "6b64cfe2-34bb-44c4-b70b-5c99394ae335",
+        "date": "2026-08-24T13:21:56"
+      }
+    ],
+    "supporting_evidence": [
+      {
+        "quote": "Sir/Madam, I bought Campus Vacuum Men Lace-Up Running Shoes on the Myntra website on 22/01/2026 for Rs. 1205. I received the delivery on 27/01/2026, and I placed a return request on the same day because the shoe sole was very hard and the size was too small. At the same price, there are much better shoes available on other platforms, so I decided to return it. For that return, Myntra sent me a message saying that their delivery agent would come and collect the return order on or before 30/01/2026. However, the delivery agent did not come and wasted a lot of my time. I complained about this issue to customer care. When the delivery agent finally came today, he rejected the return, saying that there were stains on the shoes. I strongly feel that since I complained about your delivery agent, my return order is being deliberately delayed by rejecting it without any valid reason. Such behaviour is highly unprofessional. I expect this issue to be addressed immediately and the return to be processed without further delay. Additionally, I request you to kindly look into this matter, and please check the stains if any can be found in the attached photos of the shoes I received. If anything is found wrong, I will follow your advice; otherwise, you will be responsible and answerable to this issue in the consumer court.",
+        "source": "YOUTUBE",
+        "trace_id": "43455384-7e1e-44d1-93fa-df0adb8fcb6e",
+        "date": "2026-01-30T13:34:17"
+      },
+      {
+        "quote": "Very disappointing experience with Myntra. I ordered a dress, but I received the wrong product. I immediately raised a return request, but the return pickup is repeatedly being rescheduled without any proper resolution. I have contacted customer care multiple times, but I am not getting a satisfactory response. Every time I am asked to wait, while the pickup date keeps changing. This is extremely frustrating, especially when the mistake is clearly on Myntra’s side. I simply want my refund",
+        "source": "GOOGLE_PLAY",
+        "trace_id": "c033f5e8-2dc7-436f-946a-1f2cb92078d1",
+        "date": "2026-08-24T17:34:38"
+      },
+      {
+        "quote": "Very disappointing experience with Myntra. I ordered a dress, but I received the wrong product. I immediately raised a return request, but the return pickup is repeatedly being rescheduled without any proper resolution.I have contacted customer care multiple times, but I am not getting a satisfactory response. Every time I am asked to wait, while the pickup date keeps changing.This is extremely frustrating, especially when the mistake is clearly on Myntra’s side. I simply want my refund.",
+        "source": "GOOGLE_PLAY",
+        "trace_id": "774c4b5e-1920-41e6-b0f3-0aae51252afc",
+        "date": "2026-08-24T17:26:07"
+      },
+      {
+        "quote": "The worst app, when I returned or cancelled the order the app showed refund credited but when I checked my bank statement and upi history it said I didn't receive any amount, I even complained many times but my bank still says no amount received and I knew about this a few days ago. before I had many return parcels but didn't notice in my upi account history that whether I received any amount or not. I have complained multiple times that I have not received any refund amount in my bank.",
+        "source": "GOOGLE_PLAY",
+        "trace_id": "8e2a7eba-ff33-4bc6-8e76-4e5fa9a9825b",
+        "date": "2026-08-23T20:48:19"
+      },
+      {
+        "quote": "If there were an option to give 0 stars, I would definitely give 0. I am extremely disappointed with Myntra's customer support. I have a genuine issue with my order/exchange, but there is no proper customer care number, no accessible customer support, and no effective way to get help. I even raised the issue through the grievance email, but no one has responded despite multiple follow-ups. For a major e-commerce platform, this level of customer support is extremely disappointing.",
+        "source": "GOOGLE_PLAY",
+        "trace_id": "6b64cfe2-34bb-44c4-b70b-5c99394ae335",
+        "date": "2026-08-24T13:21:56"
+      }
+    ]
+  },
+  {
+    "theme_name": "Fit / Size Uncertainty",
+    "description": "Shoppers express uncertainty and seek guidance regarding accurate clothing sizing, proper fit for specific heights and body types, and item dimensions.",
+    "unique_record_count": 12,
+    "frequency": 12,
+    "percentage_of_analyzed_records": 3.3,
+    "google_play_count": 3,
+    "youtube_count": 9,
+    "source_coverage": 2,
+    "source_distribution": {
+      "GOOGLE_PLAY": 3,
+      "YOUTUBE": 9
+    },
+    "evidence_confidence": "strong",
+    "representative_quotes": [
+      {
+        "quote": "Everyone who's watching this and thinking you should save this for later please consider that any clothing will look good on you only and only when you are fit. So hit gym or other exercises and change your inner look before your outer look.",
+        "source": "YOUTUBE",
+        "trace_id": "159383af-f398-460c-b728-09315da645a9",
+        "date": "2025-05-19T03:07:53"
+      },
+      {
+        "quote": "Bhai ek baar acchi quality ke full baggy jeans oar video bano yaar sab chep baggy khaird k thk gya hu plz 1 zet black baggy jeans which brand",
+        "source": "YOUTUBE",
+        "trace_id": "a9757be3-bbe4-464c-af8c-4ae9f96ac63f",
+        "date": "2026-08-23T08:47:31"
+      },
+      {
+        "quote": "Hii di I am 5.8 and I alwayssss got small size jeans which size jeans should I order?",
+        "source": "YOUTUBE",
+        "trace_id": "03f2f395-c636-42aa-9730-6f1ac1352bda",
+        "date": "2026-03-28T05:17:44"
+      },
+      {
+        "quote": "Straight fit jeans 👖 wala video bana do please 🥺🙏🥺🙏 😊 kab Se wait kar raha hu",
+        "source": "YOUTUBE",
+        "trace_id": "d9c65fdd-1f6b-4e7a-b31c-499484fee685",
+        "date": "2026-08-23T04:52:20"
+      },
+      {
+        "quote": "Hiiii didi,Is baggy jeans fit for 4\"11 height girls ???? Please tell me ,🙏🏿🙏🏿",
+        "source": "YOUTUBE",
+        "trace_id": "59af235e-47f0-4b29-b64e-1806ff404985",
+        "date": "2026-03-21T16:09:57"
+      }
+    ],
+    "supporting_evidence": [
+      {
+        "quote": "Everyone who's watching this and thinking you should save this for later please consider that any clothing will look good on you only and only when you are fit. So hit gym or other exercises and change your inner look before your outer look.",
+        "source": "YOUTUBE",
+        "trace_id": "159383af-f398-460c-b728-09315da645a9",
+        "date": "2025-05-19T03:07:53"
+      },
+      {
+        "quote": "Bhai ek baar acchi quality ke full baggy jeans oar video bano yaar sab chep baggy khaird k thk gya hu plz 1 zet black baggy jeans which brand",
+        "source": "YOUTUBE",
+        "trace_id": "a9757be3-bbe4-464c-af8c-4ae9f96ac63f",
+        "date": "2026-08-23T08:47:31"
+      },
+      {
+        "quote": "Hii di I am 5.8 and I alwayssss got small size jeans which size jeans should I order?",
+        "source": "YOUTUBE",
+        "trace_id": "03f2f395-c636-42aa-9730-6f1ac1352bda",
+        "date": "2026-03-28T05:17:44"
+      },
+      {
+        "quote": "Straight fit jeans 👖 wala video bana do please 🥺🙏🥺🙏 😊 kab Se wait kar raha hu",
+        "source": "YOUTUBE",
+        "trace_id": "d9c65fdd-1f6b-4e7a-b31c-499484fee685",
+        "date": "2026-08-23T04:52:20"
+      },
+      {
+        "quote": "Hiiii didi,Is baggy jeans fit for 4\"11 height girls ???? Please tell me ,🙏🏿🙏🏿",
+        "source": "YOUTUBE",
+        "trace_id": "59af235e-47f0-4b29-b64e-1806ff404985",
+        "date": "2026-03-21T16:09:57"
+      }
+    ]
+  },
+  {
+    "theme_name": "Delivery / Shipping Friction",
+    "description": "Customers report severe fulfillment issues, including unexpected delivery delays, uncommunicated order cancellations, missing items in packages, and poor updates regarding shipment status.",
+    "unique_record_count": 6,
+    "frequency": 6,
+    "percentage_of_analyzed_records": 1.6,
+    "google_play_count": 6,
+    "youtube_count": 0,
+    "source_coverage": 1,
+    "source_distribution": {
+      "GOOGLE_PLAY": 6
+    },
+    "evidence_confidence": "moderate",
+    "representative_quotes": [
+      {
+        "quote": "Very disappointed with my recent Myntra experience. I placed an order for jeans on 11th August, and even after almost two weeks, it still hasn’t been delivered. There has been no proper update or satisfactory response regarding the delay. On top of that, another order (a lip balm) was cancelled on its own without any proper explanation. I’ve used Myntra expecting reliable service, but this experience has been extremely frustrating. Delayed orders are understandable sometimes, but no proper commu",
+        "source": "GOOGLE_PLAY",
+        "trace_id": "bc0328e0-fa81-4f30-a375-966ddd4d26a2",
+        "date": "2026-08-23T21:31:34"
+      },
+      {
+        "quote": "I ordered 4 pieces of clothing, but only 3 were delivered. One item is missing from my order. This is very disappointing and unacceptable. Please be more careful with order packing and ensure customers receive the exact quantity they paid for. I expect the missing item or a proper refund immediately. Please take this issue seriously and improve your order-fulfillment process.",
+        "source": "GOOGLE_PLAY",
+        "trace_id": "d87033b4-91d3-4614-9417-506ba554f56f",
+        "date": "2026-08-24T16:10:39"
+      },
+      {
+        "quote": "bellavita and joy was my first order on Myntra, and because of that, I received a great discount and used coupons. Since the order amount became quite low, Myntra delayed my order. You have committed fraud against me. If you didn't intend to fulfill the order at that low price, why did you offer such a big discount? I have lost faith in Myntra.",
+        "source": "GOOGLE_PLAY",
+        "trace_id": "ccd206ba-f7c4-4618-9a15-873c514772a5",
+        "date": "2026-08-23T19:32:57"
+      },
+      {
+        "quote": "My First Order Placed Few minutes Back.. Lets See the Journey with Myntra... Good Collection of things....",
+        "source": "GOOGLE_PLAY",
+        "trace_id": "4695ca4b-8e1e-406c-bea5-c3fa0b828162",
+        "date": "2026-08-24T15:54:11"
+      },
+      {
+        "quote": "order always gets delayed and the delivery system is not up to the mark",
+        "source": "GOOGLE_PLAY",
+        "trace_id": "459bd783-bc15-4e80-af23-7821b87fa1c7",
+        "date": "2026-08-23T19:22:24"
+      }
+    ],
+    "supporting_evidence": [
+      {
+        "quote": "Very disappointed with my recent Myntra experience. I placed an order for jeans on 11th August, and even after almost two weeks, it still hasn’t been delivered. There has been no proper update or satisfactory response regarding the delay. On top of that, another order (a lip balm) was cancelled on its own without any proper explanation. I’ve used Myntra expecting reliable service, but this experience has been extremely frustrating. Delayed orders are understandable sometimes, but no proper commu",
+        "source": "GOOGLE_PLAY",
+        "trace_id": "bc0328e0-fa81-4f30-a375-966ddd4d26a2",
+        "date": "2026-08-23T21:31:34"
+      },
+      {
+        "quote": "I ordered 4 pieces of clothing, but only 3 were delivered. One item is missing from my order. This is very disappointing and unacceptable. Please be more careful with order packing and ensure customers receive the exact quantity they paid for. I expect the missing item or a proper refund immediately. Please take this issue seriously and improve your order-fulfillment process.",
+        "source": "GOOGLE_PLAY",
+        "trace_id": "d87033b4-91d3-4614-9417-506ba554f56f",
+        "date": "2026-08-24T16:10:39"
+      },
+      {
+        "quote": "bellavita and joy was my first order on Myntra, and because of that, I received a great discount and used coupons. Since the order amount became quite low, Myntra delayed my order. You have committed fraud against me. If you didn't intend to fulfill the order at that low price, why did you offer such a big discount? I have lost faith in Myntra.",
+        "source": "GOOGLE_PLAY",
+        "trace_id": "ccd206ba-f7c4-4618-9a15-873c514772a5",
+        "date": "2026-08-23T19:32:57"
+      },
+      {
+        "quote": "My First Order Placed Few minutes Back.. Lets See the Journey with Myntra... Good Collection of things....",
+        "source": "GOOGLE_PLAY",
+        "trace_id": "4695ca4b-8e1e-406c-bea5-c3fa0b828162",
+        "date": "2026-08-24T15:54:11"
+      },
+      {
+        "quote": "order always gets delayed and the delivery system is not up to the mark",
+        "source": "GOOGLE_PLAY",
+        "trace_id": "459bd783-bc15-4e80-af23-7821b87fa1c7",
+        "date": "2026-08-23T19:22:24"
+      }
+    ]
+  },
+  {
+    "theme_name": "App Performance / UX Issues",
+    "description": "Users report frustration with app responsiveness and functionality, specifically highlighting slow load times and malfunctioning filters.",
+    "unique_record_count": 4,
+    "frequency": 4,
+    "percentage_of_analyzed_records": 1.1,
+    "google_play_count": 4,
+    "youtube_count": 0,
+    "source_coverage": 1,
+    "source_distribution": {
+      "GOOGLE_PLAY": 4
+    },
+    "evidence_confidence": "weak",
+    "representative_quotes": [
+      {
+        "quote": "App response time is the worst, and even a simple filter takes time to respond. Aside from this, app seems good.",
+        "source": "GOOGLE_PLAY",
+        "trace_id": "06d5ef23-7070-4817-8109-d7e6f134b8d1",
+        "date": "2026-08-23T21:34:37"
+      },
+      {
+        "quote": "Friendly App & Budget friendly app like family. 👌❤️",
+        "source": "GOOGLE_PLAY",
+        "trace_id": "d6762aa3-221a-47fe-a76f-2d82dace7534",
+        "date": "2026-08-23T22:21:30"
+      },
+      {
+        "quote": "filters are not working",
+        "source": "GOOGLE_PLAY",
+        "trace_id": "6c0efdf6-9cb9-4255-9a04-8c2cfbf03125",
+        "date": "2026-08-23T18:15:17"
+      },
+      {
+        "quote": "user friendly.. 👍",
+        "source": "GOOGLE_PLAY",
+        "trace_id": "9b4bbb35-a907-4992-ac63-61d7c64433d7",
+        "date": "2026-08-23T18:29:00"
+      }
+    ],
+    "supporting_evidence": [
+      {
+        "quote": "App response time is the worst, and even a simple filter takes time to respond. Aside from this, app seems good.",
+        "source": "GOOGLE_PLAY",
+        "trace_id": "06d5ef23-7070-4817-8109-d7e6f134b8d1",
+        "date": "2026-08-23T21:34:37"
+      },
+      {
+        "quote": "Friendly App & Budget friendly app like family. 👌❤️",
+        "source": "GOOGLE_PLAY",
+        "trace_id": "d6762aa3-221a-47fe-a76f-2d82dace7534",
+        "date": "2026-08-23T22:21:30"
+      },
+      {
+        "quote": "filters are not working",
+        "source": "GOOGLE_PLAY",
+        "trace_id": "6c0efdf6-9cb9-4255-9a04-8c2cfbf03125",
+        "date": "2026-08-23T18:15:17"
+      },
+      {
+        "quote": "user friendly.. 👍",
+        "source": "GOOGLE_PLAY",
+        "trace_id": "9b4bbb35-a907-4992-ac63-61d7c64433d7",
+        "date": "2026-08-23T18:29:00"
+      }
+    ]
+  },
+  {
+    "theme_name": "Seeking Authentic Product Reviews",
+    "description": "Shoppers and audience members are actively requesting detailed product reviews and seeking authentic third-party feedback to overcome uncertainties about product quality and platform transparency.",
+    "unique_record_count": 4,
+    "frequency": 4,
+    "percentage_of_analyzed_records": 1.1,
+    "google_play_count": 1,
+    "youtube_count": 3,
+    "source_coverage": 2,
+    "source_distribution": {
+      "GOOGLE_PLAY": 1,
+      "YOUTUBE": 3
+    },
+    "evidence_confidence": "weak",
+    "representative_quotes": [
+      {
+        "quote": "delivered a wrong product and no pick up from Myntra. Nowadays Myntra don't entertain you. Chat robo is your solution without any solution. No reply to mails also. Try to give a negative review. they will not approve your. so obviously have all positive reviews on products.",
+        "source": "GOOGLE_PLAY",
+        "trace_id": "d8c7b200-7b94-4c59-af01-12640ffc90e6",
+        "date": "2026-08-23T20:36:30"
+      },
+      {
+        "quote": "Hear heena, kakao review karogi.Please jaldi karuna",
+        "source": "YOUTUBE",
+        "trace_id": "0829271f-be82-4fd2-8e13-25a3fa1ecda7",
+        "date": "2026-08-23T07:43:25"
+      },
+      {
+        "quote": "Di apni watch ka review de do please",
+        "source": "YOUTUBE",
+        "trace_id": "0b0d2a8e-cfb7-4a68-93ba-ccecef5e0aee",
+        "date": "2026-08-23T09:31:21"
+      },
+      {
+        "quote": "Centabil Tshirts ki review dalo",
+        "source": "YOUTUBE",
+        "trace_id": "0961ebbd-14db-4680-92a4-e31ebf2914e5",
+        "date": "2026-08-23T11:23:48"
+      }
+    ],
+    "supporting_evidence": [
+      {
+        "quote": "delivered a wrong product and no pick up from Myntra. Nowadays Myntra don't entertain you. Chat robo is your solution without any solution. No reply to mails also. Try to give a negative review. they will not approve your. so obviously have all positive reviews on products.",
+        "source": "GOOGLE_PLAY",
+        "trace_id": "d8c7b200-7b94-4c59-af01-12640ffc90e6",
+        "date": "2026-08-23T20:36:30"
+      },
+      {
+        "quote": "Hear heena, kakao review karogi.Please jaldi karuna",
+        "source": "YOUTUBE",
+        "trace_id": "0829271f-be82-4fd2-8e13-25a3fa1ecda7",
+        "date": "2026-08-23T07:43:25"
+      },
+      {
+        "quote": "Di apni watch ka review de do please",
+        "source": "YOUTUBE",
+        "trace_id": "0b0d2a8e-cfb7-4a68-93ba-ccecef5e0aee",
+        "date": "2026-08-23T09:31:21"
+      },
+      {
+        "quote": "Centabil Tshirts ki review dalo",
+        "source": "YOUTUBE",
+        "trace_id": "0961ebbd-14db-4680-92a4-e31ebf2914e5",
+        "date": "2026-08-23T11:23:48"
+      }
+    ]
+  },
+  {
+    "theme_name": "Returns / Exchange Friction",
+    "description": "Shoppers experience severe difficulty returning defective or overpriced items, facing refusal from customer support to accept returns which leads to app uninstallation.",
+    "unique_record_count": 2,
+    "frequency": 2,
+    "percentage_of_analyzed_records": 0.5,
+    "google_play_count": 2,
+    "youtube_count": 0,
+    "source_coverage": 1,
+    "source_distribution": {
+      "GOOGLE_PLAY": 2
+    },
+    "evidence_confidence": "weak",
+    "representative_quotes": [
+      {
+        "quote": "They sell defective products with extra price. And returning an defective item is almost impossible. I had bought belt, which was defective and they were not ready to take it back. After that uninstall the app",
+        "source": "GOOGLE_PLAY",
+        "trace_id": "96c2cf88-66d7-4319-9a4a-df797e664cfc",
+        "date": "2026-08-23T19:36:18"
+      },
+      {
+        "quote": "extra ordinary experience",
+        "source": "GOOGLE_PLAY",
+        "trace_id": "be739917-22ee-450b-85a9-7ed75fed6b6f",
+        "date": "2026-08-24T16:27:09"
+      }
+    ],
+    "supporting_evidence": [
+      {
+        "quote": "They sell defective products with extra price. And returning an defective item is almost impossible. I had bought belt, which was defective and they were not ready to take it back. After that uninstall the app",
+        "source": "GOOGLE_PLAY",
+        "trace_id": "96c2cf88-66d7-4319-9a4a-df797e664cfc",
+        "date": "2026-08-23T19:36:18"
+      },
+      {
+        "quote": "extra ordinary experience",
+        "source": "GOOGLE_PLAY",
+        "trace_id": "be739917-22ee-450b-85a9-7ed75fed6b6f",
+        "date": "2026-08-24T16:27:09"
+      }
+    ]
+  },
+  {
+    "theme_name": "Promotional Credit Application Issues",
+    "description": "Customers encounter frustration and confusion when trying to apply promotional credits, gift cards, or free gifts at checkout due to changing cart requirements and unclear threshold rules.",
+    "unique_record_count": 2,
+    "frequency": 2,
+    "percentage_of_analyzed_records": 0.5,
+    "google_play_count": 2,
+    "youtube_count": 0,
+    "source_coverage": 1,
+    "source_distribution": {
+      "GOOGLE_PLAY": 2
+    },
+    "evidence_confidence": "weak",
+    "representative_quotes": [
+      {
+        "quote": "not able to apply myntra cash for the purchase of 300₹ . because I added 150 from gift card first your app showing add item worth 121 then even after adding item worth of 300 still you asking to add ₹59 item more. why you gave myntra cash when you don't allow to apply it and changing amounts again and again . I would like to give -5 star but there is no option for such rating",
+        "source": "GOOGLE_PLAY",
+        "trace_id": "4b6f2b1c-4d7a-40d8-9cab-395240b74c99",
+        "date": "2026-08-24T18:26:04"
+      },
+      {
+        "quote": "plix shampoo and serum free gift",
+        "source": "GOOGLE_PLAY",
+        "trace_id": "c661b169-29ce-4cf0-92ea-3991b6ce9f1b",
+        "date": "2026-08-24T17:40:21"
+      }
+    ],
+    "supporting_evidence": [
+      {
+        "quote": "not able to apply myntra cash for the purchase of 300₹ . because I added 150 from gift card first your app showing add item worth 121 then even after adding item worth of 300 still you asking to add ₹59 item more. why you gave myntra cash when you don't allow to apply it and changing amounts again and again . I would like to give -5 star but there is no option for such rating",
+        "source": "GOOGLE_PLAY",
+        "trace_id": "4b6f2b1c-4d7a-40d8-9cab-395240b74c99",
+        "date": "2026-08-24T18:26:04"
+      },
+      {
+        "quote": "plix shampoo and serum free gift",
+        "source": "GOOGLE_PLAY",
+        "trace_id": "c661b169-29ce-4cf0-92ea-3991b6ce9f1b",
+        "date": "2026-08-24T17:40:21"
+      }
+    ]
+  }
+]

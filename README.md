@@ -100,3 +100,7 @@ The repository is production-ready for Railway deployment.
 - **Live Dashboard:** *(To be added post-deployment)*
 - **Live API:** *(To be added post-deployment)*
 - **Repository:** https://github.com/sibaniacharya/fashion-engine
+
+## 19. Documentation & Reports
+- **Part 1 Final Report:** [docs/part1-final-report-for-part2.md](docs/part1-final-report-for-part2.md) - Synthesizes the final canonical outputs from the Part 1 Discovery Engine.
+- **Part 2 Metric Decomposition:** [docs/part2-metric-decomposition.md](docs/part2-metric-decomposition.md) - Defines the Wishlist → Purchase conversion funnel and prioritizes opportunities for validation.

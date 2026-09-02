@@ -8,13 +8,14 @@ from models import RawFeedback
 import traceback
 import os
 
+
 class IngestionManager:
     def __init__(self, db: Session):
         self.db = db
         self.adapters = [
             GooglePlayAdapter(count=200),
             RedditAdapter(limit=20),
-            YouTubeAdapter()
+            YouTubeAdapter(),
         ]
         self.is_postgres = os.getenv("DATABASE_URL", "").startswith("postgres")
 
@@ -26,31 +27,48 @@ class IngestionManager:
                 print(f"Running ingestion for {source_name}...")
                 records = adapter.fetch_data()
                 saved_count = 0
-                
+
                 if not records:
-                    results[source_name] = {"fetched": 0, "saved": 0, "status": "Skipped or no data"}
+                    results[source_name] = {
+                        "fetched": 0,
+                        "saved": 0,
+                        "status": "Skipped or no data",
+                    }
                     continue
-                    
+
                 for record_dict in records:
                     if self.is_postgres:
                         stmt = pg_insert(RawFeedback).values(**record_dict)
-                        stmt = stmt.on_conflict_do_nothing(index_elements=['source_id'])
+                        stmt = stmt.on_conflict_do_nothing(index_elements=["source_id"])
                     else:
                         stmt = sqlite_insert(RawFeedback).values(**record_dict)
-                        stmt = stmt.on_conflict_do_nothing(index_elements=['source_id'])
-                        
+                        stmt = stmt.on_conflict_do_nothing(index_elements=["source_id"])
+
                     result = self.db.execute(stmt)
                     if result.rowcount > 0:
                         saved_count += 1
-                        
+
                 self.db.commit()
-                results[source_name] = {"fetched": len(records), "saved": saved_count, "status": "Success"}
-                print(f"Saved {saved_count}/{len(records)} new records from {source_name}")
-                
+                metrics = getattr(adapter, "metrics", {})
+
+                results[source_name] = {
+                    "fetched": len(records),
+                    "saved": saved_count,
+                    "status": "Success",
+                    "metrics": metrics,
+                }
+                print(
+                    f"Saved {saved_count}/{len(records)} new records from {source_name}"
+                )
+
             except Exception as e:
                 self.db.rollback()
                 print(f"Failed ingestion for {source_name}: {e}")
                 traceback.print_exc()
-                results[source_name] = {"fetched": 0, "saved": 0, "status": f"Error: {str(e)}"}
-                
+                results[source_name] = {
+                    "fetched": 0,
+                    "saved": 0,
+                    "status": f"Error: {str(e)}",
+                }
+
         return results
