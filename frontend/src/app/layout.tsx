@@ -14,12 +14,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>
-        <div className="dashboard-layout">
-          <Sidebar />
-          <main className="main-content glass-panel" style={{ margin: '16px', borderRadius: '24px' }}>
-            {children}
-          </main>
+      <head>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+      </head>
+      <body className="bg-background text-on-background min-h-screen flex antialiased">
+        <Sidebar />
+        <div className="flex-1 ml-[240px] flex flex-col min-h-screen relative w-[calc(100%-240px)]">
+          {children}
         </div>
       </body>
     </html>

@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Evidence Explorer - Discovery Engine</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "outline": "#777587",
+                        "surface": "#fcf8ff",
+                        "background": "#fcf8ff",
+                        "tertiary-fixed": "#ffdbcc",
+                        "secondary-fixed-dim": "#b7c8e1",
+                        "on-tertiary-fixed-variant": "#7b2f00",
+                        "primary-fixed-dim": "#c3c0ff",
+                        "secondary": "#505f76",
+                        "on-tertiary-container": "#ffd2be",
+                        "on-primary-container": "#dad7ff",
+                        "tertiary-fixed-dim": "#ffb695",
+                        "primary": "#3525cd",
+                        "surface-dim": "#dcd8e5",
+                        "on-error-container": "#93000a",
+                        "on-primary-fixed": "#0f0069",
+                        "on-surface-variant": "#464555",
+                        "primary-fixed": "#e2dfff",
+                        "on-secondary-fixed-variant": "#38485d",
+                        "error-container": "#ffdad6",
+                        "inverse-surface": "#302f39",
+                        "on-background": "#1b1b24",
+                        "on-error": "#ffffff",
+                        "secondary-container": "#d0e1fb",
+                        "inverse-primary": "#c3c0ff",
+                        "on-tertiary": "#ffffff",
+                        "primary-container": "#4f46e5",
+                        "secondary-fixed": "#d3e4fe",
+                        "surface-container-low": "#f5f2ff",
+                        "surface-container": "#f0ecf9",
+                        "surface-tint": "#4d44e3",
+                        "surface-bright": "#fcf8ff",
+                        "on-secondary": "#ffffff",
+                        "on-secondary-container": "#54647a",
+                        "on-primary-fixed-variant": "#3323cc",
+                        "surface-variant": "#e4e1ee",
+                        "surface-container-lowest": "#ffffff",
+                        "outline-variant": "#c7c4d8",
+                        "surface-container-high": "#eae6f4",
+                        "on-primary": "#ffffff",
+                        "on-surface": "#1b1b24",
+                        "inverse-on-surface": "#f3effc",
+                        "tertiary-container": "#a44100",
+                        "on-secondary-fixed": "#0b1c30",
+                        "on-tertiary-fixed": "#351000",
+                        "error": "#ba1a1a",
+                        "tertiary": "#7e3000",
+                        "surface-container-highest": "#e4e1ee"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "stack-xs": "0.25rem",
+                        "stack-sm": "0.5rem",
+                        "gutter": "1.5rem",
+                        "container-max": "1440px",
+                        "margin-page": "2rem",
+                        "stack-lg": "1.5rem",
+                        "stack-md": "1rem"
+                    },
+                    "fontFamily": {
+                        "label-md": ["Inter"],
+                        "h2": ["Inter"],
+                        "label-sm": ["Inter"],
+                        "body-md": ["Inter"],
+                        "display-sm": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "h1": ["Inter"],
+                        "micro": ["Inter"],
+                        "display-lg": ["Inter"]
+                    },
+                    "fontSize": {
+                        "label-md": ["14px", { "lineHeight": "20px", "fontWeight": "500" }],
+                        "h2": ["18px", { "lineHeight": "26px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "label-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "500" }],
+                        "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+                        "display-sm": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+                        "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "h1": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "micro": ["11px", { "lineHeight": "14px", "letterSpacing": "0.03em", "fontWeight": "600" }],
+                        "display-lg": ["30px", { "lineHeight": "38px", "letterSpacing": "-0.02em", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .custom-scrollbar::-webkit-scrollbar { width: 6px; }
+        .custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
+        .custom-scrollbar::-webkit-scrollbar-thumb { background-color: #cbd5e1; border-radius: 20px; }
+    </style>
+</head>
+<body class="bg-[#F8FAFC] text-on-surface font-body-md min-h-screen flex antialiased">
+<!-- SideNavBar -->
+<nav class="fixed left-0 top-0 h-full w-[240px] bg-inverse-surface flex flex-col z-50">
+<div class="px-gutter py-6 border-b border-white/10">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-lg bg-primary-fixed flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary text-xl">dataset</span>
+</div>
+<div class="flex flex-col">
+<span class="font-h1 text-h1 text-primary-fixed">Discovery Engine</span>
+<span class="font-micro text-micro text-secondary-fixed-dim uppercase tracking-wider">Enterprise Analytics</span>
+</div>
+</div>
+</div>
+<div class="flex-1 overflow-y-auto py-6">
+<ul class="flex flex-col gap-1">
+<li>
+<a class="flex items-center gap-3 text-secondary-fixed-dim hover:text-white px-6 py-3 hover:bg-white/5 transition-colors duration-200" href="#">
+<span class="material-symbols-outlined text-[20px]">dashboard</span>
+<span class="font-label-md text-label-md">Overview</span>
+</a>
+</li>
+<li>
+<a class="flex items-center gap-3 text-secondary-fixed-dim hover:text-white px-6 py-3 hover:bg-white/5 transition-colors duration-200" href="#">
+<span class="material-symbols-outlined text-[20px]">topic</span>
+<span class="font-label-md text-label-md">Themes</span>
+</a>
+</li>
+<li>
+<a class="flex items-center gap-3 text-secondary-fixed-dim hover:text-white px-6 py-3 hover:bg-white/5 transition-colors duration-200" href="#">
+<span class="material-symbols-outlined text-[20px]">alt_route</span>
+<span class="font-label-md text-label-md">Customer Journey</span>
+</a>
+</li>
+<li>
+<a class="flex items-center gap-3 text-secondary-fixed-dim hover:text-white px-6 py-3 hover:bg-white/5 transition-colors duration-200" href="#">
+<span class="material-symbols-outlined text-[20px]">lightbulb</span>
+<span class="font-label-md text-label-md">Opportunities</span>
+</a>
+</li>
+<li>
+<a class="flex items-center gap-3 bg-white/10 text-white border-l-4 border-primary-fixed px-6 py-3 opacity-100 transition-opacity" href="#">
+<span class="material-symbols-outlined text-[20px]">search_insights</span>
+<span class="font-label-md text-label-md">Evidence Explorer</span>
+</a>
+</li>
+<li>
+<a class="flex items-center gap-3 text-secondary-fixed-dim hover:text-white px-6 py-3 hover:bg-white/5 transition-colors duration-200" href="#">
+<span class="material-symbols-outlined text-[20px]">groups</span>
+<span class="font-label-md text-label-md">Behavioral Segments</span>
+</a>
+</li>
+<li>
+<a class="flex items-center gap-3 text-secondary-fixed-dim hover:text-white px-6 py-3 hover:bg-white/5 transition-colors duration-200" href="#">
+<span class="material-symbols-outlined text-[20px]">data_thresholding</span>
+<span class="font-label-md text-label-md">Data Quality</span>
+</a>
+</li>
+</ul>
+</div>
+<div class="mt-auto px-4 py-4 border-t border-white/10">
+<ul class="flex flex-col gap-1">
+<li>
+<a class="flex items-center gap-3 text-secondary-fixed-dim hover:text-white px-4 py-2 rounded hover:bg-white/5 transition-colors duration-200" href="#">
+<span class="material-symbols-outlined text-[18px]">sync</span>
+<span class="font-label-sm text-label-sm">Analysis Status</span>
+</a>
+</li>
+<li>
+<a class="flex items-center gap-3 text-secondary-fixed-dim hover:text-white px-4 py-2 rounded hover:bg-white/5 transition-colors duration-200" href="#">
+<span class="material-symbols-outlined text-[18px]">history</span>
+<span class="font-label-sm text-label-sm">Data Freshness</span>
+</a>
+</li>
+</ul>
+</div>
+</nav>
+<!-- Main Content Area -->
+<div class="ml-[240px] flex-1 flex flex-col min-h-screen">
+<!-- TopAppBar -->
+<header class="h-16 bg-surface border-b border-outline-variant flex justify-between items-center px-gutter sticky top-0 z-40">
+<div class="flex items-center gap-4">
+<h1 class="font-display-sm text-display-sm text-on-surface">Evidence Explorer</h1>
+</div>
+<div class="flex items-center gap-4">
+<button class="flex items-center gap-2 bg-primary text-white px-4 py-2 rounded-lg font-label-md text-label-md hover:bg-primary/90 transition-colors">
+<span class="material-symbols-outlined text-[18px]">download</span>
+                    Export Evidence
+                </button>
+<div class="w-px h-6 bg-outline-variant mx-2"></div>
+<button class="text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button class="text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined">settings</span>
+</button>
+<img alt="User profile" class="w-8 h-8 rounded-full border border-outline-variant object-cover" data-alt="A small, circular avatar portrait of a professional woman with glasses, smiling slightly, against a solid gray background. Clean, corporate light-mode styling." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBoX-N7qcB5JukNvzOvXgm5h8VfFkh0NI8i3h-Jrh4NMuprCpDmFH_5WFShdv5k7c0Oln0WwdVRDmY42L87OuyLmo6JVqwX2hG3s4hTiwtrrE3KeStPfKW0I7T5n-NYCYNi9SpQ9OCV2VLyEtMlHe3uikFmidN0U_iej7Sm5JUtx9pRPAPdJvcL6IOkSnRjkNahHbeWWpi9Ary8kY3j3_gmRgRbZPNUuzLdLbbJ2xWLThOnPimxPTs"/>
+</div>
+</header>
+<!-- Content Canvas -->
+<main class="flex-1 p-margin-page flex gap-gutter max-w-container-max mx-auto w-full h-[calc(100vh-64px)] overflow-hidden">
+<!-- Filters Sidebar (Left Column) -->
+<aside class="w-72 shrink-0 flex flex-col gap-6 bg-white border border-outline-variant/30 rounded-xl p-6 shadow-sm overflow-y-auto custom-scrollbar">
+<!-- Search -->
+<div class="space-y-2">
+<label class="font-label-md text-label-md text-on-surface">Search Evidence</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-[20px]">search</span>
+<input class="w-full pl-10 pr-4 py-2 bg-surface-container-low border border-outline-variant rounded-lg font-body-md text-body-md focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-shadow" placeholder="Search quotes..." type="text"/>
+</div>
+</div>
+<hr class="border-outline-variant/50"/>
+<!-- Source Filter -->
+<div class="space-y-3">
+<label class="font-label-md text-label-md text-on-surface">Source</label>
+<div class="space-y-2">
+<label class="flex items-center gap-2 cursor-pointer group">
+<input checked="" class="rounded border-outline-variant text-primary focus:ring-primary w-4 h-4" type="checkbox"/>
+<span class="font-body-md text-body-md text-on-surface-variant group-hover:text-on-surface">Google Play</span>
+</label>
+<label class="flex items-center gap-2 cursor-pointer group">
+<input checked="" class="rounded border-outline-variant text-primary focus:ring-primary w-4 h-4" type="checkbox"/>
+<span class="font-body-md text-body-md text-on-surface-variant group-hover:text-on-surface">YouTube</span>
+</label>
+<label class="flex items-center gap-2 cursor-pointer group">
+<input class="rounded border-outline-variant text-primary focus:ring-primary w-4 h-4" type="checkbox"/>
+<span class="font-body-md text-body-md text-on-surface-variant group-hover:text-on-surface">App Store</span>
+</label>
+</div>
+</div>
+<!-- Theme Filter -->
+<div class="space-y-3">
+<label class="font-label-md text-label-md text-on-surface">Theme</label>
+<div class="space-y-2">
+<label class="flex items-center gap-2 cursor-pointer group">
+<input checked="" class="rounded border-outline-variant text-primary focus:ring-primary w-4 h-4" type="checkbox"/>
+<span class="font-body-md text-body-md text-on-surface-variant group-hover:text-on-surface">Return Friction</span>
+</label>
+<label class="flex items-center gap-2 cursor-pointer group">
+<input checked="" class="rounded border-outline-variant text-primary focus:ring-primary w-4 h-4" type="checkbox"/>
+<span class="font-body-md text-body-md text-on-surface-variant group-hover:text-on-surface">Fit Uncertainty</span>
+</label>
+<label class="flex items-center gap-2 cursor-pointer group">
+<input class="rounded border-outline-variant text-primary focus:ring-primary w-4 h-4" type="checkbox"/>
+<span class="font-body-md text-body-md text-on-surface-variant group-hover:text-on-surface">Quality Concerns</span>
+</label>
+</div>
+</div>
+<!-- Purchase Barrier Filter -->
+<div class="space-y-3">
+<label class="font-label-md text-label-md text-on-surface">Purchase Barrier</label>
+<select class="w-full p-2 bg-surface-container-low border border-outline-variant rounded-lg font-body-md text-body-md focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary appearance-none bg-no-repeat bg-[right_0.75rem_center] bg-[length:16px_12px]" style="background-image: url('data:image/svg+xml;utf8,&lt;svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'%23777587\' stroke-width=\'2\' stroke-linecap=\'round\' stroke-linejoin=\'round\'&gt;&lt;polyline points=\'6 9 12 15 18 9\'/&gt;&lt;/svg&gt;');">
+<option>All Barriers</option>
+<option>Price</option>
+<option>Support</option>
+<option>Trust</option>
+</select>
+</div>
+<!-- Behavioral Segment Filter -->
+<div class="space-y-3">
+<label class="font-label-md text-label-md text-on-surface">Behavioral Segment</label>
+<select class="w-full p-2 bg-surface-container-low border border-outline-variant rounded-lg font-body-md text-body-md focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary appearance-none bg-no-repeat bg-[right_0.75rem_center] bg-[length:16px_12px]" style="background-image: url('data:image/svg+xml;utf8,&lt;svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'%23777587\' stroke-width=\'2\' stroke-linecap=\'round\' stroke-linejoin=\'round\'&gt;&lt;polyline points=\'6 9 12 15 18 9\'/&gt;&lt;/svg&gt;');">
+<option>All Segments</option>
+<option>FIT_CONSCIOUS</option>
+<option>PRICE_SENSITIVE</option>
+</select>
+</div>
+</aside>
+<!-- Results Area (Right Column) -->
+<div class="flex-1 flex flex-col overflow-hidden">
+<!-- Results Header -->
+<div class="flex justify-between items-center mb-4 shrink-0">
+<div class="font-label-md text-label-md text-on-surface-variant">
+                        Showing 3 highly relevant evidence pieces
+                    </div>
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Sort by:</span>
+<select class="bg-transparent border-none text-on-surface font-label-md focus:ring-0 cursor-pointer text-primary">
+<option>Relevance Score</option>
+<option>Date (Newest)</option>
+</select>
+</div>
+</div>
+<!-- Cards Container -->
+<div class="flex-1 overflow-y-auto custom-scrollbar pr-2 space-y-4 pb-8">
+<!-- Evidence Card 1 -->
+<div class="bg-white border border-outline-variant/40 rounded-xl p-6 hover:border-primary/50 transition-colors group shadow-sm flex flex-col gap-4 relative overflow-hidden">
+<!-- Decorative left edge indicator -->
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-tertiary-container/80"></div>
+<div class="flex justify-between items-start">
+<div class="flex items-center gap-3">
+<span class="bg-[#e4f0f6] text-[#0066cc] font-micro text-micro px-2 py-1 rounded-sm tracking-wide">GOOGLE PLAY</span>
+<span class="text-on-surface-variant font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">fingerprint</span> Trace GP_00482
+                                </span>
+</div>
+<button class="text-primary font-label-md text-label-md flex items-center gap-1 hover:underline opacity-0 group-hover:opacity-100 transition-opacity">
+                                View Source <span class="material-symbols-outlined text-[16px]">open_in_new</span>
+</button>
+</div>
+<blockquote class="font-h1 text-h1 text-on-surface border-l-2 border-outline-variant/30 pl-4 py-1 italic text-gray-800">
+                            "Size was not as expected and the return process took too long."
+                        </blockquote>
+<div class="flex flex-wrap gap-2 pt-2 border-t border-outline-variant/20 mt-2">
+<span class="px-3 py-1 bg-surface-container text-on-surface-variant font-label-sm text-label-sm rounded-full flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">category</span> Fit / Size Uncertainty
+                            </span>
+<span class="px-3 py-1 bg-surface-container text-on-surface-variant font-label-sm text-label-sm rounded-full flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">policy</span> Return Policy
+                            </span>
+<span class="px-3 py-1 bg-primary/10 text-primary font-label-sm text-label-sm rounded-full flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">person</span> FIT_CONSCIOUS
+                            </span>
+</div>
+<div class="bg-surface-container-low p-3 rounded-lg border border-primary/10 flex gap-3 items-start mt-2">
+<span class="material-symbols-outlined text-primary text-[20px] mt-0.5">smart_toy</span>
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant block mb-1 uppercase tracking-wider">AI Rationale</span>
+<span class="font-body-md text-body-md text-on-surface">Explicit mention of sizing error and return friction.</span>
+</div>
+</div>
+</div>
+<!-- Evidence Card 2 -->
+<div class="bg-white border border-outline-variant/40 rounded-xl p-6 hover:border-primary/50 transition-colors group shadow-sm flex flex-col gap-4 relative overflow-hidden">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-error/60"></div>
+<div class="flex justify-between items-start">
+<div class="flex items-center gap-3">
+<span class="bg-[#e4f0f6] text-[#0066cc] font-micro text-micro px-2 py-1 rounded-sm tracking-wide">GOOGLE PLAY</span>
+<span class="text-on-surface-variant font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">fingerprint</span> Trace GP_00312
+                                </span>
+</div>
+<button class="text-primary font-label-md text-label-md flex items-center gap-1 hover:underline opacity-0 group-hover:opacity-100 transition-opacity">
+                                View Source <span class="material-symbols-outlined text-[16px]">open_in_new</span>
+</button>
+</div>
+<blockquote class="font-h1 text-h1 text-on-surface border-l-2 border-outline-variant/30 pl-4 py-1 italic text-gray-800">
+                            "Support never emailed me back about my refund."
+                        </blockquote>
+<div class="flex flex-wrap gap-2 pt-2 border-t border-outline-variant/20 mt-2">
+<span class="px-3 py-1 bg-surface-container text-on-surface-variant font-label-sm text-label-sm rounded-full flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">support_agent</span> Customer Support
+                            </span>
+<span class="px-3 py-1 bg-surface-container text-on-surface-variant font-label-sm text-label-sm rounded-full flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">credit_card_off</span> Refund Friction
+                            </span>
+</div>
+</div>
+<!-- Evidence Card 3 -->
+<div class="bg-white border border-outline-variant/40 rounded-xl p-6 hover:border-primary/50 transition-colors group shadow-sm flex flex-col gap-4 relative overflow-hidden">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-[#ff0000]/70"></div>
+<div class="flex justify-between items-start">
+<div class="flex items-center gap-3">
+<span class="bg-[#fceceb] text-[#cc0000] font-micro text-micro px-2 py-1 rounded-sm tracking-wide">YOUTUBE</span>
+<span class="text-on-surface-variant font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">fingerprint</span> Trace YT_0012
+                                </span>
+</div>
+<button class="text-primary font-label-md text-label-md flex items-center gap-1 hover:underline opacity-0 group-hover:opacity-100 transition-opacity">
+                                View Source <span class="material-symbols-outlined text-[16px]">open_in_new</span>
+</button>
+</div>
+<blockquote class="font-h1 text-h1 text-on-surface border-l-2 border-outline-variant/30 pl-4 py-1 italic text-gray-800">
+                            "The quality doesn't match the price point in the video review."
+                        </blockquote>
+<div class="flex flex-wrap gap-2 pt-2 border-t border-outline-variant/20 mt-2">
+<span class="px-3 py-1 bg-surface-container text-on-surface-variant font-label-sm text-label-sm rounded-full flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">balance</span> Price-Quality Mismatch
+                            </span>
+<span class="px-3 py-1 bg-surface-container text-on-surface-variant font-label-sm text-label-sm rounded-full flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">fact_check</span> Evaluation
+                            </span>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+</body></html>

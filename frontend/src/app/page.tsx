@@ -1,7 +1,6 @@
 'use client';
 import { useEffect, useState } from 'react';
-import MetricCard from '@/components/MetricCard';
-import OpportunityCard from '@/components/OpportunityCard';
+import TopAppBar from '@/components/TopAppBar';
 import { ApiClient, DashboardMetrics, DataQuality, PaginatedThemes, WishlistBehavior, PurchaseBarriers, ExternalResearch, UserSegments } from '@/lib/api';
 
 export default function Overview() {
@@ -38,190 +37,116 @@ export default function Overview() {
     }).catch(e => console.error(e));
   }, []);
 
-  if (loading) return <div>Loading...</div>;
+  if (loading) {
+    return (
+      <div className="flex-1 flex items-center justify-center">
+        <div className="font-label-md text-label-md text-on-surface-variant">Loading dashboard...</div>
+      </div>
+    );
+  }
+
+  // Pick top 4 barriers as "Key Findings" for the UI cards
+  const topBarriers = Object.entries(barriers?.top_barriers || {}).slice(0, 4);
 
   return (
-    <div>
-      <h1 className="gradient-text">Cross-Source Discovery Analysis</h1>
-      <p>Identify recurring behavioral patterns and opportunity areas from Google Play and YouTube.</p>
-
-      {/* LIMITATIONS BANNER */}
-      <div style={{ backgroundColor: 'rgba(255, 100, 100, 0.1)', borderLeft: '4px solid #ff4d4d', padding: '16px', marginTop: '24px', borderRadius: '4px' }}>
-        <h3 style={{ color: '#ff4d4d', fontSize: '1rem', margin: '0 0 8px 0' }}>Discovery Limitations</h3>
-        <ul style={{ margin: 0, paddingLeft: '20px', fontSize: '0.85rem', color: 'var(--text-secondary)' }}>
-          <li>Google Play contains many app-level complaints and may have limited explicit wishlist behavior.</li>
-          <li>YouTube comments may have different sampling bias toward visual/styling feedback.</li>
-          <li>Absence of evidence is not evidence of absence (e.g. users may comparison shop without explicitly mentioning it).</li>
-          <li>Reddit is NOT included (API access unavailable).</li>
-        </ul>
-      </div>
-
-      {/* 1. SOURCE OVERVIEW & DATA QUALITY */}
-      <div className="glass-card" style={{ marginTop: '24px', padding: '16px' }}>
-        <h2 style={{ fontSize: '1.2rem', marginBottom: '16px', borderBottom: '1px solid var(--border)', paddingBottom: '8px' }}>1. Data Quality & Pipeline Status</h2>
-        <div style={{ display: 'flex', gap: '32px', fontSize: '0.9rem', flexWrap: 'wrap', marginBottom: '24px' }}>
-          <div><strong>Raw:</strong> {quality?.raw || 0}</div>
-          <div><strong>Valid:</strong> {quality?.valid || 0}</div>
-          <div><strong>Eligible:</strong> {quality?.eligible || 0}</div>
+    <>
+      <TopAppBar title="Discovery Engine" />
+      <main className="flex-1 p-margin-page max-w-container-max mx-auto w-full">
+        {/* Hero */}
+        <div className="mb-stack-lg">
+          <h1 className="font-display-sm text-display-sm text-on-surface mb-stack-xs">Customer Feedback Intelligence</h1>
+          <p className="font-body-lg text-body-lg text-on-surface-variant">Turn public customer feedback into actionable product opportunities.</p>
         </div>
 
-        <h3 style={{ fontSize: '1rem', marginTop: '16px', marginBottom: '12px' }}>Other/Filtered Breakdown</h3>
-        <div style={{ display: 'flex', gap: '32px', fontSize: '0.9rem', flexWrap: 'wrap', marginBottom: '24px', padding: '12px', background: 'rgba(255,255,255,0.05)', borderRadius: '6px' }}>
-          <div style={{ color: 'var(--text-secondary)' }}><strong>Duplicates Removed:</strong> {quality?.duplicates || 0}</div>
-          <div style={{ color: 'var(--text-secondary)' }}><strong>Spam Removed:</strong> {quality?.spam || 0}</div>
-          <div style={{ color: 'var(--text-secondary)' }}><strong>Empty Content:</strong> {quality?.empty_content || 0}</div>
-          <div style={{ color: 'var(--text-secondary)' }}><strong>Non-English:</strong> {quality?.non_english || 0}</div>
-          <div style={{ color: 'var(--text-secondary)' }}><strong>Other Exclusions:</strong> {quality?.other_exclusions || 0}</div>
-        </div>
-        <div style={{ display: 'flex', gap: '32px', fontSize: '0.9rem', flexWrap: 'wrap', marginBottom: '24px' }}>
-          <div style={{ color: 'var(--accent-cyan)' }}><strong>LLM Analyzed:</strong> {quality?.llm_analyzed || 0}</div>
-          <div style={{ color: 'var(--accent-cyan)' }}><strong>Fallback Analyzed:</strong> {quality?.fallback_analyzed || 0}</div>
-          <div style={{ color: '#ff4d4d' }}><strong>Failed:</strong> {quality?.failed || 0}</div>
-          <div style={{ color: '#ffa500' }}><strong>Deferred (Rate Limit):</strong> {quality?.deferred_rate_limit || 0}</div>
-          <div style={{ color: '#ffa500' }}><strong>Deferred (Quota):</strong> {quality?.deferred_quota || 0}</div>
-        </div>
-
-        <h3 style={{ fontSize: '1rem', marginTop: '16px', marginBottom: '12px' }}>Source Coverage</h3>
-        <div style={{ display: 'flex', gap: '32px', fontSize: '0.9rem', flexWrap: 'wrap' }}>
-          <div>
-            <strong style={{ color: 'var(--accent-cyan)' }}>Google Play</strong>
-            <div style={{ marginTop: '4px' }}>Eligible: {quality?.source_coverage?.['GOOGLE_PLAY']?.eligible || 0}</div>
-            <div style={{ marginTop: '4px' }}>Analyzed: {quality?.source_coverage?.['GOOGLE_PLAY']?.analyzed || 0}</div>
-            <div style={{ marginTop: '4px' }}>Deferred: {quality?.source_coverage?.['GOOGLE_PLAY']?.deferred || 0}</div>
+        {/* KPI Bento Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-stack-md mb-stack-lg">
+          <div className="bg-white/70 backdrop-blur-md p-4 rounded-xl col-span-1 flex flex-col justify-center items-start shadow-sm border border-outline-variant">
+            <span className="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider mb-1">Raw Records</span>
+            <span className="font-display-lg text-display-lg text-primary">{quality?.raw || 0}</span>
           </div>
-          <div>
-            <strong style={{ color: 'var(--accent-cyan)' }}>YouTube</strong>
-            <div style={{ marginTop: '4px' }}>Eligible: {quality?.source_coverage?.['YOUTUBE']?.eligible || 0}</div>
-            <div style={{ marginTop: '4px' }}>Analyzed: {quality?.source_coverage?.['YOUTUBE']?.analyzed || 0}</div>
-            <div style={{ marginTop: '4px' }}>Deferred: {quality?.source_coverage?.['YOUTUBE']?.deferred || 0}</div>
+          <div className="bg-white/70 backdrop-blur-md p-4 rounded-xl col-span-1 flex flex-col justify-center items-start shadow-sm border border-outline-variant">
+            <span className="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider mb-1">Eligible</span>
+            <span className="font-display-lg text-display-lg text-primary">{quality?.eligible || 0}</span>
           </div>
-          <div>
-            <strong style={{ color: 'var(--text-secondary)' }}>Reddit</strong>
-            <div style={{ marginTop: '4px', color: 'var(--text-secondary)' }}>Status: NOT CONFIGURED</div>
+          <div className="bg-white/70 backdrop-blur-md p-4 rounded-xl col-span-1 flex flex-col justify-center items-start shadow-sm border border-outline-variant">
+            <span className="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider mb-1">AI-Analyzed</span>
+            <span className="font-display-lg text-display-lg text-primary">{quality?.llm_analyzed || 0}</span>
+          </div>
+          <div className="bg-white/70 backdrop-blur-md p-4 rounded-xl col-span-1 flex flex-col justify-center items-start shadow-sm border border-outline-variant">
+            <span className="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider mb-1">Themes</span>
+            <span className="font-display-lg text-display-lg text-on-surface">{themes?.total || 0}</span>
+          </div>
+          <div className="bg-white/70 backdrop-blur-md p-4 rounded-xl col-span-1 flex flex-col justify-center items-start shadow-sm border border-outline-variant">
+            <span className="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider mb-1">Barriers</span>
+            <span className="font-display-lg text-display-lg text-error">{Object.keys(barriers?.top_barriers || {}).length}</span>
+          </div>
+          <div className="bg-white/70 backdrop-blur-md p-4 rounded-xl col-span-1 flex flex-col justify-center items-start shadow-sm border border-outline-variant relative overflow-hidden">
+            <div className="absolute inset-0 bg-primary/5"></div>
+            <span className="font-label-sm text-label-sm text-primary uppercase tracking-wider mb-1 relative z-10">Opportunities</span>
+            <span className="font-display-lg text-display-lg text-primary relative z-10">{opportunities?.length || 0}</span>
           </div>
         </div>
-      </div>
 
-      {/* 2. CROSS-SOURCE THEMES */}
-      <div className="glass-card" style={{ marginTop: '24px', padding: '16px' }}>
-        <h2 style={{ fontSize: '1.2rem', marginBottom: '16px', borderBottom: '1px solid var(--border)', paddingBottom: '8px' }}>2. Cross-source Themes</h2>
-        <table style={{ width: '100%', textAlign: 'left', fontSize: '0.9rem', borderCollapse: 'collapse' }}>
-          <thead>
-            <tr style={{ borderBottom: '1px solid var(--border)' }}>
-              <th style={{ padding: '8px 0' }}>Theme</th>
-              <th>Frequency</th>
-              <th>Google Play</th>
-              <th>YouTube</th>
-              <th>Coverage</th>
-              <th>Confidence</th>
-            </tr>
-          </thead>
-          <tbody>
-            {themes?.data?.slice(0, 5).map((t: any, i: number) => (
-              <tr key={i} style={{ borderBottom: '1px solid rgba(255,255,255,0.05)' }}>
-                <td style={{ padding: '12px 0' }}>{t.theme_name}</td>
-                <td>{t.frequency}</td>
-                <td>{t.source_distribution?.['GOOGLE_PLAY'] || 0}</td>
-                <td>{t.source_distribution?.['YOUTUBE'] || 0}</td>
-                <td>{t.source_coverage || 1} sources</td>
-                <td>
-                  <span style={{
-                    padding: '2px 6px', borderRadius: '4px', fontSize: '0.7rem',
-                    backgroundColor: t.evidence_confidence === 'strong' ? 'rgba(0,255,0,0.1)' : 'rgba(255,255,255,0.1)',
-                    color: t.evidence_confidence === 'strong' ? '#4dff4d' : 'var(--text-secondary)'
-                  }}>
-                    {t.evidence_confidence?.toUpperCase() || 'UNKNOWN'}
+        {/* Key Findings Cards */}
+        <div className="mb-stack-lg">
+          <div className="flex items-center justify-between mb-stack-sm">
+            <h2 className="font-h2 text-h2 text-on-surface">Top Purchase Barriers</h2>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-stack-md">
+            {topBarriers.map(([barrierName, barrierData]: [string, any], idx) => (
+              <div key={idx} className="bg-surface rounded-xl border border-outline-variant p-6 flex flex-col h-full hover:border-primary transition-colors cursor-pointer group">
+                <div className="flex items-start justify-between mb-4">
+                  <h3 className="font-h1 text-h1 text-on-surface">{barrierName}</h3>
+                  <span className="bg-secondary-container text-on-secondary-container px-2 py-1 rounded-full font-micro text-micro flex items-center gap-1">
+                    <span className="material-symbols-outlined text-[14px]">description</span> {barrierData.total_mentions}
                   </span>
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
-
-      <div className="grid-2" style={{ marginTop: '24px' }}>
-        {/* 3. WISHLIST BEHAVIOR */}
-        <div className="glass-card" style={{ padding: '16px' }}>
-          <h2 style={{ fontSize: '1.2rem', marginBottom: '16px', borderBottom: '1px solid var(--border)', paddingBottom: '8px' }}>3. Wishlist Behavior</h2>
-          <ul style={{ listStyle: 'none', padding: 0, margin: 0, fontSize: '0.9rem' }}>
-            {Object.entries(wishlist?.bookmarking_vs_intent || {}).map(([key, val]: [string, any], i) => (
-              <li key={i} style={{ display: 'flex', justifyContent: 'space-between', padding: '8px 0', borderBottom: '1px solid rgba(255,255,255,0.05)' }}>
-                <span>{key}</span>
-                <strong style={{ color: 'var(--accent-violet)' }}>{val}</strong>
-              </li>
-            ))}
-          </ul>
-        </div>
-
-        {/* 4. PURCHASE BARRIERS */}
-        <div className="glass-card" style={{ padding: '16px' }}>
-          <h2 style={{ fontSize: '1.2rem', marginBottom: '16px', borderBottom: '1px solid var(--border)', paddingBottom: '8px' }}>4. Purchase Barriers</h2>
-          <ul style={{ listStyle: 'none', padding: 0, margin: 0, fontSize: '0.9rem' }}>
-            {Object.entries(barriers?.top_barriers || {}).slice(0, 5).map(([key, val]: [string, any], i) => (
-              <li key={i} style={{ padding: '8px 0', borderBottom: '1px solid rgba(255,255,255,0.05)' }}>
-                <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '4px' }}>
-                  <span style={{ fontWeight: 'bold' }}>{key}</span>
-                  <strong style={{ color: '#ff4d4d' }}>{val.total_mentions}</strong>
                 </div>
-                <div style={{ fontSize: '0.75rem', color: 'var(--text-secondary)' }}>
-                  {val.unique_supporting_records} unique records
+                <p className="font-body-md text-body-md text-on-surface-variant flex-1 mb-4">
+                  This barrier was mentioned {barrierData.total_mentions} times across {barrierData.unique_supporting_records} unique records.
+                </p>
+                <div className="mt-auto">
+                  <button className="font-label-sm text-label-sm text-primary flex items-center gap-1 group-hover:underline">
+                    View evidence <span className="material-symbols-outlined text-[14px]">arrow_forward</span>
+                  </button>
                 </div>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </div>
-
-      <div className="grid-2" style={{ marginTop: '24px' }}>
-        {/* 5. EXTERNAL INFORMATION SEEKING */}
-        <div className="glass-card" style={{ padding: '16px' }}>
-          <h2 style={{ fontSize: '1.2rem', marginBottom: '16px', borderBottom: '1px solid var(--border)', paddingBottom: '8px' }}>5. External Information Seeking</h2>
-          <div style={{ marginBottom: '16px' }}>
-            {Object.entries(research?.research_types || {}).map(([key, val]: [string, any], i) => (
-              <div key={i} style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.9rem', marginBottom: '4px' }}>
-                <span>{key}</span>
-                <strong>{val}</strong>
               </div>
             ))}
           </div>
-          <h3 style={{ fontSize: '0.9rem', color: 'var(--text-secondary)', marginBottom: '8px' }}>Information Sought:</h3>
-          <ul style={{ paddingLeft: '20px', fontSize: '0.8rem', color: 'var(--text-secondary)' }}>
-            {Object.entries(research?.information_sought || {}).slice(0, 5).map(([key, val]: [string, any], i) => (
-              <li key={i}>{key} ({val})</li>
-            ))}
-          </ul>
         </div>
 
-        {/* 6. USER SEGMENTS */}
-        <div className="glass-card" style={{ padding: '16px' }}>
-          <h2 style={{ fontSize: '1.2rem', marginBottom: '16px', borderBottom: '1px solid var(--border)', paddingBottom: '8px' }}>6. User Segments</h2>
-          <ul style={{ listStyle: 'none', padding: 0, margin: 0, fontSize: '0.9rem' }}>
-            {Object.entries(segments?.segments || {}).slice(0, 5).map(([key, val]: [string, any], i) => (
-              <li key={i} style={{ padding: '8px 0', borderBottom: '1px solid rgba(255,255,255,0.05)' }}>
-                <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '4px' }}>
-                  <span style={{ fontWeight: 'bold', color: 'var(--accent-cyan)' }}>{key}</span>
-                  <strong>{val.count}</strong>
-                </div>
-                <div style={{ fontSize: '0.75rem', color: 'var(--text-secondary)' }}>
-                  Top Barrier: {val.top_barriers?.[0] || 'None'}
-                </div>
-              </li>
-            ))}
-          </ul>
+        {/* Opportunities Table */}
+        <div className="mb-stack-lg">
+          <div className="bg-surface rounded-xl border border-outline-variant overflow-hidden">
+            <div className="p-6 border-b border-outline-variant bg-surface-container-lowest">
+              <h2 className="font-h2 text-h2 text-on-surface">Top Wishlist → Purchase Opportunities</h2>
+            </div>
+            <div className="overflow-x-auto">
+              <table className="w-full text-left border-collapse">
+                <thead>
+                  <tr className="bg-surface-container-low border-b border-outline-variant">
+                    <th className="p-4 font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Opportunity</th>
+                    <th className="p-4 font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Outcome</th>
+                    <th className="p-4 font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold text-right">Score</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-outline-variant font-body-md text-body-md">
+                  {opportunities?.slice(0, 5).map((opp: any, idx: number) => (
+                    <tr key={idx} className="hover:bg-surface-variant/50 transition-colors">
+                      <td className="p-4 font-label-md text-label-md text-on-surface">{opp.opportunity_statement}</td>
+                      <td className="p-4 text-on-surface-variant">{opp.product_outcome}</td>
+                      <td className="p-4 text-right font-label-md text-label-md text-on-surface">{opp.score}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+            <div className="p-3 bg-surface-container-low border-t border-outline-variant flex justify-end gap-4 font-label-sm text-label-sm text-on-surface-variant">
+              <span className="flex items-center gap-1"><span className="w-2 h-2 rounded-full bg-primary/50"></span> Validation opportunity</span>
+              <span className="flex items-center gap-1"><span className="w-2 h-2 rounded-full bg-outline"></span> Requires primary research</span>
+            </div>
+          </div>
         </div>
-      </div>
-
-      {/* 7. OPPORTUNITY RANKING & 8. EVIDENCE EXPLORER */}
-      <h2 style={{ marginTop: '48px' }}>7. Opportunity Ranking & 8. Evidence Explorer</h2>
-      <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem', marginBottom: '24px' }}>
-        Opportunities are scored transparently (0-5). Click 'View Evidence' to see the exact user quotes backing this opportunity.
-      </p>
-
-      <div className="grid-2">
-        {opportunities?.map((opp: any, idx: number) => (
-          <OpportunityCard key={idx} opp={opp} />
-        ))}
-      </div>
-    </div>
+      </main>
+    </>
   );
 }
