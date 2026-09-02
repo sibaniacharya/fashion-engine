@@ -1,4 +1,4 @@
-export const API_BASE = 'http://127.0.0.1:8000/api';
+export const API_BASE = process.env.NEXT_PUBLIC_API_URL || 'http://127.0.0.1:8000/api';
 
 /**
  * Shared fetcher that safely catches all 404s/500s and returns a fallback structure.
