@@ -3,18 +3,17 @@ export const API_BASE = process.env.NEXT_PUBLIC_API_URL || 'http://127.0.0.1:800
 /**
  * Shared fetcher that safely catches all 404s/500s and returns a fallback structure.
  */
-async function fetchSafe<T>(endpoint: string, fallback: T): Promise<T> {
+async function fetchSafe<T>(endpoint: string): Promise<T> {
   try {
     const res = await fetch(`${API_BASE}${endpoint}`, { cache: 'no-store' });
     if (!res.ok) {
-      console.error(`API Error on ${endpoint}: ${res.statusText}`);
-      return fallback;
+      throw new Error(`API Error on ${endpoint}: ${res.statusText}`);
     }
     const data = await res.json();
     return data as T;
   } catch (error) {
     console.error(`Network Error on ${endpoint}:`, error);
-    return fallback;
+    throw error;
   }
 }
 
@@ -100,41 +99,17 @@ export interface UserSegments {
 // ---------------------------------------------------------
 
 export const ApiClient = {
-  getDashboard: () => fetchSafe<DashboardMetrics>('/dashboard', {
-    total_records_processed: 0, top_opportunities: [], top_themes: []
-  }),
-
-  getDataQuality: () => fetchSafe<DataQuality>('/data-quality', {
-    raw: 0, valid: 0, eligible: 0, llm_analyzed: 0, fallback_analyzed: 0,
-    failed: 0, deferred_rate_limit: 0, deferred_quota: 0, source_coverage: {}
-  }),
-
-  getThemes: (page = 1, size = 10) => fetchSafe<PaginatedThemes>(`/themes?page=${page}&size=${size}`, {
-    data: [], total: 0, page: 1, size: 10, message: "Insufficient evidence to identify reliable recurring themes from the currently analyzed records."
-  }),
-
-  getWishlistBehavior: () => fetchSafe<WishlistBehavior>('/wishlist-behavior', {
-    total_valid_records: 0, total_wishlist_mentions: 0, bookmarking_vs_intent: {},
-    postponement_reasons: {}, by_source: {}, by_segment: {}, by_theme: {}
-  }),
-
-  getPurchaseBarriers: () => fetchSafe<PurchaseBarriers>('/purchase-barriers', {
-    total_barriers_identified: 0, top_barriers: {}, top_uncertainties: {},
-    by_source: {}, by_segment: {}, by_theme: {}, correlation_with_comparison: 0
-  }),
-
-  getExternalResearch: () => fetchSafe<ExternalResearch>('/external-research', {
-    total_external_research_events: 0, research_types: {}, information_sought: {},
-    alternatives_considered: [], by_source: {}, by_segment: {}, by_theme: {}
-  }),
-
-  getSegments: () => fetchSafe<UserSegments>('/segments', {
-    total_records_classified: 0, segments: {}
-  }),
-
-  getOpportunities: () => fetchSafe<any[]>('/opportunities', []),
-
-  getEvidence: (page = 1, size = 20) => fetchSafe<PaginatedEvidence>(`/evidence?page=${page}&size=${size}`, {
-    data: [], total: 0, page: 1, size: 20
-  })
+  getDashboard: () => fetchSafe<DashboardMetrics>('/dashboard'),
+  getDataQuality: () => fetchSafe<DataQuality>('/data-quality'),
+  getThemes: (page = 1, size = 10) => fetchSafe<PaginatedThemes>(`/themes?page=${page}&size=${size}`),
+  getWishlistBehavior: () => fetchSafe<WishlistBehavior>('/wishlist-behavior'),
+  getPurchaseBarriers: () => fetchSafe<PurchaseBarriers>('/purchase-barriers'),
+  getExternalResearch: () => fetchSafe<ExternalResearch>('/external-research'),
+  getSegments: () => fetchSafe<UserSegments>('/segments'),
+  getOpportunities: () => fetchSafe<any[]>('/opportunities'),
+  getEvidence: (page = 1, size = 20, source?: string) => {
+    let url = `/evidence?page=${page}&size=${size}`;
+    if (source) url += `&source=${encodeURIComponent(source)}`;
+    return fetchSafe<PaginatedEvidence>(url);
+  }
 };

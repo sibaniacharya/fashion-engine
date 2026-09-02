@@ -13,6 +13,7 @@ export default function Overview() {
   const [segments, setSegments] = useState<UserSegments | null>(null);
   const [opportunities, setOpportunities] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     Promise.all([
@@ -32,15 +33,27 @@ export default function Overview() {
       setBarriers(b);
       setResearch(r);
       setSegments(s);
-      setOpportunities(o);
+      setOpportunities(o || []);
       setLoading(false);
-    }).catch(e => console.error(e));
+    }).catch(e => {
+      console.error(e);
+      setError("Failed to load dashboard data. Please check API connection.");
+      setLoading(false);
+    });
   }, []);
 
   if (loading) {
     return (
-      <div className="flex-1 flex items-center justify-center">
+      <div className="flex-1 flex items-center justify-center h-screen">
         <div className="font-label-md text-label-md text-on-surface-variant">Loading dashboard...</div>
+      </div>
+    );
+  }
+
+  if (error) {
+    return (
+      <div className="flex-1 flex items-center justify-center h-screen">
+        <div className="font-label-md text-label-md text-error">{error}</div>
       </div>
     );
   }
@@ -132,9 +145,9 @@ export default function Overview() {
                 <tbody className="divide-y divide-outline-variant font-body-md text-body-md">
                   {opportunities?.slice(0, 5).map((opp: any, idx: number) => (
                     <tr key={idx} className="hover:bg-surface-variant/50 transition-colors">
-                      <td className="p-4 font-label-md text-label-md text-on-surface">{opp.opportunity_statement}</td>
-                      <td className="p-4 text-on-surface-variant">{opp.product_outcome}</td>
-                      <td className="p-4 text-right font-label-md text-label-md text-on-surface">{opp.score}</td>
+                      <td className="p-4 font-label-md text-label-md text-on-surface">{opp.structured_statement || opp.opportunity_name}</td>
+                      <td className="p-4 text-on-surface-variant">{opp.problem}</td>
+                      <td className="p-4 text-right font-label-md text-label-md text-on-surface">{opp.opportunity_score}</td>
                     </tr>
                   ))}
                 </tbody>

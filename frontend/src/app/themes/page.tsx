@@ -8,6 +8,8 @@ export default function Themes() {
   const [loading, setLoading] = useState(true);
   const [selectedTheme, setSelectedTheme] = useState<any | null>(null);
 
+  const [error, setError] = useState<string | null>(null);
+
   useEffect(() => {
     ApiClient.getThemes(1, 100)
       .then(d => {
@@ -17,13 +19,25 @@ export default function Themes() {
           setSelectedTheme(d.data[0]); // Select first theme by default
         }
       })
-      .catch(e => console.error(e));
+      .catch(e => {
+        console.error(e);
+        setError("Failed to load themes.");
+        setLoading(false);
+      });
   }, []);
 
   if (loading) {
     return (
-      <div className="flex-1 flex items-center justify-center">
+      <div className="flex-1 flex items-center justify-center h-screen">
         <div className="font-label-md text-label-md text-on-surface-variant">Loading themes...</div>
+      </div>
+    );
+  }
+
+  if (error) {
+    return (
+      <div className="flex-1 flex items-center justify-center h-screen">
+        <div className="font-label-md text-label-md text-error">{error}</div>
       </div>
     );
   }
@@ -31,7 +45,7 @@ export default function Themes() {
   return (
     <>
       <TopAppBar title="Themes" breadcrumbs={['Discovery Engine', 'Themes']} />
-      
+
       <main className="flex-1 p-margin-page mx-auto w-full max-w-container-max flex flex-col gap-6">
         {/* Page Header */}
         <div className="flex flex-col gap-1 mb-2">
@@ -41,7 +55,7 @@ export default function Themes() {
 
         {/* Bento Layout for Table and Drawer */}
         <div className="flex gap-6 items-start">
-          
+
           {/* Main Themes Table Container */}
           <div className="flex-1 bg-surface-container-lowest border border-outline-variant rounded-xl overflow-hidden shadow-sm flex flex-col min-w-[700px]">
             <div className="p-4 border-b border-outline-variant bg-surface flex justify-between items-center">
@@ -51,7 +65,7 @@ export default function Themes() {
                 Filter
               </button>
             </div>
-            
+
             <div className="overflow-x-auto">
               <table className="w-full text-left border-collapse">
                 <thead>
@@ -73,14 +87,14 @@ export default function Themes() {
                   ) : (
                     data.data.map((theme: any, idx: number) => {
                       const isSelected = selectedTheme?.theme_name === theme.theme_name;
-                      
+
                       return (
-                        <tr 
-                          key={idx} 
+                        <tr
+                          key={idx}
                           onClick={() => setSelectedTheme(theme)}
                           className={`border-b border-outline-variant cursor-pointer group h-12 transition-colors ${
-                            isSelected 
-                              ? 'bg-primary-fixed/20 border-l-4 border-l-primary' 
+                            isSelected
+                              ? 'bg-primary-fixed/20 border-l-4 border-l-primary'
                               : 'hover:bg-surface-container-low'
                           }`}
                         >
@@ -123,7 +137,7 @@ export default function Themes() {
               </table>
             </div>
           </div>
-          
+
           {/* Detail Drawer (Right panel) */}
           {selectedTheme && (
             <div className="w-[360px] bg-surface-container-lowest border border-outline-variant rounded-xl flex flex-col shadow-sm flex-shrink-0 sticky top-24">
@@ -132,14 +146,14 @@ export default function Themes() {
                   <div className="font-label-sm text-label-sm text-primary mb-1 uppercase tracking-wider">Theme Details</div>
                   <h2 className="font-h1 text-h1 text-on-surface leading-tight">{selectedTheme.theme_name}</h2>
                 </div>
-                <button 
+                <button
                   onClick={() => setSelectedTheme(null)}
                   className="text-on-surface-variant hover:text-on-surface p-1 rounded hover:bg-surface-variant transition-colors"
                 >
                   <span className="material-symbols-outlined">close</span>
                 </button>
               </div>
-              
+
               <div className="p-5 flex flex-col gap-6 flex-1 overflow-y-auto">
                 {/* Metadata Grid */}
                 <div className="grid grid-cols-2 gap-4">
@@ -157,9 +171,9 @@ export default function Themes() {
                     </div>
                   </div>
                 </div>
-                
+
                 <hr className="border-outline-variant/50" />
-                
+
                 {/* Content Sections */}
                 <div>
                   <h3 className="font-label-md text-label-md text-secondary mb-2 flex items-center gap-2">
@@ -170,7 +184,7 @@ export default function Themes() {
                     {selectedTheme.description}
                   </p>
                 </div>
-                
+
                 {selectedTheme.supporting_evidence && selectedTheme.supporting_evidence.length > 0 && (
                   <div>
                     <h3 className="font-label-md text-label-md text-secondary mb-2 flex items-center gap-2">
@@ -189,7 +203,7 @@ export default function Themes() {
                     </div>
                   </div>
                 )}
-                
+
               </div>
               <div className="p-4 border-t border-outline-variant bg-surface rounded-b-xl">
                 <button className="w-full bg-primary text-on-primary font-label-md text-label-md py-2.5 px-4 rounded-lg hover:bg-primary/90 transition-colors shadow-sm flex items-center justify-center gap-2">

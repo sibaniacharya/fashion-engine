@@ -31,10 +31,10 @@ export default function Validation() {
   return (
     <>
       <TopAppBar title="Discovery Engine" />
-      
+
       <main className="flex-1 overflow-y-auto custom-scrollbar p-margin-page">
         <div className="max-w-[1440px] mx-auto space-y-gutter">
-          
+
           {/* Page Header */}
           <div className="flex justify-between items-end mb-8">
             <div>
@@ -51,7 +51,7 @@ export default function Validation() {
           <section className="bg-white rounded-xl border border-outline-variant p-6 mb-gutter relative overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-r from-surface-container-low to-transparent opacity-50 pointer-events-none"></div>
             <h3 className="font-h2 text-h2 text-on-surface mb-6 relative z-10">Ingestion Flow</h3>
-            
+
             <div className="flex items-center justify-between relative z-10 px-4">
               {/* Node 1 */}
               <div className="flex flex-col items-center flex-1 relative">
@@ -62,7 +62,7 @@ export default function Validation() {
                 <span className="font-display-sm text-display-sm text-on-background mt-1">{quality?.raw || 0}</span>
                 <div className="absolute top-8 left-[50%] w-full h-[2px] bg-outline-variant -z-10"></div>
               </div>
-              
+
               {/* Node 2 */}
               <div className="flex flex-col items-center flex-1 relative">
                 <div className="w-16 h-16 rounded-lg bg-surface-container-high border border-outline-variant flex items-center justify-center mb-3 shadow-sm z-10">
@@ -72,7 +72,7 @@ export default function Validation() {
                 <span className="font-label-sm text-label-sm text-on-surface-variant mt-1">Deduplication & Formatting</span>
                 <div className="absolute top-8 left-[50%] w-full h-[2px] bg-outline-variant -z-10"></div>
               </div>
-              
+
               {/* Node 3 */}
               <div className="flex flex-col items-center flex-1 relative">
                 <div className="w-16 h-16 rounded-lg bg-primary/10 border border-primary flex items-center justify-center mb-3 shadow-sm z-10">
@@ -82,7 +82,7 @@ export default function Validation() {
                 <span className="font-display-sm text-display-sm text-primary mt-1">{quality?.eligible || 0}</span>
                 <div className="absolute top-8 left-[50%] w-full h-[2px] bg-primary/30 -z-10"></div>
               </div>
-              
+
               {/* Node 4 */}
               <div className="flex flex-col items-center flex-1 relative">
                 <div className="w-16 h-16 rounded-lg bg-primary border border-primary flex items-center justify-center mb-3 shadow-sm z-10 pipeline-active">
@@ -92,7 +92,7 @@ export default function Validation() {
                 <span className="font-label-sm text-label-sm text-on-surface-variant mt-1">Feature Extraction</span>
                 <div className="absolute top-8 left-[50%] w-full h-[2px] bg-primary/30 -z-10"></div>
               </div>
-              
+
               {/* Node 5 */}
               <div className="flex flex-col items-center flex-1 relative">
                 <div className="w-16 h-16 rounded-lg bg-surface-container-high border border-outline-variant flex items-center justify-center mb-3 shadow-sm z-10">
@@ -106,7 +106,7 @@ export default function Validation() {
 
           {/* Bento Grid Layout for Details */}
           <div className="grid grid-cols-12 gap-gutter">
-            
+
             {/* Exclusion Breakdown */}
             <section className="col-span-12 lg:col-span-8 bg-white rounded-xl border border-outline-variant p-6">
               <div className="flex justify-between items-center mb-6">
@@ -115,7 +115,7 @@ export default function Validation() {
                   View Logs <span className="material-symbols-outlined text-[16px]">open_in_new</span>
                 </button>
               </div>
-              
+
               <div className="space-y-4">
                 <div className="flex items-center justify-between p-3 rounded-lg border border-surface-variant hover:bg-surface-container-low transition-colors">
                   <div className="flex items-center gap-3">
@@ -126,7 +126,7 @@ export default function Validation() {
                   </div>
                   <span className="font-h2 text-h2 text-on-surface">{quality?.non_english || 0}</span>
                 </div>
-                
+
                 <div className="flex items-center justify-between p-3 rounded-lg border border-surface-variant hover:bg-surface-container-low transition-colors">
                   <div className="flex items-center gap-3">
                     <div className="w-8 h-8 rounded-full bg-surface-variant flex items-center justify-center">
@@ -136,7 +136,7 @@ export default function Validation() {
                   </div>
                   <span className="font-h2 text-h2 text-on-surface">{quality?.empty_content || 0}</span>
                 </div>
-                
+
                 <div className="flex items-center justify-between p-3 rounded-lg border border-surface-variant hover:bg-surface-container-low transition-colors">
                   <div className="flex items-center gap-3">
                     <div className="w-8 h-8 rounded-full bg-surface-variant flex items-center justify-center">
@@ -146,7 +146,7 @@ export default function Validation() {
                   </div>
                   <span className="font-h2 text-h2 text-on-surface">{quality?.duplicates || 0}</span>
                 </div>
-                
+
                 <div className="flex items-center justify-between p-3 rounded-lg border border-surface-variant hover:bg-surface-container-low transition-colors">
                   <div className="flex items-center gap-3">
                     <div className="w-8 h-8 rounded-full bg-surface-variant flex items-center justify-center">
@@ -156,7 +156,7 @@ export default function Validation() {
                   </div>
                   <span className="font-h2 text-h2 text-on-surface">{quality?.spam || 0}</span>
                 </div>
-                
+
                 <div className="flex items-center justify-between p-3 rounded-lg border border-surface-variant hover:bg-surface-container-low transition-colors">
                   <div className="flex items-center gap-3">
                     <div className="w-8 h-8 rounded-full bg-surface-variant flex items-center justify-center">
@@ -171,7 +171,7 @@ export default function Validation() {
 
             {/* Technical Stats */}
             <div className="col-span-12 lg:col-span-4 flex flex-col gap-gutter">
-              
+
               <section className="bg-inverse-surface rounded-xl p-6 text-on-primary">
                 <div className="flex items-center gap-2 mb-6 text-primary-fixed">
                   <span className="material-symbols-outlined">terminal</span>
@@ -180,7 +180,7 @@ export default function Validation() {
                 <ul className="space-y-4 font-body-md text-body-md text-surface-variant">
                   <li className="flex justify-between border-b border-white/10 pb-2">
                     <span>Model</span>
-                    <span className="font-label-md text-label-md text-white">Gemini 2.5 Pro</span>
+                    <span className="font-label-md text-label-md text-white">Qwen 3.8 27B</span>
                   </li>
                   <li className="flex justify-between border-b border-white/10 pb-2">
                     <span>Analyzed</span>
@@ -201,17 +201,17 @@ export default function Validation() {
                 <div>
                   <h3 className="font-h2 text-h2 text-on-surface mb-2">Analysis Status</h3>
                   <p className="font-body-sm text-body-sm text-on-surface-variant mb-6">Real-time processing overview</p>
-                  
+
                   <div className="mb-2 flex justify-between items-end">
                     <span className="font-label-md text-label-md text-on-surface">{completionPercentage}% Complete</span>
                     <span className="font-micro text-micro text-on-surface-variant uppercase tracking-wider">Done</span>
                   </div>
-                  
+
                   <div className="w-full h-2 bg-surface-variant rounded-full overflow-hidden mb-4">
                     <div className="h-full bg-primary rounded-full" style={{ width: `${completionPercentage}%` }}></div>
                   </div>
                 </div>
-                
+
                 <div className="mt-4 pt-4 border-t border-surface-variant">
                   <p className="font-label-md text-label-md text-on-surface mb-1 flex items-center gap-2">
                     <span className="material-symbols-outlined text-[16px] text-primary">check_circle</span>

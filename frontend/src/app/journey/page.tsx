@@ -1,24 +1,38 @@
 'use client';
 import { useEffect, useState } from 'react';
+import TopAppBar from '@/components/TopAppBar';
 import { ApiClient, WishlistBehavior, PurchaseBarriers, ExternalResearch } from '@/lib/api';
 
 const WISHLIST_LABELS: Record<string, string> = {
-  EXPLICIT_WISHLIST: "Explicit wishlist behavior",
+  EXPLICIT_WISHLIST: "Explicit wishlist",
   EXPLICIT_PURCHASE_INTENT: "Explicit purchase intent",
   GENERAL_PRODUCT_INTEREST: "General product interest",
   PURCHASE_EVALUATION: "Purchase evaluation",
-  COMPARISON: "Comparison behavior",
-  POSTPONEMENT: "Purchase postponement",
-  ABANDONMENT: "Purchase abandonment",
-  BOOKMARKING: "Bookmarking behavior",
-  UNKNOWN: "Unknown intent"
+  COMPARISON: "Comparison",
+  POSTPONEMENT: "Postponement",
+  ABANDONMENT: "Abandonment",
+  BOOKMARKING: "Bookmarking",
+  UNKNOWN: "Unknown"
 };
+
+const JOURNEY_STAGES = [
+  "Product Discovery",
+  "Product Interest",
+  "Wishlist",
+  "Wishlist Revisit",
+  "Evaluation",
+  "Comparison",
+  "Purchase Intent",
+  "Checkout",
+  "Purchase"
+];
 
 export default function Journey() {
   const [wishlist, setWishlist] = useState<WishlistBehavior | null>(null);
   const [barriers, setBarriers] = useState<PurchaseBarriers | null>(null);
   const [research, setResearch] = useState<ExternalResearch | null>(null);
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     Promise.all([
@@ -30,109 +44,109 @@ export default function Journey() {
       setBarriers(b);
       setResearch(r);
       setLoading(false);
-    }).catch(e => console.error(e));
+    }).catch(e => {
+      console.error(e);
+      setError("Failed to load journey data.");
+      setLoading(false);
+    });
   }, []);
 
-  if (loading) return <div>Loading...</div>;
+  if (loading) {
+    return (
+      <div className="flex-1 flex items-center justify-center h-screen">
+        <div className="font-label-md text-label-md text-on-surface-variant">Loading journey analytics...</div>
+      </div>
+    );
+  }
 
-  const validRecords = wishlist?.total_valid_records || 1;
-  const explicitIntent = wishlist?.bookmarking_vs_intent?.EXPLICIT_PURCHASE_INTENT || 0;
-  const explicitWishlist = wishlist?.bookmarking_vs_intent?.EXPLICIT_WISHLIST || 0;
-  const intentPercentage = Math.round((explicitIntent / validRecords) * 100);
+  if (error) {
+    return (
+      <div className="flex-1 flex items-center justify-center h-screen">
+        <div className="font-label-md text-label-md text-error">{error}</div>
+      </div>
+    );
+  }
 
   return (
-    <div>
-      <h1 className="gradient-text">Journey Analytics</h1>
-      <p>Tracking the Wishlist-to-Purchase Funnel</p>
+    <>
+      <TopAppBar title="Customer Journey" breadcrumbs={['Discovery Engine', 'Journey Analytics']} />
 
-      <div className="grid-2" style={{ marginTop: '32px' }}>
-        <div className="glass-card">
-          <h2>Why Users Wishlist</h2>
-          <p style={{ fontSize: '0.85rem', marginBottom: '16px', color: 'var(--text-secondary)' }}>
-            {explicitIntent} of {validRecords} valid records ({intentPercentage}%) contain explicit purchase-intent signals.
+      <main className="flex-1 p-margin-page mx-auto w-full max-w-container-max flex flex-col gap-8">
+
+        <div className="flex flex-col gap-2">
+          <h1 className="font-display-lg text-display-lg text-on-surface">Product Journey Model</h1>
+          <p className="font-body-md text-body-md text-on-surface-variant max-w-3xl">
+            This research framework tracks qualitative feedback mapped to theoretical stages of the wishlist-to-purchase funnel.
+            <br/><span className="text-error font-medium">Disclaimer:</span> This model represents observed friction in public feedback, not actual measured conversion drop-offs.
           </p>
-          {explicitWishlist === 0 && explicitIntent === 0 ? (
-            <p style={{ color: 'var(--text-secondary)' }}>
-              No explicit wishlist or purchase intent signals exist in this dataset. Public feedback contains limited direct wishlist evidence.
+        </div>
+
+        {/* Theoretical Funnel Graphic */}
+        <section className="bg-surface-container-lowest border border-outline-variant rounded-xl p-6 shadow-sm">
+          <h2 className="font-h2 text-h2 text-on-surface mb-6">Wishlist-to-Purchase Theoretical Framework</h2>
+          <div className="flex flex-wrap gap-2 items-center text-sm font-medium text-on-surface-variant">
+            {JOURNEY_STAGES.map((stage, idx) => (
+              <div key={idx} className="flex items-center gap-2">
+                <span className="px-3 py-1.5 bg-surface-container-low border border-outline-variant rounded-full text-center">
+                  {stage}
+                </span>
+                {idx < JOURNEY_STAGES.length - 1 && (
+                  <span className="material-symbols-outlined text-outline-variant">arrow_forward</span>
+                )}
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+
+          {/* Wishlist Intent Signals */}
+          <section className="bg-surface-container-lowest border border-outline-variant rounded-xl p-6 shadow-sm flex flex-col">
+            <h2 className="font-h2 text-h2 text-on-surface mb-2">Wishlist Intent Signals</h2>
+            <p className="font-body-sm text-body-sm text-on-surface-variant mb-6">
+              Distribution of intent signals mined from the dataset.
             </p>
-          ) : (
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px' }}>
-              {Object.entries(wishlist?.bookmarking_vs_intent || {}).map(([intentKey, count]: any) => (
-                <div key={intentKey}>
-                  <div style={{ fontSize: '1.5rem', fontWeight: 700, color: 'var(--accent-cyan)' }}>{count}</div>
-                  <div style={{ fontSize: '0.8rem', color: 'var(--text-secondary)' }}>{WISHLIST_LABELS[intentKey] || intentKey}</div>
+
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+              {Object.entries(wishlist?.bookmarking_vs_intent || {}).sort((a: any, b: any) => b[1] - a[1]).map(([intentKey, count]: any) => (
+                <div key={intentKey} className="bg-surface-container-low p-4 rounded-lg border border-outline-variant">
+                  <div className="font-display-md text-display-md text-primary mb-1">{count}</div>
+                  <div className="font-label-sm text-label-sm text-on-surface-variant">
+                    {WISHLIST_LABELS[intentKey] || intentKey}
+                  </div>
                 </div>
               ))}
             </div>
-          )}
-        </div>
+          </section>
 
-        <div className="glass-card">
-          <h2>Aggregated Purchase Barriers</h2>
-          <p style={{ fontSize: '0.85rem', marginBottom: '16px', color: 'var(--text-secondary)' }}>
-            Top reasons users abandon or postpone purchases.
-          </p>
-          {barriers?.top_barriers && Object.keys(barriers.top_barriers).length > 0 ? (
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
-              {Object.entries(barriers.top_barriers).map(([b, data]: any) => (
-                <div key={b} style={{ padding: '12px', background: 'rgba(255,255,255,0.05)', borderRadius: '8px' }}>
-                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                    <strong>{b}</strong>
-                    <span className="badge badge-violet">{data.percentage_of_relevant}% of barriers</span>
-                  </div>
-                  <div style={{ fontSize: '0.8rem', color: 'var(--text-secondary)', marginTop: '4px' }}>
-                    {data.total_mentions} total mentions across {data.unique_supporting_records} unique records.
+          {/* Friction Points mapped to Journey */}
+          <section className="bg-surface-container-lowest border border-outline-variant rounded-xl p-6 shadow-sm flex flex-col">
+            <h2 className="font-h2 text-h2 text-on-surface mb-2">Observed Friction Points</h2>
+            <p className="font-body-sm text-body-sm text-on-surface-variant mb-6">
+              Top reasons users reported abandoning or postponing purchases.
+            </p>
+
+            <div className="flex flex-col gap-3 flex-1 overflow-y-auto">
+              {barriers?.top_barriers && Object.entries(barriers.top_barriers).map(([b, data]: any) => (
+                <div key={b} className="bg-surface-container-low p-4 rounded-lg border border-outline-variant">
+                  <div className="flex justify-between items-start mb-2">
+                    <strong className="font-label-md text-label-md text-on-surface">{b}</strong>
+                    <span className="font-label-sm text-label-sm px-2 py-0.5 bg-error/10 text-error rounded">
+                      {data.total_mentions} mentions
+                    </span>
                   </div>
                   {data.representative_quotes && data.representative_quotes.length > 0 && (
-                     <p style={{ fontSize: '0.8rem', fontStyle: 'italic', marginTop: '8px', color: '#ccc' }}>
-                       "{data.representative_quotes[0]}"
-                     </p>
+                    <p className="font-body-sm text-body-sm text-on-surface-variant italic border-l-2 border-outline-variant pl-2">
+                      "{data.representative_quotes[0]}"
+                    </p>
                   )}
                 </div>
               ))}
             </div>
-          ) : (
-            <p>No postponement barriers explicitly logged in this dataset.</p>
-          )}
-        </div>
-      </div>
+          </section>
 
-      <div className="grid-2" style={{ marginTop: '24px' }}>
-        <div className="glass-card">
-          <h2>External Information Seeking</h2>
-          <p style={{ fontSize: '0.85rem', marginBottom: '16px', color: 'var(--text-secondary)' }}>
-            Behavior indicating external research outside the platform.
-          </p>
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px', marginBottom: '16px' }}>
-             {Object.entries(research?.research_types || {}).map(([type, count]: any) => (
-                <div key={type}>
-                  <div style={{ fontSize: '1.2rem', fontWeight: 700, color: 'var(--accent-violet)' }}>{count}</div>
-                  <div style={{ fontSize: '0.8rem', color: 'var(--text-secondary)' }}>{type}</div>
-                </div>
-             ))}
-          </div>
-
-          <h3 style={{ fontSize: '0.9rem', marginTop: '16px' }}>Alternatives Considered</h3>
-          {research?.alternatives_considered && research.alternatives_considered.length > 0 ? (
-            <ul style={{ paddingLeft: '16px', color: 'var(--text-secondary)' }}>
-              {research.alternatives_considered.map((alt: string, i: number) => (
-                <li key={i}>{alt}</li>
-              ))}
-            </ul>
-          ) : (
-             <p style={{ color: 'var(--text-secondary)', fontStyle: 'italic', fontSize: '0.85rem' }}>No external alternatives found.</p>
-          )}
         </div>
-
-        <div className="glass-card">
-          <h2>User Segments Affected</h2>
-          <ul style={{ paddingLeft: '16px', color: 'var(--text-secondary)' }}>
-             {barriers?.by_segment && Object.keys(barriers.by_segment).map((seg: string, i: number) => (
-               <li key={i}>{seg}</li>
-             ))}
-          </ul>
-        </div>
-      </div>
-    </div>
+      </main>
+    </>
   );
 }

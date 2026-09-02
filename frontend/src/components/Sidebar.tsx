@@ -12,7 +12,7 @@ export default function Sidebar() {
     { name: 'Opportunities', href: '/opportunities', icon: 'lightbulb' },
     { name: 'Evidence Explorer', href: '/evidence', icon: 'search_insights' },
     { name: 'Behavioral Segments', href: '/segments', icon: 'groups' },
-    { name: 'Data Quality', href: '/validation', icon: 'data_thresholding' },
+    { name: 'Data Quality', href: '/data-quality', icon: 'data_thresholding' },
   ];
 
   return (
