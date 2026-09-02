@@ -37,8 +37,8 @@ export default function Segments() {
     );
   }
 
-  const segmentsList = Array.isArray(data?.segments)
-    ? [...data.segments].sort((a: any, b: any) => (b.unique_record_count || 0) - (a.unique_record_count || 0))
+  const segmentsList = data?.segments
+    ? Object.entries(data.segments).sort((a: any, b: any) => (b[1].count || 0) - (a[1].count || 0))
     : [];
 
   return (
@@ -72,12 +72,12 @@ export default function Segments() {
                     </td>
                   </tr>
                 ) : (
-                  segmentsList.map((seg: any, idx: number) => (
+                  segmentsList.map(([name, segData]: any, idx: number) => (
                     <tr key={idx} className="border-b border-outline-variant hover:bg-surface-container-low transition-colors">
-                      <td className="py-4 px-4 font-medium text-on-surface">{seg.segment_name}</td>
+                      <td className="py-4 px-4 font-medium text-on-surface">{name}</td>
                       <td className="py-4 px-4 text-right">
                         <span className="bg-primary/10 text-primary font-medium px-3 py-1 rounded-full">
-                          {seg.unique_record_count}
+                          {segData.count}
                         </span>
                       </td>
                     </tr>
