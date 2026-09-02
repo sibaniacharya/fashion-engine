@@ -91,7 +91,7 @@ export interface ExternalResearch {
 
 export interface UserSegments {
   total_records_classified: number;
-  segments: Record<string, any>;
+  segments: any[];
 }
 
 // ---------------------------------------------------------
