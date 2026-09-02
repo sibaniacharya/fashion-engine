@@ -2,9 +2,9 @@
   {
     "opportunity_name": "Resolve: Customer Support Inaccessibili",
     "problem": "Customer Support Inaccessibility and Post-Purchase Friction",
-    "structured_statement": "Users experiencing strong product interest may postpone or abandon their purchase when they encounter 'Customer Support Inaccessibility and Post-Purchase Friction' during the POST_PURCHASE stage.",
+    "structured_statement": "The presence of 'Customer Support Inaccessibility and Post-Purchase Friction' during the Evaluation stage may contribute to potential friction, representing a validation opportunity.",
     "affected_segment": "Broadly applicable",
-    "journey_stage": "POST_PURCHASE",
+    "journey_stage": "Evaluation",
     "classification": "HIGH_CONFIDENCE_OPPORTUNITY",
     "wishlist_purchase_relevance": 2,
     "unique_evidence_records": 26,
@@ -28,7 +28,7 @@
         "date": "2026-08-23T21:16:35"
       },
       {
-        "quote": "Extremely frustrating experience with Myntra. I ordered a product and requested a return, but the app showed that the pickup partner was “out for pickup.” However, no one actually came to pick it up. After waiting 3–4 days, Myntra cancelled the return request from their side without properly resolving the issue. What’s even worse is the Help Center. The interface is so poorly designed that getting actual help feels almost impossible. There’s no proper way to explain the issue",
+        "quote": "Extremely frustrating experience with Myntra. I ordered a product and requested a return, but the app showed that the pickup partner was \u201cout for pickup.\u201d However, no one actually came to pick it up. After waiting 3\u20134 days, Myntra cancelled the return request from their side without properly resolving the issue. What\u2019s even worse is the Help Center. The interface is so poorly designed that getting actual help feels almost impossible. There\u2019s no proper way to explain the issue",
         "source": "GOOGLE_PLAY",
         "trace_id": "8f469fe4-f62b-4785-9b9b-c7e22c960419",
         "date": "2026-08-23T20:54:42"
@@ -56,9 +56,9 @@
   {
     "opportunity_name": "Resolve: Delivery and Fulfillment Unrel",
     "problem": "Delivery and Fulfillment Unreliability",
-    "structured_statement": "Users experiencing strong product interest may postpone or abandon their purchase when they encounter 'Delivery and Fulfillment Unreliability' during the POST_PURCHASE stage.",
+    "structured_statement": "The presence of 'Delivery and Fulfillment Unreliability' during the Evaluation stage may contribute to potential friction, representing a validation opportunity.",
     "affected_segment": "Broadly applicable",
-    "journey_stage": "POST_PURCHASE",
+    "journey_stage": "Evaluation",
     "classification": "OPPORTUNITY",
     "wishlist_purchase_relevance": 2,
     "unique_evidence_records": 9,
@@ -76,7 +76,7 @@
     "opportunity_score": 4.7,
     "supporting_evidence": [
       {
-        "quote": "Very disappointed with my recent Myntra experience. I placed an order for jeans on 11th August, and even after almost two weeks, it still hasn’t been delivered. There has been no proper update or satisfactory response regarding the delay. On top of that, another order (a lip balm) was cancelled on its own without any proper explanation. I’ve used Myntra expecting reliable service, but this experience has been extremely frustrating. Delayed orders are understandable sometimes, but no proper commu",
+        "quote": "Very disappointed with my recent Myntra experience. I placed an order for jeans on 11th August, and even after almost two weeks, it still hasn\u2019t been delivered. There has been no proper update or satisfactory response regarding the delay. On top of that, another order (a lip balm) was cancelled on its own without any proper explanation. I\u2019ve used Myntra expecting reliable service, but this experience has been extremely frustrating. Delayed orders are understandable sometimes, but no proper commu",
         "source": "GOOGLE_PLAY",
         "trace_id": "bc0328e0-fa81-4f30-a375-966ddd4d26a2",
         "date": "2026-08-23T21:31:34"
@@ -94,7 +94,7 @@
         "date": "2026-08-23T19:32:57"
       },
       {
-        "quote": "I am very disappointed with Myntra’s delivery service.Whenever I place an order, the app shows an expected delivery date,but later the delivery date is extended.Even after changing the date, the product is often not delivered on the new date.My order gets cancelled,which is extremely frustrating and wastes my time. If Myntra cannot deliver a product on time, it should provide accurate information instead of repeatedly changing the delivery date.",
+        "quote": "I am very disappointed with Myntra\u2019s delivery service.Whenever I place an order, the app shows an expected delivery date,but later the delivery date is extended.Even after changing the date, the product is often not delivered on the new date.My order gets cancelled,which is extremely frustrating and wastes my time. If Myntra cannot deliver a product on time, it should provide accurate information instead of repeatedly changing the delivery date.",
         "source": "GOOGLE_PLAY",
         "trace_id": "1723a187-a93b-42c6-aded-ad8422ed3873",
         "date": "2026-08-23T18:51:22"
@@ -110,9 +110,9 @@
   {
     "opportunity_name": "Resolve: Price-Quality Mismatch",
     "problem": "Price-Quality Mismatch",
-    "structured_statement": "Users experiencing strong product interest may postpone or abandon their purchase when they encounter 'Price-Quality Mismatch' during the POST_PURCHASE stage.",
+    "structured_statement": "The presence of 'Price-Quality Mismatch' during the Evaluation stage may contribute to potential friction, representing a validation opportunity.",
     "affected_segment": "Broadly applicable",
-    "journey_stage": "POST_PURCHASE",
+    "journey_stage": "Evaluation",
     "classification": "HIGH_CONFIDENCE_OPPORTUNITY",
     "wishlist_purchase_relevance": 3,
     "unique_evidence_records": 11,
@@ -142,7 +142,7 @@
         "date": "2026-08-23T19:59:35"
       },
       {
-        "quote": "good quality but little high price but quality top class 😉",
+        "quote": "good quality but little high price but quality top class \ud83d\ude09",
         "source": "GOOGLE_PLAY",
         "trace_id": "fccc0177-1daa-40e4-b05c-49fc5b06fc27",
         "date": "2026-08-24T16:21:09"
@@ -164,9 +164,9 @@
   {
     "opportunity_name": "Resolve: Pricing and Fee Friction",
     "problem": "Pricing and Fee Friction",
-    "structured_statement": "Users experiencing strong product interest may postpone or abandon their purchase when they encounter 'Pricing and Fee Friction' during the POST_PURCHASE stage.",
+    "structured_statement": "The presence of 'Pricing and Fee Friction' during the Checkout stage may contribute to potential friction, representing a validation opportunity.",
     "affected_segment": "Broadly applicable",
-    "journey_stage": "POST_PURCHASE",
+    "journey_stage": "Checkout",
     "classification": "OPPORTUNITY",
     "wishlist_purchase_relevance": 3,
     "unique_evidence_records": 6,
@@ -208,7 +208,7 @@
         "date": "2026-08-24T14:05:07"
       },
       {
-        "quote": "Myntra app tatti hai bhai 👎👎👎",
+        "quote": "Myntra app tatti hai bhai \ud83d\udc4e\ud83d\udc4e\ud83d\udc4e",
         "source": "YOUTUBE",
         "trace_id": "0770160c-33be-4f62-9a68-f1eeb593eb78",
         "date": "2026-08-24T10:25:47"
@@ -218,9 +218,9 @@
   {
     "opportunity_name": "Signal: Return and Refund Friction",
     "problem": "Return and Refund Friction",
-    "structured_statement": "Users evaluating the platform encounter friction from 'Return and Refund Friction' during the Discovery stage, which may disrupt their shopping journey.",
+    "structured_statement": "The presence of 'Return and Refund Friction' during the Evaluation stage may contribute to potential friction, representing a validation opportunity.",
     "affected_segment": "Broadly applicable",
-    "journey_stage": "POST_PURCHASE",
+    "journey_stage": "Evaluation",
     "classification": "HIGH_CONFIDENCE_OPPORTUNITY",
     "wishlist_purchase_relevance": 2,
     "unique_evidence_records": 25,
@@ -244,13 +244,13 @@
         "date": "2026-01-30T13:34:17"
       },
       {
-        "quote": "Very disappointing experience with Myntra. I ordered a dress, but I received the wrong product. I immediately raised a return request, but the return pickup is repeatedly being rescheduled without any proper resolution. I have contacted customer care multiple times, but I am not getting a satisfactory response. Every time I am asked to wait, while the pickup date keeps changing. This is extremely frustrating, especially when the mistake is clearly on Myntra’s side. I simply want my refund",
+        "quote": "Very disappointing experience with Myntra. I ordered a dress, but I received the wrong product. I immediately raised a return request, but the return pickup is repeatedly being rescheduled without any proper resolution. I have contacted customer care multiple times, but I am not getting a satisfactory response. Every time I am asked to wait, while the pickup date keeps changing. This is extremely frustrating, especially when the mistake is clearly on Myntra\u2019s side. I simply want my refund",
         "source": "GOOGLE_PLAY",
         "trace_id": "c033f5e8-2dc7-436f-946a-1f2cb92078d1",
         "date": "2026-08-24T17:34:38"
       },
       {
-        "quote": "Very disappointing experience with Myntra. I ordered a dress, but I received the wrong product. I immediately raised a return request, but the return pickup is repeatedly being rescheduled without any proper resolution.I have contacted customer care multiple times, but I am not getting a satisfactory response. Every time I am asked to wait, while the pickup date keeps changing.This is extremely frustrating, especially when the mistake is clearly on Myntra’s side. I simply want my refund.",
+        "quote": "Very disappointing experience with Myntra. I ordered a dress, but I received the wrong product. I immediately raised a return request, but the return pickup is repeatedly being rescheduled without any proper resolution.I have contacted customer care multiple times, but I am not getting a satisfactory response. Every time I am asked to wait, while the pickup date keeps changing.This is extremely frustrating, especially when the mistake is clearly on Myntra\u2019s side. I simply want my refund.",
         "source": "GOOGLE_PLAY",
         "trace_id": "774c4b5e-1920-41e6-b0f3-0aae51252afc",
         "date": "2026-08-24T17:26:07"
@@ -272,9 +272,9 @@
   {
     "opportunity_name": "Resolve: Brand Trust and Authenticity C",
     "problem": "Brand Trust and Authenticity Concerns",
-    "structured_statement": "Users experiencing strong product interest may postpone or abandon their purchase when they encounter 'Brand Trust and Authenticity Concerns' during the UNKNOWN stage.",
+    "structured_statement": "The presence of 'Brand Trust and Authenticity Concerns' during the Evaluation stage may contribute to potential friction, representing a validation opportunity.",
     "affected_segment": "Broadly applicable",
-    "journey_stage": "UNKNOWN",
+    "journey_stage": "Evaluation",
     "classification": "OPPORTUNITY",
     "wishlist_purchase_relevance": 1,
     "unique_evidence_records": 6,
@@ -316,7 +316,7 @@
         "date": "2026-08-23T06:26:28"
       },
       {
-        "quote": "0:02 Myntra ❌ Meesho ✅",
+        "quote": "0:02 Myntra \u274c Meesho \u2705",
         "source": "YOUTUBE",
         "trace_id": "9580d61c-bc50-43d2-a6db-43ed531a8bf3",
         "date": "2026-08-23T04:53:29"
@@ -326,9 +326,9 @@
   {
     "opportunity_name": "Signal: Fit / Size Uncertainty",
     "problem": "Fit / Size Uncertainty",
-    "structured_statement": "Users evaluating the platform encounter friction from 'Fit / Size Uncertainty' during the Discovery stage, which may disrupt their shopping journey.",
+    "structured_statement": "The presence of 'Fit / Size Uncertainty' during the Evaluation stage may contribute to potential friction, representing a validation opportunity.",
     "affected_segment": "Broadly applicable",
-    "journey_stage": "Discovery",
+    "journey_stage": "Evaluation",
     "classification": "HIGH_CONFIDENCE_OPPORTUNITY",
     "wishlist_purchase_relevance": 4,
     "unique_evidence_records": 12,
@@ -364,13 +364,13 @@
         "date": "2026-03-28T05:17:44"
       },
       {
-        "quote": "Straight fit jeans 👖 wala video bana do please 🥺🙏🥺🙏 😊 kab Se wait kar raha hu",
+        "quote": "Straight fit jeans \ud83d\udc56 wala video bana do please \ud83e\udd7a\ud83d\ude4f\ud83e\udd7a\ud83d\ude4f \ud83d\ude0a kab Se wait kar raha hu",
         "source": "YOUTUBE",
         "trace_id": "d9c65fdd-1f6b-4e7a-b31c-499484fee685",
         "date": "2026-08-23T04:52:20"
       },
       {
-        "quote": "Hiiii didi,Is baggy jeans fit for 4\"11 height girls ???? Please tell me ,🙏🏿🙏🏿",
+        "quote": "Hiiii didi,Is baggy jeans fit for 4\"11 height girls ???? Please tell me ,\ud83d\ude4f\ud83c\udfff\ud83d\ude4f\ud83c\udfff",
         "source": "YOUTUBE",
         "trace_id": "59af235e-47f0-4b29-b64e-1806ff404985",
         "date": "2026-03-21T16:09:57"
@@ -380,9 +380,9 @@
   {
     "opportunity_name": "Signal: Account Access and Security Is",
     "problem": "Account Access and Security Issues",
-    "structured_statement": "Users experiencing strong product interest may postpone or abandon their purchase when they encounter 'Account Access and Security Issues' during the Post-purchase stage.",
+    "structured_statement": "The presence of 'Account Access and Security Issues' during the Checkout stage may contribute to potential friction, representing a validation opportunity.",
     "affected_segment": "Broadly applicable",
-    "journey_stage": "Post-purchase",
+    "journey_stage": "Checkout",
     "classification": "EMERGING_SIGNAL",
     "wishlist_purchase_relevance": 4,
     "unique_evidence_records": 4,
@@ -400,7 +400,7 @@
     "opportunity_score": 3.5,
     "supporting_evidence": [
       {
-        "quote": "Myntra Review Myntra has been my favorite shopping platform for the past 7 years, and overall, I’ve always had a great experience. The product quality is really good, and I’ve been happy with most of my purchases. ❤️ Recently, I faced an issue while trying to create and log in to a new account. The login process isn’t working properly, which is quite frustrating. Please look into this issue and fix it as soon as possible. Apart from this, my overall experience with Myntra has been very good,",
+        "quote": "Myntra Review Myntra has been my favorite shopping platform for the past 7 years, and overall, I\u2019ve always had a great experience. The product quality is really good, and I\u2019ve been happy with most of my purchases. \u2764\ufe0f Recently, I faced an issue while trying to create and log in to a new account. The login process isn\u2019t working properly, which is quite frustrating. Please look into this issue and fix it as soon as possible. Apart from this, my overall experience with Myntra has been very good,",
         "source": "GOOGLE_PLAY",
         "trace_id": "3a786d2f-6e4b-4899-9652-53f08d71ced6",
         "date": "2026-08-23T21:48:27"
@@ -412,7 +412,7 @@
         "date": "2026-08-23T19:36:26"
       },
       {
-        "quote": "★☆☆☆☆ Extremely disappointing experience. My Myntra account was compromised, and someone else was able to access and use the account while it was still logged in on another device. The account security and session management need serious improvement. I eventually had to delete my account because I could not feel confident that it was secure. Very frustrating experience.",
+        "quote": "\u2605\u2606\u2606\u2606\u2606 Extremely disappointing experience. My Myntra account was compromised, and someone else was able to access and use the account while it was still logged in on another device. The account security and session management need serious improvement. I eventually had to delete my account because I could not feel confident that it was secure. Very frustrating experience.",
         "source": "GOOGLE_PLAY",
         "trace_id": "70a8fb4e-ce33-4b6f-a2d9-75ab0ddbd862",
         "date": "2026-08-23T18:21:53"
@@ -428,9 +428,9 @@
   {
     "opportunity_name": "Signal: Return Policy & Process Fricti",
     "problem": "Return Policy & Process Friction",
-    "structured_statement": "Users experiencing strong product interest may postpone or abandon their purchase when they encounter 'Return Policy & Process Friction' during the POST_PURCHASE stage.",
+    "structured_statement": "The presence of 'Return Policy & Process Friction' during the Evaluation stage may contribute to potential friction, representing a validation opportunity.",
     "affected_segment": "Broadly applicable",
-    "journey_stage": "POST_PURCHASE",
+    "journey_stage": "Evaluation",
     "classification": "EMERGING_SIGNAL",
     "wishlist_purchase_relevance": 3,
     "unique_evidence_records": 3,
@@ -454,7 +454,7 @@
         "date": "2026-08-23T19:36:18"
       },
       {
-        "quote": "not able to apply myntra cash for the purchase of 300₹ . because I added 150 from gift card first your app showing add item worth 121 then even after adding item worth of 300 still you asking to add ₹59 item more. why you gave myntra cash when you don't allow to apply it and changing amounts again and again . I would like to give -5 star but there is no option for such rating",
+        "quote": "not able to apply myntra cash for the purchase of 300\u20b9 . because I added 150 from gift card first your app showing add item worth 121 then even after adding item worth of 300 still you asking to add \u20b959 item more. why you gave myntra cash when you don't allow to apply it and changing amounts again and again . I would like to give -5 star but there is no option for such rating",
         "source": "GOOGLE_PLAY",
         "trace_id": "4b6f2b1c-4d7a-40d8-9cab-395240b74c99",
         "date": "2026-08-24T18:26:04"
@@ -470,9 +470,9 @@
   {
     "opportunity_name": "Signal: Delivery / Shipping Friction",
     "problem": "Delivery / Shipping Friction",
-    "structured_statement": "Users evaluating the platform encounter friction from 'Delivery / Shipping Friction' during the Discovery stage, which may disrupt their shopping journey.",
+    "structured_statement": "The presence of 'Delivery / Shipping Friction' during the Evaluation stage may contribute to potential friction, representing a validation opportunity.",
     "affected_segment": "Broadly applicable",
-    "journey_stage": "POST_PURCHASE",
+    "journey_stage": "Evaluation",
     "classification": "OPPORTUNITY",
     "wishlist_purchase_relevance": 2,
     "unique_evidence_records": 6,
@@ -490,7 +490,7 @@
     "opportunity_score": 3.4,
     "supporting_evidence": [
       {
-        "quote": "Very disappointed with my recent Myntra experience. I placed an order for jeans on 11th August, and even after almost two weeks, it still hasn’t been delivered. There has been no proper update or satisfactory response regarding the delay. On top of that, another order (a lip balm) was cancelled on its own without any proper explanation. I’ve used Myntra expecting reliable service, but this experience has been extremely frustrating. Delayed orders are understandable sometimes, but no proper commu",
+        "quote": "Very disappointed with my recent Myntra experience. I placed an order for jeans on 11th August, and even after almost two weeks, it still hasn\u2019t been delivered. There has been no proper update or satisfactory response regarding the delay. On top of that, another order (a lip balm) was cancelled on its own without any proper explanation. I\u2019ve used Myntra expecting reliable service, but this experience has been extremely frustrating. Delayed orders are understandable sometimes, but no proper commu",
         "source": "GOOGLE_PLAY",
         "trace_id": "bc0328e0-fa81-4f30-a375-966ddd4d26a2",
         "date": "2026-08-23T21:31:34"
@@ -524,9 +524,9 @@
   {
     "opportunity_name": "Signal: App Performance and Usability ",
     "problem": "App Performance and Usability Issues",
-    "structured_statement": "Users experiencing strong product interest may postpone or abandon their purchase when they encounter 'App Performance and Usability Issues' during the UNKNOWN stage.",
+    "structured_statement": "The presence of 'App Performance and Usability Issues' during the Product Discovery stage may contribute to potential friction, representing a validation opportunity.",
     "affected_segment": "Broadly applicable",
-    "journey_stage": "UNKNOWN",
+    "journey_stage": "Product Discovery",
     "classification": "EMERGING_SIGNAL",
     "wishlist_purchase_relevance": 1,
     "unique_evidence_records": 2,
@@ -560,9 +560,9 @@
   {
     "opportunity_name": "Signal: Seeking Authentic Product Revi",
     "problem": "Seeking Authentic Product Reviews",
-    "structured_statement": "Users evaluating the platform encounter friction from 'Seeking Authentic Product Reviews' during the Discovery stage, which may disrupt their shopping journey.",
+    "structured_statement": "The presence of 'Seeking Authentic Product Reviews' during the Evaluation stage may contribute to potential friction, representing a validation opportunity.",
     "affected_segment": "Broadly applicable",
-    "journey_stage": "Discovery",
+    "journey_stage": "Evaluation",
     "classification": "EMERGING_SIGNAL",
     "wishlist_purchase_relevance": 1,
     "unique_evidence_records": 4,
@@ -608,9 +608,9 @@
   {
     "opportunity_name": "Signal: Promotional Credit Application",
     "problem": "Promotional Credit Application Issues",
-    "structured_statement": "Users evaluating the platform encounter friction from 'Promotional Credit Application Issues' during the Discovery stage, which may disrupt their shopping journey.",
+    "structured_statement": "The presence of 'Promotional Credit Application Issues' during the Checkout stage may contribute to potential friction, representing a validation opportunity.",
     "affected_segment": "Broadly applicable",
-    "journey_stage": "Discovery",
+    "journey_stage": "Checkout",
     "classification": "EMERGING_SIGNAL",
     "wishlist_purchase_relevance": 3,
     "unique_evidence_records": 2,
@@ -628,7 +628,7 @@
     "opportunity_score": 2.6,
     "supporting_evidence": [
       {
-        "quote": "not able to apply myntra cash for the purchase of 300₹ . because I added 150 from gift card first your app showing add item worth 121 then even after adding item worth of 300 still you asking to add ₹59 item more. why you gave myntra cash when you don't allow to apply it and changing amounts again and again . I would like to give -5 star but there is no option for such rating",
+        "quote": "not able to apply myntra cash for the purchase of 300\u20b9 . because I added 150 from gift card first your app showing add item worth 121 then even after adding item worth of 300 still you asking to add \u20b959 item more. why you gave myntra cash when you don't allow to apply it and changing amounts again and again . I would like to give -5 star but there is no option for such rating",
         "source": "GOOGLE_PLAY",
         "trace_id": "4b6f2b1c-4d7a-40d8-9cab-395240b74c99",
         "date": "2026-08-24T18:26:04"
@@ -644,9 +644,9 @@
   {
     "opportunity_name": "Signal: App Performance / UX Issues",
     "problem": "App Performance / UX Issues",
-    "structured_statement": "Users evaluating the platform encounter friction from 'App Performance / UX Issues' during the Discovery stage, which may disrupt their shopping journey.",
+    "structured_statement": "The presence of 'App Performance / UX Issues' during the Product Discovery stage may contribute to potential friction, representing a validation opportunity.",
     "affected_segment": "Broadly applicable",
-    "journey_stage": "POST_PURCHASE",
+    "journey_stage": "Product Discovery",
     "classification": "EMERGING_SIGNAL",
     "wishlist_purchase_relevance": 1,
     "unique_evidence_records": 4,
@@ -670,7 +670,7 @@
         "date": "2026-08-23T21:34:37"
       },
       {
-        "quote": "Friendly App & Budget friendly app like family. 👌❤️",
+        "quote": "Friendly App & Budget friendly app like family. \ud83d\udc4c\u2764\ufe0f",
         "source": "GOOGLE_PLAY",
         "trace_id": "d6762aa3-221a-47fe-a76f-2d82dace7534",
         "date": "2026-08-23T22:21:30"
@@ -682,7 +682,7 @@
         "date": "2026-08-23T18:15:17"
       },
       {
-        "quote": "user friendly.. 👍",
+        "quote": "user friendly.. \ud83d\udc4d",
         "source": "GOOGLE_PLAY",
         "trace_id": "9b4bbb35-a907-4992-ac63-61d7c64433d7",
         "date": "2026-08-23T18:29:00"
@@ -692,9 +692,9 @@
   {
     "opportunity_name": "Signal: Returns / Exchange Friction",
     "problem": "Returns / Exchange Friction",
-    "structured_statement": "Users evaluating the platform encounter friction from 'Returns / Exchange Friction' during the Discovery stage, which may disrupt their shopping journey.",
+    "structured_statement": "The presence of 'Returns / Exchange Friction' during the Evaluation stage may contribute to potential friction, representing a validation opportunity.",
     "affected_segment": "Broadly applicable",
-    "journey_stage": "POST_PURCHASE",
+    "journey_stage": "Evaluation",
     "classification": "EMERGING_SIGNAL",
     "wishlist_purchase_relevance": 1,
     "unique_evidence_records": 2,
@@ -728,9 +728,9 @@
   {
     "opportunity_name": "Signal: Price and Value Perception",
     "problem": "Price and Value Perception",
-    "structured_statement": "Users experiencing strong product interest may postpone or abandon their purchase when they encounter 'Price and Value Perception' during the Unknown stage.",
+    "structured_statement": "The presence of 'Price and Value Perception' during the Evaluation stage may contribute to potential friction, representing a validation opportunity.",
     "affected_segment": "Broadly applicable",
-    "journey_stage": "Unknown",
+    "journey_stage": "Evaluation",
     "classification": "SIGNAL",
     "wishlist_purchase_relevance": 1,
     "unique_evidence_records": 1,
@@ -758,9 +758,9 @@
   {
     "opportunity_name": "Signal: Product Assortment and Price C",
     "problem": "Product Assortment and Price Constraints",
-    "structured_statement": "Users experiencing strong product interest may postpone or abandon their purchase when they encounter 'Product Assortment and Price Constraints' during the EVALUATION stage.",
+    "structured_statement": "The presence of 'Product Assortment and Price Constraints' during the Product Discovery stage may contribute to potential friction, representing a validation opportunity.",
     "affected_segment": "Broadly applicable",
-    "journey_stage": "EVALUATION",
+    "journey_stage": "Product Discovery",
     "classification": "SIGNAL",
     "wishlist_purchase_relevance": 3,
     "unique_evidence_records": 1,
@@ -778,7 +778,7 @@
     "opportunity_score": 1.9,
     "supporting_evidence": [
       {
-        "quote": "Bhai tshirt to aache late ho par trackpants thode acche aur baagy sath me cotton material lao under 1000 maniac brand cover karo 😢😢",
+        "quote": "Bhai tshirt to aache late ho par trackpants thode acche aur baagy sath me cotton material lao under 1000 maniac brand cover karo \ud83d\ude22\ud83d\ude22",
         "source": "YOUTUBE",
         "trace_id": "15ee4aa1-abea-4aae-9c4d-bbe846fc18ca",
         "date": "2026-08-23T12:51:33"
