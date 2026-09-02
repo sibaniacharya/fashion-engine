@@ -1,5 +1,11 @@
 {
   "total_external_research_events": 0,
+  "research_types": {
+    "Explicit external research": 0,
+    "Implied external research": 0,
+    "No evidence": 34,
+    "Unknown": 4
+  },
   "information_sought": {},
   "alternatives_considered": [],
   "by_source": {},

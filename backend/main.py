@@ -15,17 +15,20 @@ logger = logging.getLogger(__name__)
 # Create database tables
 Base.metadata.create_all(bind=engine)
 
-app = FastAPI(title="Discovery Engine API", description="AI-Powered Wishlist Discovery Engine")
+app = FastAPI(
+    title="Discovery Engine API", description="AI-Powered Wishlist Discovery Engine"
+)
 
 # Configure CORS via ENV, fallback to wildcard for local dev
-frontend_url = os.getenv("FRONTEND_URL", "*")
+frontend_urls = os.getenv("FRONTEND_URL", "*").split(",")
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[frontend_url] if frontend_url != "*" else ["*"],
+    allow_origins=frontend_urls if "*" not in frontend_urls else ["*"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
 
 # Global Error Handler
 @app.exception_handler(Exception)
@@ -35,12 +38,15 @@ async def global_exception_handler(request: Request, exc: Exception):
         content={"message": "Internal Server Error", "details": str(exc)},
     )
 
+
 # Include the new API router
 app.include_router(api_router, prefix="/api")
+
 
 @app.get("/")
 def read_root():
     return {"status": "ok", "message": "Backend is running!"}
+
 
 @app.post("/api/ingest")
 def trigger_ingestion(db: Session = Depends(get_db)):

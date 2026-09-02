@@ -1,0 +1,788 @@
+[
+  {
+    "opportunity_name": "Resolve: Customer Support Inaccessibili",
+    "problem": "Customer Support Inaccessibility and Post-Purchase Friction",
+    "structured_statement": "Users experiencing strong product interest may postpone or abandon their purchase when they encounter 'Customer Support Inaccessibility and Post-Purchase Friction' during the POST_PURCHASE stage.",
+    "affected_segment": "Broadly applicable",
+    "journey_stage": "POST_PURCHASE",
+    "classification": "HIGH_CONFIDENCE_OPPORTUNITY",
+    "wishlist_purchase_relevance": 2,
+    "unique_evidence_records": 26,
+    "google_play_count": 25,
+    "youtube_count": 1,
+    "source_coverage": 2,
+    "scores": {
+      "frequency": 5,
+      "wishlist_relevance": 5,
+      "purchase_impact": 5,
+      "user_pain": 5,
+      "cross_source_consistency": 5,
+      "evidence_confidence": 5
+    },
+    "opportunity_score": 5.0,
+    "supporting_evidence": [
+      {
+        "quote": "Worst app ever sells product of low quality with 2x price...Not even their customer service is effective they don't listen any of your problem and delete the real reviews!! They don't let me write the real review of my product... Messho is far better I'll say!! MYNTRA FIX YOUR CUSTOMER SERVICE AND YOUR THE PRODUCTS YOU SELL. selling 2k watch with writing STAINLESS STEEL everywhere still the product fails within 3 months",
+        "source": "GOOGLE_PLAY",
+        "trace_id": "bc5d8ed1-67f2-4464-a158-a4ce3fcafa23",
+        "date": "2026-08-23T21:16:35"
+      },
+      {
+        "quote": "Extremely frustrating experience with Myntra. I ordered a product and requested a return, but the app showed that the pickup partner was “out for pickup.” However, no one actually came to pick it up. After waiting 3–4 days, Myntra cancelled the return request from their side without properly resolving the issue. What’s even worse is the Help Center. The interface is so poorly designed that getting actual help feels almost impossible. There’s no proper way to explain the issue",
+        "source": "GOOGLE_PLAY",
+        "trace_id": "8f469fe4-f62b-4785-9b9b-c7e22c960419",
+        "date": "2026-08-23T20:54:42"
+      },
+      {
+        "quote": "The worst app, when I returned or cancelled the order the app showed refund credited but when I checked my bank statement and upi history it said I didn't receive any amount, I even complained many times but my bank still says no amount received and I knew about this a few days ago. before I had many return parcels but didn't notice in my upi account history that whether I received any amount or not. I have complained multiple times that I have not received any refund amount in my bank.",
+        "source": "GOOGLE_PLAY",
+        "trace_id": "8e2a7eba-ff33-4bc6-8e76-4e5fa9a9825b",
+        "date": "2026-08-23T20:48:19"
+      },
+      {
+        "quote": "Your customer support is AI based which is useless, I am trying to connect with a human who can understand and solve the query but there is just no simple way to do it",
+        "source": "GOOGLE_PLAY",
+        "trace_id": "b1e79edd-3484-49bd-b7cc-b921b248cd8f",
+        "date": "2026-08-23T20:44:18"
+      },
+      {
+        "quote": "i ordered a shirt but even after 25 days nobody is bothered to either give information of when will receive order , we are unable to connect to customer care as only robot talks , no executive connected , even after cancellation of order it's not cancelled even after 3 days, don't know when I will receive my money back , so don't purchase anything with upfront payment, only order cash on delivery, worst app and worst customer support .",
+        "source": "GOOGLE_PLAY",
+        "trace_id": "f8f111ff-c47a-41b7-a42b-a31030c77752",
+        "date": "2026-08-23T20:13:58"
+      }
+    ]
+  },
+  {
+    "opportunity_name": "Resolve: Delivery and Fulfillment Unrel",
+    "problem": "Delivery and Fulfillment Unreliability",
+    "structured_statement": "Users experiencing strong product interest may postpone or abandon their purchase when they encounter 'Delivery and Fulfillment Unreliability' during the POST_PURCHASE stage.",
+    "affected_segment": "Broadly applicable",
+    "journey_stage": "POST_PURCHASE",
+    "classification": "OPPORTUNITY",
+    "wishlist_purchase_relevance": 2,
+    "unique_evidence_records": 9,
+    "google_play_count": 8,
+    "youtube_count": 1,
+    "source_coverage": 2,
+    "scores": {
+      "frequency": 3,
+      "wishlist_relevance": 5,
+      "purchase_impact": 5,
+      "user_pain": 5,
+      "cross_source_consistency": 5,
+      "evidence_confidence": 4
+    },
+    "opportunity_score": 4.7,
+    "supporting_evidence": [
+      {
+        "quote": "Very disappointed with my recent Myntra experience. I placed an order for jeans on 11th August, and even after almost two weeks, it still hasn’t been delivered. There has been no proper update or satisfactory response regarding the delay. On top of that, another order (a lip balm) was cancelled on its own without any proper explanation. I’ve used Myntra expecting reliable service, but this experience has been extremely frustrating. Delayed orders are understandable sometimes, but no proper commu",
+        "source": "GOOGLE_PLAY",
+        "trace_id": "bc0328e0-fa81-4f30-a375-966ddd4d26a2",
+        "date": "2026-08-23T21:31:34"
+      },
+      {
+        "quote": "It does have really great deals and stuff but when it comes to actual service it sucks really bad. the delivery is often cancelled without any reasoning. when you try to call the agent you have to go through a stupid IVR/bot who doesn't even connect us because of the idiotic dial system. Its very bad if you want anything on time.",
+        "source": "GOOGLE_PLAY",
+        "trace_id": "37dc78cc-70be-4ab6-a267-bc5929fb21ca",
+        "date": "2026-08-23T20:55:11"
+      },
+      {
+        "quote": "bellavita and joy was my first order on Myntra, and because of that, I received a great discount and used coupons. Since the order amount became quite low, Myntra delayed my order. You have committed fraud against me. If you didn't intend to fulfill the order at that low price, why did you offer such a big discount? I have lost faith in Myntra.",
+        "source": "GOOGLE_PLAY",
+        "trace_id": "ccd206ba-f7c4-4618-9a15-873c514772a5",
+        "date": "2026-08-23T19:32:57"
+      },
+      {
+        "quote": "I am very disappointed with Myntra’s delivery service.Whenever I place an order, the app shows an expected delivery date,but later the delivery date is extended.Even after changing the date, the product is often not delivered on the new date.My order gets cancelled,which is extremely frustrating and wastes my time. If Myntra cannot deliver a product on time, it should provide accurate information instead of repeatedly changing the delivery date.",
+        "source": "GOOGLE_PLAY",
+        "trace_id": "1723a187-a93b-42c6-aded-ad8422ed3873",
+        "date": "2026-08-23T18:51:22"
+      },
+      {
+        "quote": "delivery service is very poor, any time they cancel the products and do late delivery, time pe kuchh milta hi nhi h, very disappointing,",
+        "source": "GOOGLE_PLAY",
+        "trace_id": "978a1c84-3293-429c-83cc-df3312773c42",
+        "date": "2026-08-23T17:23:42"
+      }
+    ]
+  },
+  {
+    "opportunity_name": "Resolve: Price-Quality Mismatch",
+    "problem": "Price-Quality Mismatch",
+    "structured_statement": "Users experiencing strong product interest may postpone or abandon their purchase when they encounter 'Price-Quality Mismatch' during the POST_PURCHASE stage.",
+    "affected_segment": "Broadly applicable",
+    "journey_stage": "POST_PURCHASE",
+    "classification": "HIGH_CONFIDENCE_OPPORTUNITY",
+    "wishlist_purchase_relevance": 3,
+    "unique_evidence_records": 11,
+    "google_play_count": 3,
+    "youtube_count": 8,
+    "source_coverage": 2,
+    "scores": {
+      "frequency": 4,
+      "wishlist_relevance": 3,
+      "purchase_impact": 5,
+      "user_pain": 5,
+      "cross_source_consistency": 5,
+      "evidence_confidence": 5
+    },
+    "opportunity_score": 4.5,
+    "supporting_evidence": [
+      {
+        "quote": "i hate purchasing clothes from myntra. Every time it either sends me the wrong product or a cheap quality product. Even after exchanging the product is still the same. The prices are also too high as compared to the product quality. Never buying clothes from myntra again. its a waste of money",
+        "source": "GOOGLE_PLAY",
+        "trace_id": "b8846795-a0ef-44f3-9bd9-0e8d71b6abd4",
+        "date": "2026-08-23T21:20:10"
+      },
+      {
+        "quote": "Good app to find good quality trend wears also can't find that mutch offers that's a bad point",
+        "source": "GOOGLE_PLAY",
+        "trace_id": "e8c3279d-eb1e-4679-b8e3-5307616c7aee",
+        "date": "2026-08-23T19:59:35"
+      },
+      {
+        "quote": "good quality but little high price but quality top class 😉",
+        "source": "GOOGLE_PLAY",
+        "trace_id": "fccc0177-1daa-40e4-b05c-49fc5b06fc27",
+        "date": "2026-08-24T16:21:09"
+      },
+      {
+        "quote": "Same to same but meesho quality kam...",
+        "source": "YOUTUBE",
+        "trace_id": "ed09c04b-9909-48af-927a-2c5d82c606f6",
+        "date": "2025-08-24T01:05:58"
+      },
+      {
+        "quote": "They were exactly same quality but meesho price was cheaper.....",
+        "source": "YOUTUBE",
+        "trace_id": "cf989965-4da9-47c8-99c0-ffae132a9e96",
+        "date": "2026-01-25T05:06:46"
+      }
+    ]
+  },
+  {
+    "opportunity_name": "Resolve: Pricing and Fee Friction",
+    "problem": "Pricing and Fee Friction",
+    "structured_statement": "Users experiencing strong product interest may postpone or abandon their purchase when they encounter 'Pricing and Fee Friction' during the POST_PURCHASE stage.",
+    "affected_segment": "Broadly applicable",
+    "journey_stage": "POST_PURCHASE",
+    "classification": "OPPORTUNITY",
+    "wishlist_purchase_relevance": 3,
+    "unique_evidence_records": 6,
+    "google_play_count": 4,
+    "youtube_count": 2,
+    "source_coverage": 2,
+    "scores": {
+      "frequency": 3,
+      "wishlist_relevance": 3,
+      "purchase_impact": 5,
+      "user_pain": 5,
+      "cross_source_consistency": 5,
+      "evidence_confidence": 4
+    },
+    "opportunity_score": 4.3,
+    "supporting_evidence": [
+      {
+        "quote": "ab uninstall kr rhi hun myntra credit ka limit lga diya hai",
+        "source": "GOOGLE_PLAY",
+        "trace_id": "64d395a1-99e1-4ed4-81ac-26e33a11acd0",
+        "date": "2026-08-23T18:25:36"
+      },
+      {
+        "quote": "app ekadam bakwas hai Koi coupon nahin lagta aur product quality bhi ghatiya hai",
+        "source": "GOOGLE_PLAY",
+        "trace_id": "4ed65da8-b961-4cc4-a08b-b35562c6d1c1",
+        "date": "2026-08-23T18:17:02"
+      },
+      {
+        "quote": "very pathetic experience they charge delivery fees when the amount is above 799 along with platform fees of 23 when I returned one of the product 35 rs deducted in the name of platform fees and delivery fees not going to buy again",
+        "source": "GOOGLE_PLAY",
+        "trace_id": "61a57595-8e4c-465e-8652-613111f4edc7",
+        "date": "2026-08-23T17:53:16"
+      },
+      {
+        "quote": "Yeh app bahot accha hai per price thodi jadya hai but all over is best",
+        "source": "GOOGLE_PLAY",
+        "trace_id": "a7ffd7dc-6360-4ea5-b955-9898f3385e74",
+        "date": "2026-08-24T14:05:07"
+      },
+      {
+        "quote": "Myntra app tatti hai bhai 👎👎👎",
+        "source": "YOUTUBE",
+        "trace_id": "0770160c-33be-4f62-9a68-f1eeb593eb78",
+        "date": "2026-08-24T10:25:47"
+      }
+    ]
+  },
+  {
+    "opportunity_name": "Signal: Return and Refund Friction",
+    "problem": "Return and Refund Friction",
+    "structured_statement": "Users evaluating the platform encounter friction from 'Return and Refund Friction' during the Discovery stage, which may disrupt their shopping journey.",
+    "affected_segment": "Broadly applicable",
+    "journey_stage": "POST_PURCHASE",
+    "classification": "HIGH_CONFIDENCE_OPPORTUNITY",
+    "wishlist_purchase_relevance": 2,
+    "unique_evidence_records": 25,
+    "google_play_count": 46,
+    "youtube_count": 2,
+    "source_coverage": 2,
+    "scores": {
+      "frequency": 5,
+      "wishlist_relevance": 5,
+      "purchase_impact": 3,
+      "user_pain": 3,
+      "cross_source_consistency": 5,
+      "evidence_confidence": 5
+    },
+    "opportunity_score": 4.0,
+    "supporting_evidence": [
+      {
+        "quote": "Sir/Madam, I bought Campus Vacuum Men Lace-Up Running Shoes on the Myntra website on 22/01/2026 for Rs. 1205. I received the delivery on 27/01/2026, and I placed a return request on the same day because the shoe sole was very hard and the size was too small. At the same price, there are much better shoes available on other platforms, so I decided to return it. For that return, Myntra sent me a message saying that their delivery agent would come and collect the return order on or before 30/01/2026. However, the delivery agent did not come and wasted a lot of my time. I complained about this issue to customer care. When the delivery agent finally came today, he rejected the return, saying that there were stains on the shoes. I strongly feel that since I complained about your delivery agent, my return order is being deliberately delayed by rejecting it without any valid reason. Such behaviour is highly unprofessional. I expect this issue to be addressed immediately and the return to be processed without further delay. Additionally, I request you to kindly look into this matter, and please check the stains if any can be found in the attached photos of the shoes I received. If anything is found wrong, I will follow your advice; otherwise, you will be responsible and answerable to this issue in the consumer court.",
+        "source": "YOUTUBE",
+        "trace_id": "43455384-7e1e-44d1-93fa-df0adb8fcb6e",
+        "date": "2026-01-30T13:34:17"
+      },
+      {
+        "quote": "Very disappointing experience with Myntra. I ordered a dress, but I received the wrong product. I immediately raised a return request, but the return pickup is repeatedly being rescheduled without any proper resolution. I have contacted customer care multiple times, but I am not getting a satisfactory response. Every time I am asked to wait, while the pickup date keeps changing. This is extremely frustrating, especially when the mistake is clearly on Myntra’s side. I simply want my refund",
+        "source": "GOOGLE_PLAY",
+        "trace_id": "c033f5e8-2dc7-436f-946a-1f2cb92078d1",
+        "date": "2026-08-24T17:34:38"
+      },
+      {
+        "quote": "Very disappointing experience with Myntra. I ordered a dress, but I received the wrong product. I immediately raised a return request, but the return pickup is repeatedly being rescheduled without any proper resolution.I have contacted customer care multiple times, but I am not getting a satisfactory response. Every time I am asked to wait, while the pickup date keeps changing.This is extremely frustrating, especially when the mistake is clearly on Myntra’s side. I simply want my refund.",
+        "source": "GOOGLE_PLAY",
+        "trace_id": "774c4b5e-1920-41e6-b0f3-0aae51252afc",
+        "date": "2026-08-24T17:26:07"
+      },
+      {
+        "quote": "The worst app, when I returned or cancelled the order the app showed refund credited but when I checked my bank statement and upi history it said I didn't receive any amount, I even complained many times but my bank still says no amount received and I knew about this a few days ago. before I had many return parcels but didn't notice in my upi account history that whether I received any amount or not. I have complained multiple times that I have not received any refund amount in my bank.",
+        "source": "GOOGLE_PLAY",
+        "trace_id": "8e2a7eba-ff33-4bc6-8e76-4e5fa9a9825b",
+        "date": "2026-08-23T20:48:19"
+      },
+      {
+        "quote": "If there were an option to give 0 stars, I would definitely give 0. I am extremely disappointed with Myntra's customer support. I have a genuine issue with my order/exchange, but there is no proper customer care number, no accessible customer support, and no effective way to get help. I even raised the issue through the grievance email, but no one has responded despite multiple follow-ups. For a major e-commerce platform, this level of customer support is extremely disappointing.",
+        "source": "GOOGLE_PLAY",
+        "trace_id": "6b64cfe2-34bb-44c4-b70b-5c99394ae335",
+        "date": "2026-08-24T13:21:56"
+      }
+    ]
+  },
+  {
+    "opportunity_name": "Resolve: Brand Trust and Authenticity C",
+    "problem": "Brand Trust and Authenticity Concerns",
+    "structured_statement": "Users experiencing strong product interest may postpone or abandon their purchase when they encounter 'Brand Trust and Authenticity Concerns' during the UNKNOWN stage.",
+    "affected_segment": "Broadly applicable",
+    "journey_stage": "UNKNOWN",
+    "classification": "OPPORTUNITY",
+    "wishlist_purchase_relevance": 1,
+    "unique_evidence_records": 6,
+    "google_play_count": 2,
+    "youtube_count": 4,
+    "source_coverage": 2,
+    "scores": {
+      "frequency": 3,
+      "wishlist_relevance": 1,
+      "purchase_impact": 5,
+      "user_pain": 5,
+      "cross_source_consistency": 5,
+      "evidence_confidence": 4
+    },
+    "opportunity_score": 3.9,
+    "supporting_evidence": [
+      {
+        "quote": "fraud",
+        "source": "GOOGLE_PLAY",
+        "trace_id": "3605cd1d-ab1e-49c5-b123-422d3744cecf",
+        "date": "2026-08-23T19:15:22"
+      },
+      {
+        "quote": "please provide original brand products to customer",
+        "source": "GOOGLE_PLAY",
+        "trace_id": "71f5cde0-228f-4282-bce7-209160a8f0e6",
+        "date": "2026-08-24T12:58:02"
+      },
+      {
+        "quote": "Myntra ko meesho bol raha he bhai",
+        "source": "YOUTUBE",
+        "trace_id": "15926746-2d78-45d6-91d8-8ec4ca3a26a9",
+        "date": "2026-08-23T09:07:30"
+      },
+      {
+        "quote": "bhai kya hogaya , meesho bolke myntra ka logo xd ,,,, fir 10 out of 8",
+        "source": "YOUTUBE",
+        "trace_id": "a5ecb7b7-924f-4bef-8d44-3b76e80d5fba",
+        "date": "2026-08-23T06:26:28"
+      },
+      {
+        "quote": "0:02 Myntra ❌ Meesho ✅",
+        "source": "YOUTUBE",
+        "trace_id": "9580d61c-bc50-43d2-a6db-43ed531a8bf3",
+        "date": "2026-08-23T04:53:29"
+      }
+    ]
+  },
+  {
+    "opportunity_name": "Signal: Fit / Size Uncertainty",
+    "problem": "Fit / Size Uncertainty",
+    "structured_statement": "Users evaluating the platform encounter friction from 'Fit / Size Uncertainty' during the Discovery stage, which may disrupt their shopping journey.",
+    "affected_segment": "Broadly applicable",
+    "journey_stage": "Discovery",
+    "classification": "HIGH_CONFIDENCE_OPPORTUNITY",
+    "wishlist_purchase_relevance": 4,
+    "unique_evidence_records": 12,
+    "google_play_count": 3,
+    "youtube_count": 9,
+    "source_coverage": 2,
+    "scores": {
+      "frequency": 4,
+      "wishlist_relevance": 4,
+      "purchase_impact": 3,
+      "user_pain": 3,
+      "cross_source_consistency": 5,
+      "evidence_confidence": 5
+    },
+    "opportunity_score": 3.7,
+    "supporting_evidence": [
+      {
+        "quote": "Everyone who's watching this and thinking you should save this for later please consider that any clothing will look good on you only and only when you are fit. So hit gym or other exercises and change your inner look before your outer look.",
+        "source": "YOUTUBE",
+        "trace_id": "159383af-f398-460c-b728-09315da645a9",
+        "date": "2025-05-19T03:07:53"
+      },
+      {
+        "quote": "Bhai ek baar acchi quality ke full baggy jeans oar video bano yaar sab chep baggy khaird k thk gya hu plz 1 zet black baggy jeans which brand",
+        "source": "YOUTUBE",
+        "trace_id": "a9757be3-bbe4-464c-af8c-4ae9f96ac63f",
+        "date": "2026-08-23T08:47:31"
+      },
+      {
+        "quote": "Hii di I am 5.8 and I alwayssss got small size jeans which size jeans should I order?",
+        "source": "YOUTUBE",
+        "trace_id": "03f2f395-c636-42aa-9730-6f1ac1352bda",
+        "date": "2026-03-28T05:17:44"
+      },
+      {
+        "quote": "Straight fit jeans 👖 wala video bana do please 🥺🙏🥺🙏 😊 kab Se wait kar raha hu",
+        "source": "YOUTUBE",
+        "trace_id": "d9c65fdd-1f6b-4e7a-b31c-499484fee685",
+        "date": "2026-08-23T04:52:20"
+      },
+      {
+        "quote": "Hiiii didi,Is baggy jeans fit for 4\"11 height girls ???? Please tell me ,🙏🏿🙏🏿",
+        "source": "YOUTUBE",
+        "trace_id": "59af235e-47f0-4b29-b64e-1806ff404985",
+        "date": "2026-03-21T16:09:57"
+      }
+    ]
+  },
+  {
+    "opportunity_name": "Signal: Account Access and Security Is",
+    "problem": "Account Access and Security Issues",
+    "structured_statement": "Users experiencing strong product interest may postpone or abandon their purchase when they encounter 'Account Access and Security Issues' during the Post-purchase stage.",
+    "affected_segment": "Broadly applicable",
+    "journey_stage": "Post-purchase",
+    "classification": "EMERGING_SIGNAL",
+    "wishlist_purchase_relevance": 4,
+    "unique_evidence_records": 4,
+    "google_play_count": 3,
+    "youtube_count": 1,
+    "source_coverage": 2,
+    "scores": {
+      "frequency": 2,
+      "wishlist_relevance": 4,
+      "purchase_impact": 5,
+      "user_pain": 5,
+      "cross_source_consistency": 5,
+      "evidence_confidence": 3
+    },
+    "opportunity_score": 3.5,
+    "supporting_evidence": [
+      {
+        "quote": "Myntra Review Myntra has been my favorite shopping platform for the past 7 years, and overall, I’ve always had a great experience. The product quality is really good, and I’ve been happy with most of my purchases. ❤️ Recently, I faced an issue while trying to create and log in to a new account. The login process isn’t working properly, which is quite frustrating. Please look into this issue and fix it as soon as possible. Apart from this, my overall experience with Myntra has been very good,",
+        "source": "GOOGLE_PLAY",
+        "trace_id": "3a786d2f-6e4b-4899-9652-53f08d71ced6",
+        "date": "2026-08-23T21:48:27"
+      },
+      {
+        "quote": "worst shopping app in india. don't buy anything if products are damaged or the seller sent the wrong size products or any fault then your platform charged not refund. other platforms like flipkart or Amazon refund your platform charges but Myntra does not. Maximum time Myntra sent the wrong product and if you want to replace then your produce has not replaced only return and platform charges not refunded. Myntra is the worst playing games in the Online shopping market. Don't buy on Mantra.",
+        "source": "GOOGLE_PLAY",
+        "trace_id": "c3ab50b7-f5b5-4974-845f-18f1f82bdedd",
+        "date": "2026-08-23T19:36:26"
+      },
+      {
+        "quote": "★☆☆☆☆ Extremely disappointing experience. My Myntra account was compromised, and someone else was able to access and use the account while it was still logged in on another device. The account security and session management need serious improvement. I eventually had to delete my account because I could not feel confident that it was secure. Very frustrating experience.",
+        "source": "GOOGLE_PLAY",
+        "trace_id": "70a8fb4e-ce33-4b6f-a2d9-75ab0ddbd862",
+        "date": "2026-08-23T18:21:53"
+      },
+      {
+        "quote": "I'm really confused that i need to use any of these app for my mom's shopping.. she is using online shopping for the first time. Which app is good to use but in low prices? Should I check for meesho? Pls need some help",
+        "source": "YOUTUBE",
+        "trace_id": "8b4c2fb7-de38-4b4a-8f1f-44c14f173ee6",
+        "date": "2026-08-19T11:56:49"
+      }
+    ]
+  },
+  {
+    "opportunity_name": "Signal: Return Policy & Process Fricti",
+    "problem": "Return Policy & Process Friction",
+    "structured_statement": "Users experiencing strong product interest may postpone or abandon their purchase when they encounter 'Return Policy & Process Friction' during the POST_PURCHASE stage.",
+    "affected_segment": "Broadly applicable",
+    "journey_stage": "POST_PURCHASE",
+    "classification": "EMERGING_SIGNAL",
+    "wishlist_purchase_relevance": 3,
+    "unique_evidence_records": 3,
+    "google_play_count": 3,
+    "youtube_count": 0,
+    "source_coverage": 1,
+    "scores": {
+      "frequency": 2,
+      "wishlist_relevance": 3,
+      "purchase_impact": 5,
+      "user_pain": 5,
+      "cross_source_consistency": 2,
+      "evidence_confidence": 3
+    },
+    "opportunity_score": 3.5,
+    "supporting_evidence": [
+      {
+        "quote": "They sell defective products with extra price. And returning an defective item is almost impossible. I had bought belt, which was defective and they were not ready to take it back. After that uninstall the app",
+        "source": "GOOGLE_PLAY",
+        "trace_id": "96c2cf88-66d7-4319-9a4a-df797e664cfc",
+        "date": "2026-08-23T19:36:18"
+      },
+      {
+        "quote": "not able to apply myntra cash for the purchase of 300₹ . because I added 150 from gift card first your app showing add item worth 121 then even after adding item worth of 300 still you asking to add ₹59 item more. why you gave myntra cash when you don't allow to apply it and changing amounts again and again . I would like to give -5 star but there is no option for such rating",
+        "source": "GOOGLE_PLAY",
+        "trace_id": "4b6f2b1c-4d7a-40d8-9cab-395240b74c99",
+        "date": "2026-08-24T18:26:04"
+      },
+      {
+        "quote": "Defective item received. Item is not being returned on false pretext of \"YOU WERE NOT REACHABLE\".",
+        "source": "GOOGLE_PLAY",
+        "trace_id": "9fc58459-ae16-4ff1-80e9-dee9628e4660",
+        "date": "2026-08-24T17:14:23"
+      }
+    ]
+  },
+  {
+    "opportunity_name": "Signal: Delivery / Shipping Friction",
+    "problem": "Delivery / Shipping Friction",
+    "structured_statement": "Users evaluating the platform encounter friction from 'Delivery / Shipping Friction' during the Discovery stage, which may disrupt their shopping journey.",
+    "affected_segment": "Broadly applicable",
+    "journey_stage": "POST_PURCHASE",
+    "classification": "OPPORTUNITY",
+    "wishlist_purchase_relevance": 2,
+    "unique_evidence_records": 6,
+    "google_play_count": 6,
+    "youtube_count": 0,
+    "source_coverage": 1,
+    "scores": {
+      "frequency": 3,
+      "wishlist_relevance": 5,
+      "purchase_impact": 3,
+      "user_pain": 3,
+      "cross_source_consistency": 2,
+      "evidence_confidence": 4
+    },
+    "opportunity_score": 3.4,
+    "supporting_evidence": [
+      {
+        "quote": "Very disappointed with my recent Myntra experience. I placed an order for jeans on 11th August, and even after almost two weeks, it still hasn’t been delivered. There has been no proper update or satisfactory response regarding the delay. On top of that, another order (a lip balm) was cancelled on its own without any proper explanation. I’ve used Myntra expecting reliable service, but this experience has been extremely frustrating. Delayed orders are understandable sometimes, but no proper commu",
+        "source": "GOOGLE_PLAY",
+        "trace_id": "bc0328e0-fa81-4f30-a375-966ddd4d26a2",
+        "date": "2026-08-23T21:31:34"
+      },
+      {
+        "quote": "I ordered 4 pieces of clothing, but only 3 were delivered. One item is missing from my order. This is very disappointing and unacceptable. Please be more careful with order packing and ensure customers receive the exact quantity they paid for. I expect the missing item or a proper refund immediately. Please take this issue seriously and improve your order-fulfillment process.",
+        "source": "GOOGLE_PLAY",
+        "trace_id": "d87033b4-91d3-4614-9417-506ba554f56f",
+        "date": "2026-08-24T16:10:39"
+      },
+      {
+        "quote": "bellavita and joy was my first order on Myntra, and because of that, I received a great discount and used coupons. Since the order amount became quite low, Myntra delayed my order. You have committed fraud against me. If you didn't intend to fulfill the order at that low price, why did you offer such a big discount? I have lost faith in Myntra.",
+        "source": "GOOGLE_PLAY",
+        "trace_id": "ccd206ba-f7c4-4618-9a15-873c514772a5",
+        "date": "2026-08-23T19:32:57"
+      },
+      {
+        "quote": "My First Order Placed Few minutes Back.. Lets See the Journey with Myntra... Good Collection of things....",
+        "source": "GOOGLE_PLAY",
+        "trace_id": "4695ca4b-8e1e-406c-bea5-c3fa0b828162",
+        "date": "2026-08-24T15:54:11"
+      },
+      {
+        "quote": "order always gets delayed and the delivery system is not up to the mark",
+        "source": "GOOGLE_PLAY",
+        "trace_id": "459bd783-bc15-4e80-af23-7821b87fa1c7",
+        "date": "2026-08-23T19:22:24"
+      }
+    ]
+  },
+  {
+    "opportunity_name": "Signal: App Performance and Usability ",
+    "problem": "App Performance and Usability Issues",
+    "structured_statement": "Users experiencing strong product interest may postpone or abandon their purchase when they encounter 'App Performance and Usability Issues' during the UNKNOWN stage.",
+    "affected_segment": "Broadly applicable",
+    "journey_stage": "UNKNOWN",
+    "classification": "EMERGING_SIGNAL",
+    "wishlist_purchase_relevance": 1,
+    "unique_evidence_records": 2,
+    "google_play_count": 2,
+    "youtube_count": 0,
+    "source_coverage": 1,
+    "scores": {
+      "frequency": 1,
+      "wishlist_relevance": 1,
+      "purchase_impact": 5,
+      "user_pain": 5,
+      "cross_source_consistency": 2,
+      "evidence_confidence": 2
+    },
+    "opportunity_score": 3.2,
+    "supporting_evidence": [
+      {
+        "quote": "App response time is the worst, and even a simple filter takes time to respond. Aside from this, app seems good.",
+        "source": "GOOGLE_PLAY",
+        "trace_id": "06d5ef23-7070-4817-8109-d7e6f134b8d1",
+        "date": "2026-08-23T21:34:37"
+      },
+      {
+        "quote": "filters are not working",
+        "source": "GOOGLE_PLAY",
+        "trace_id": "6c0efdf6-9cb9-4255-9a04-8c2cfbf03125",
+        "date": "2026-08-23T18:15:17"
+      }
+    ]
+  },
+  {
+    "opportunity_name": "Signal: Seeking Authentic Product Revi",
+    "problem": "Seeking Authentic Product Reviews",
+    "structured_statement": "Users evaluating the platform encounter friction from 'Seeking Authentic Product Reviews' during the Discovery stage, which may disrupt their shopping journey.",
+    "affected_segment": "Broadly applicable",
+    "journey_stage": "Discovery",
+    "classification": "EMERGING_SIGNAL",
+    "wishlist_purchase_relevance": 1,
+    "unique_evidence_records": 4,
+    "google_play_count": 1,
+    "youtube_count": 3,
+    "source_coverage": 2,
+    "scores": {
+      "frequency": 2,
+      "wishlist_relevance": 1,
+      "purchase_impact": 3,
+      "user_pain": 3,
+      "cross_source_consistency": 5,
+      "evidence_confidence": 3
+    },
+    "opportunity_score": 2.7,
+    "supporting_evidence": [
+      {
+        "quote": "delivered a wrong product and no pick up from Myntra. Nowadays Myntra don't entertain you. Chat robo is your solution without any solution. No reply to mails also. Try to give a negative review. they will not approve your. so obviously have all positive reviews on products.",
+        "source": "GOOGLE_PLAY",
+        "trace_id": "d8c7b200-7b94-4c59-af01-12640ffc90e6",
+        "date": "2026-08-23T20:36:30"
+      },
+      {
+        "quote": "Hear heena, kakao review karogi.Please jaldi karuna",
+        "source": "YOUTUBE",
+        "trace_id": "0829271f-be82-4fd2-8e13-25a3fa1ecda7",
+        "date": "2026-08-23T07:43:25"
+      },
+      {
+        "quote": "Di apni watch ka review de do please",
+        "source": "YOUTUBE",
+        "trace_id": "0b0d2a8e-cfb7-4a68-93ba-ccecef5e0aee",
+        "date": "2026-08-23T09:31:21"
+      },
+      {
+        "quote": "Centabil Tshirts ki review dalo",
+        "source": "YOUTUBE",
+        "trace_id": "0961ebbd-14db-4680-92a4-e31ebf2914e5",
+        "date": "2026-08-23T11:23:48"
+      }
+    ]
+  },
+  {
+    "opportunity_name": "Signal: Promotional Credit Application",
+    "problem": "Promotional Credit Application Issues",
+    "structured_statement": "Users evaluating the platform encounter friction from 'Promotional Credit Application Issues' during the Discovery stage, which may disrupt their shopping journey.",
+    "affected_segment": "Broadly applicable",
+    "journey_stage": "Discovery",
+    "classification": "EMERGING_SIGNAL",
+    "wishlist_purchase_relevance": 3,
+    "unique_evidence_records": 2,
+    "google_play_count": 2,
+    "youtube_count": 0,
+    "source_coverage": 1,
+    "scores": {
+      "frequency": 1,
+      "wishlist_relevance": 3,
+      "purchase_impact": 3,
+      "user_pain": 3,
+      "cross_source_consistency": 2,
+      "evidence_confidence": 2
+    },
+    "opportunity_score": 2.6,
+    "supporting_evidence": [
+      {
+        "quote": "not able to apply myntra cash for the purchase of 300₹ . because I added 150 from gift card first your app showing add item worth 121 then even after adding item worth of 300 still you asking to add ₹59 item more. why you gave myntra cash when you don't allow to apply it and changing amounts again and again . I would like to give -5 star but there is no option for such rating",
+        "source": "GOOGLE_PLAY",
+        "trace_id": "4b6f2b1c-4d7a-40d8-9cab-395240b74c99",
+        "date": "2026-08-24T18:26:04"
+      },
+      {
+        "quote": "plix shampoo and serum free gift",
+        "source": "GOOGLE_PLAY",
+        "trace_id": "c661b169-29ce-4cf0-92ea-3991b6ce9f1b",
+        "date": "2026-08-24T17:40:21"
+      }
+    ]
+  },
+  {
+    "opportunity_name": "Signal: App Performance / UX Issues",
+    "problem": "App Performance / UX Issues",
+    "structured_statement": "Users evaluating the platform encounter friction from 'App Performance / UX Issues' during the Discovery stage, which may disrupt their shopping journey.",
+    "affected_segment": "Broadly applicable",
+    "journey_stage": "POST_PURCHASE",
+    "classification": "EMERGING_SIGNAL",
+    "wishlist_purchase_relevance": 1,
+    "unique_evidence_records": 4,
+    "google_play_count": 4,
+    "youtube_count": 0,
+    "source_coverage": 1,
+    "scores": {
+      "frequency": 2,
+      "wishlist_relevance": 1,
+      "purchase_impact": 3,
+      "user_pain": 3,
+      "cross_source_consistency": 2,
+      "evidence_confidence": 3
+    },
+    "opportunity_score": 2.4,
+    "supporting_evidence": [
+      {
+        "quote": "App response time is the worst, and even a simple filter takes time to respond. Aside from this, app seems good.",
+        "source": "GOOGLE_PLAY",
+        "trace_id": "06d5ef23-7070-4817-8109-d7e6f134b8d1",
+        "date": "2026-08-23T21:34:37"
+      },
+      {
+        "quote": "Friendly App & Budget friendly app like family. 👌❤️",
+        "source": "GOOGLE_PLAY",
+        "trace_id": "d6762aa3-221a-47fe-a76f-2d82dace7534",
+        "date": "2026-08-23T22:21:30"
+      },
+      {
+        "quote": "filters are not working",
+        "source": "GOOGLE_PLAY",
+        "trace_id": "6c0efdf6-9cb9-4255-9a04-8c2cfbf03125",
+        "date": "2026-08-23T18:15:17"
+      },
+      {
+        "quote": "user friendly.. 👍",
+        "source": "GOOGLE_PLAY",
+        "trace_id": "9b4bbb35-a907-4992-ac63-61d7c64433d7",
+        "date": "2026-08-23T18:29:00"
+      }
+    ]
+  },
+  {
+    "opportunity_name": "Signal: Returns / Exchange Friction",
+    "problem": "Returns / Exchange Friction",
+    "structured_statement": "Users evaluating the platform encounter friction from 'Returns / Exchange Friction' during the Discovery stage, which may disrupt their shopping journey.",
+    "affected_segment": "Broadly applicable",
+    "journey_stage": "POST_PURCHASE",
+    "classification": "EMERGING_SIGNAL",
+    "wishlist_purchase_relevance": 1,
+    "unique_evidence_records": 2,
+    "google_play_count": 2,
+    "youtube_count": 0,
+    "source_coverage": 1,
+    "scores": {
+      "frequency": 1,
+      "wishlist_relevance": 1,
+      "purchase_impact": 3,
+      "user_pain": 3,
+      "cross_source_consistency": 2,
+      "evidence_confidence": 2
+    },
+    "opportunity_score": 2.2,
+    "supporting_evidence": [
+      {
+        "quote": "They sell defective products with extra price. And returning an defective item is almost impossible. I had bought belt, which was defective and they were not ready to take it back. After that uninstall the app",
+        "source": "GOOGLE_PLAY",
+        "trace_id": "96c2cf88-66d7-4319-9a4a-df797e664cfc",
+        "date": "2026-08-23T19:36:18"
+      },
+      {
+        "quote": "extra ordinary experience",
+        "source": "GOOGLE_PLAY",
+        "trace_id": "be739917-22ee-450b-85a9-7ed75fed6b6f",
+        "date": "2026-08-24T16:27:09"
+      }
+    ]
+  },
+  {
+    "opportunity_name": "Signal: Price and Value Perception",
+    "problem": "Price and Value Perception",
+    "structured_statement": "Users experiencing strong product interest may postpone or abandon their purchase when they encounter 'Price and Value Perception' during the Unknown stage.",
+    "affected_segment": "Broadly applicable",
+    "journey_stage": "Unknown",
+    "classification": "SIGNAL",
+    "wishlist_purchase_relevance": 1,
+    "unique_evidence_records": 1,
+    "google_play_count": 1,
+    "youtube_count": 0,
+    "source_coverage": 1,
+    "scores": {
+      "frequency": 1,
+      "wishlist_relevance": 1,
+      "purchase_impact": 5,
+      "user_pain": 5,
+      "cross_source_consistency": 2,
+      "evidence_confidence": 1
+    },
+    "opportunity_score": 1.9,
+    "supporting_evidence": [
+      {
+        "quote": "worst app ever so expensive not good productss",
+        "source": "GOOGLE_PLAY",
+        "trace_id": "3d3b1bb8-f96c-4c75-8c75-64e9a07ec49f",
+        "date": "2026-08-23T22:38:59"
+      }
+    ]
+  },
+  {
+    "opportunity_name": "Signal: Product Assortment and Price C",
+    "problem": "Product Assortment and Price Constraints",
+    "structured_statement": "Users experiencing strong product interest may postpone or abandon their purchase when they encounter 'Product Assortment and Price Constraints' during the EVALUATION stage.",
+    "affected_segment": "Broadly applicable",
+    "journey_stage": "EVALUATION",
+    "classification": "SIGNAL",
+    "wishlist_purchase_relevance": 3,
+    "unique_evidence_records": 1,
+    "google_play_count": 0,
+    "youtube_count": 1,
+    "source_coverage": 1,
+    "scores": {
+      "frequency": 1,
+      "wishlist_relevance": 3,
+      "purchase_impact": 5,
+      "user_pain": 5,
+      "cross_source_consistency": 2,
+      "evidence_confidence": 1
+    },
+    "opportunity_score": 1.9,
+    "supporting_evidence": [
+      {
+        "quote": "Bhai tshirt to aache late ho par trackpants thode acche aur baagy sath me cotton material lao under 1000 maniac brand cover karo 😢😢",
+        "source": "YOUTUBE",
+        "trace_id": "15ee4aa1-abea-4aae-9c4d-bbe846fc18ca",
+        "date": "2026-08-23T12:51:33"
+      }
+    ]
+  }
+]

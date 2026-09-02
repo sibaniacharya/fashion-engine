@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Data Quality &amp; Pipeline - Discovery Engine</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "outline": "#777587",
+                        "surface": "#fcf8ff",
+                        "background": "#fcf8ff",
+                        "tertiary-fixed": "#ffdbcc",
+                        "secondary-fixed-dim": "#b7c8e1",
+                        "on-tertiary-fixed-variant": "#7b2f00",
+                        "primary-fixed-dim": "#c3c0ff",
+                        "secondary": "#505f76",
+                        "on-tertiary-container": "#ffd2be",
+                        "on-primary-container": "#dad7ff",
+                        "tertiary-fixed-dim": "#ffb695",
+                        "primary": "#3525cd",
+                        "surface-dim": "#dcd8e5",
+                        "on-error-container": "#93000a",
+                        "on-primary-fixed": "#0f0069",
+                        "on-surface-variant": "#464555",
+                        "primary-fixed": "#e2dfff",
+                        "on-secondary-fixed-variant": "#38485d",
+                        "error-container": "#ffdad6",
+                        "inverse-surface": "#302f39",
+                        "on-background": "#1b1b24",
+                        "on-error": "#ffffff",
+                        "secondary-container": "#d0e1fb",
+                        "inverse-primary": "#c3c0ff",
+                        "on-tertiary": "#ffffff",
+                        "primary-container": "#4f46e5",
+                        "secondary-fixed": "#d3e4fe",
+                        "surface-container-low": "#f5f2ff",
+                        "surface-container": "#f0ecf9",
+                        "surface-tint": "#4d44e3",
+                        "surface-bright": "#fcf8ff",
+                        "on-secondary": "#ffffff",
+                        "on-secondary-container": "#54647a",
+                        "on-primary-fixed-variant": "#3323cc",
+                        "surface-variant": "#e4e1ee",
+                        "surface-container-lowest": "#ffffff",
+                        "outline-variant": "#c7c4d8",
+                        "surface-container-high": "#eae6f4",
+                        "on-primary": "#ffffff",
+                        "on-surface": "#1b1b24",
+                        "inverse-on-surface": "#f3effc",
+                        "tertiary-container": "#a44100",
+                        "on-secondary-fixed": "#0b1c30",
+                        "on-tertiary-fixed": "#351000",
+                        "error": "#ba1a1a",
+                        "tertiary": "#7e3000",
+                        "surface-container-highest": "#e4e1ee"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "stack-xs": "0.25rem",
+                        "stack-sm": "0.5rem",
+                        "gutter": "1.5rem",
+                        "container-max": "1440px",
+                        "margin-page": "2rem",
+                        "stack-lg": "1.5rem",
+                        "stack-md": "1rem"
+                    },
+                    "fontFamily": {
+                        "label-md": ["Inter"],
+                        "h2": ["Inter"],
+                        "label-sm": ["Inter"],
+                        "body-md": ["Inter"],
+                        "display-sm": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "h1": ["Inter"],
+                        "micro": ["Inter"],
+                        "display-lg": ["Inter"]
+                    },
+                    "fontSize": {
+                        "label-md": ["14px", { "lineHeight": "20px", "fontWeight": "500" }],
+                        "h2": ["18px", { "lineHeight": "26px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "label-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "500" }],
+                        "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+                        "display-sm": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+                        "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "h1": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "micro": ["11px", { "lineHeight": "14px", "letterSpacing": "0.03em", "fontWeight": "600" }],
+                        "display-lg": ["30px", { "lineHeight": "38px", "letterSpacing": "-0.02em", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; background-color: #F8FAFC; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .icon-filled { font-variation-settings: 'FILL' 1; }
+        
+        /* Subtle pulse for active pipeline nodes */
+        @keyframes subtle-pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+        .pipeline-active { animation: subtle-pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
+        
+        /* Custom scrollbar for content area */
+        .custom-scrollbar::-webkit-scrollbar { width: 6px; }
+        .custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
+        .custom-scrollbar::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 3px; }
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+    </style>
+</head>
+<body class="bg-[#F8FAFC] text-on-surface flex h-screen overflow-hidden">
+<!-- SideNavBar (Shared Component) -->
+<nav class="fixed left-0 top-0 h-full w-[240px] bg-inverse-surface dark:bg-inverse-surface flex flex-col z-20">
+<!-- Brand Header -->
+<div class="px-6 py-8 border-b border-white/10">
+<h1 class="font-h1 text-h1 text-primary-fixed dark:text-primary-fixed-dim tracking-tight">Discovery Engine</h1>
+<p class="font-label-sm text-label-sm text-secondary-fixed-dim mt-1 uppercase tracking-wider">Enterprise Analytics</p>
+</div>
+<!-- Main Navigation -->
+<div class="flex-1 py-6 overflow-y-auto custom-scrollbar">
+<ul class="space-y-1">
+<li>
+<a class="flex items-center gap-3 text-secondary-fixed-dim hover:text-white px-4 py-3 hover:bg-white/5 transition-colors duration-200" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="font-label-md text-label-md">Overview</span>
+</a>
+</li>
+<li>
+<a class="flex items-center gap-3 text-secondary-fixed-dim hover:text-white px-4 py-3 hover:bg-white/5 transition-colors duration-200" href="#">
+<span class="material-symbols-outlined">topic</span>
+<span class="font-label-md text-label-md">Themes</span>
+</a>
+</li>
+<li>
+<a class="flex items-center gap-3 text-secondary-fixed-dim hover:text-white px-4 py-3 hover:bg-white/5 transition-colors duration-200" href="#">
+<span class="material-symbols-outlined">alt_route</span>
+<span class="font-label-md text-label-md">Customer Journey</span>
+</a>
+</li>
+<li>
+<a class="flex items-center gap-3 text-secondary-fixed-dim hover:text-white px-4 py-3 hover:bg-white/5 transition-colors duration-200" href="#">
+<span class="material-symbols-outlined">lightbulb</span>
+<span class="font-label-md text-label-md">Opportunities</span>
+</a>
+</li>
+<li>
+<a class="flex items-center gap-3 text-secondary-fixed-dim hover:text-white px-4 py-3 hover:bg-white/5 transition-colors duration-200" href="#">
+<span class="material-symbols-outlined">search_insights</span>
+<span class="font-label-md text-label-md">Evidence Explorer</span>
+</a>
+</li>
+<li>
+<a class="flex items-center gap-3 text-secondary-fixed-dim hover:text-white px-4 py-3 hover:bg-white/5 transition-colors duration-200" href="#">
+<span class="material-symbols-outlined">groups</span>
+<span class="font-label-md text-label-md">Behavioral Segments</span>
+</a>
+</li>
+<li>
+<a class="flex items-center gap-3 bg-white/10 text-white border-l-4 border-primary-fixed px-4 py-3 opacity-100 transition-opacity" href="#">
+<span class="material-symbols-outlined icon-filled">data_thresholding</span>
+<span class="font-label-md text-label-md">Data Quality</span>
+</a>
+</li>
+</ul>
+</div>
+<!-- Footer Navigation -->
+<div class="px-4 py-6 border-t border-white/10">
+<ul class="space-y-1">
+<li>
+<a class="flex items-center gap-3 text-secondary-fixed-dim hover:text-white px-4 py-2 hover:bg-white/5 transition-colors duration-200" href="#">
+<span class="material-symbols-outlined text-[18px]">sync</span>
+<span class="font-label-sm text-label-sm">Analysis Status</span>
+</a>
+</li>
+<li>
+<a class="flex items-center gap-3 text-secondary-fixed-dim hover:text-white px-4 py-2 hover:bg-white/5 transition-colors duration-200" href="#">
+<span class="material-symbols-outlined text-[18px]">history</span>
+<span class="font-label-sm text-label-sm">Data Freshness</span>
+</a>
+</li>
+</ul>
+</div>
+</nav>
+<!-- Main Workspace -->
+<div class="flex-1 flex flex-col ml-[240px] w-[calc(100%-240px)] h-screen">
+<!-- TopAppBar (Shared Component) -->
+<header class="flex justify-between items-center h-16 px-gutter bg-surface dark:bg-surface-container-low border-b border-outline-variant dark:border-outline sticky top-0 z-10">
+<div class="flex items-center gap-4">
+<h2 class="font-h2 text-h2 text-on-surface dark:text-on-surface-variant">Discovery Engine</h2>
+</div>
+<div class="flex items-center gap-6">
+<!-- Trailing Icons -->
+<div class="flex items-center gap-4 text-on-surface-variant dark:text-on-secondary-fixed-variant">
+<button class="hover:text-primary dark:hover:text-primary-fixed-dim transition-colors">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button class="hover:text-primary dark:hover:text-primary-fixed-dim transition-colors">
+<span class="material-symbols-outlined">settings</span>
+</button>
+<div class="w-8 h-8 rounded-full overflow-hidden border border-outline-variant">
+<img alt="User profile" class="w-full h-full object-cover" data-alt="A small, circular avatar portrait of a professional individual in a well-lit, neutral environment, suitable for a corporate application dashboard. The image is clean, sharp, and uses a realistic light-mode photography style with soft shadows." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBMP6hFrSDLVv7ARhuEQf9grxlm0pCVBn3qEFAT8AvZR-zSD6O9nqFa-R5aOBTi6fPZBru_tt8EPfyPI5p1MpXG5xQye_XPdVSXVIWTAG5q9mVvdmM3Wp_wK6avApLtyMXI8uVd3h7PRP7GfwwqR4LZ9f1pGyF95Np1G8-qg4CjCr14GR0uV-DD0RpGc1m6TQOar3ZquMYDkqqJvJC1StWe_G3ROJ9aW-BSHtVp-MwBFuDInD99VCQ"/>
+</div>
+</div>
+</div>
+</header>
+<!-- Page Canvas -->
+<main class="flex-1 overflow-y-auto custom-scrollbar p-margin-page">
+<div class="max-w-[1440px] mx-auto space-y-gutter">
+<!-- Page Header -->
+<div class="flex justify-between items-end mb-8">
+<div>
+<h1 class="font-display-lg text-display-lg text-on-background mb-2">Data Quality &amp; Pipeline</h1>
+<p class="font-body-md text-body-md text-on-surface-variant">Monitor data ingestion, filtering, and analysis health.</p>
+</div>
+<div class="flex items-center gap-2 px-3 py-1.5 bg-secondary-container/30 border border-secondary-container rounded-full">
+<div class="w-2 h-2 rounded-full bg-primary pipeline-active"></div>
+<span class="font-label-sm text-label-sm text-primary">Pipeline Complete</span>
+</div>
+</div>
+<!-- Pipeline Visualization -->
+<section class="bg-white rounded-xl border border-outline-variant p-6 mb-gutter relative overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-r from-surface-container-low to-transparent opacity-50 pointer-events-none"></div>
+<h3 class="font-h2 text-h2 text-on-surface mb-6 relative z-10">Ingestion Flow</h3>
+<div class="flex items-center justify-between relative z-10 px-4">
+<!-- Node 1 -->
+<div class="flex flex-col items-center flex-1 relative">
+<div class="w-16 h-16 rounded-lg bg-surface-container-high border border-outline-variant flex items-center justify-center mb-3 shadow-sm z-10">
+<span class="material-symbols-outlined text-[28px] text-secondary">database</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface">Raw Data</span>
+<span class="font-display-sm text-display-sm text-on-background mt-1">1,004</span>
+<!-- Connector -->
+<div class="absolute top-8 left-[50%] w-full h-[2px] bg-outline-variant -z-0"></div>
+</div>
+<!-- Node 2 -->
+<div class="flex flex-col items-center flex-1 relative">
+<div class="w-16 h-16 rounded-lg bg-surface-container-high border border-outline-variant flex items-center justify-center mb-3 shadow-sm z-10">
+<span class="material-symbols-outlined text-[28px] text-secondary">filter_alt</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface">Cleaning</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-1">Deduplication &amp; Formatting</span>
+<!-- Connector -->
+<div class="absolute top-8 left-[50%] w-full h-[2px] bg-outline-variant -z-0"></div>
+</div>
+<!-- Node 3 -->
+<div class="flex flex-col items-center flex-1 relative">
+<div class="w-16 h-16 rounded-lg bg-primary/10 border border-primary flex items-center justify-center mb-3 shadow-sm z-10">
+<span class="material-symbols-outlined text-[28px] text-primary">fact_check</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface">Eligibility Filtering</span>
+<span class="font-display-sm text-display-sm text-primary mt-1">364</span>
+<!-- Connector -->
+<div class="absolute top-8 left-[50%] w-full h-[2px] bg-primary/30 -z-0"></div>
+</div>
+<!-- Node 4 -->
+<div class="flex flex-col items-center flex-1 relative">
+<div class="w-16 h-16 rounded-lg bg-primary border border-primary flex items-center justify-center mb-3 shadow-sm z-10 pipeline-active">
+<span class="material-symbols-outlined text-[28px] text-white">memory</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface">AI Analysis</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-1">Feature Extraction</span>
+<!-- Connector -->
+<div class="absolute top-8 left-[50%] w-full h-[2px] bg-primary/30 -z-0"></div>
+</div>
+<!-- Node 5 -->
+<div class="flex flex-col items-center flex-1 relative">
+<div class="w-16 h-16 rounded-lg bg-surface-container-high border border-outline-variant flex items-center justify-center mb-3 shadow-sm z-10">
+<span class="material-symbols-outlined text-[28px] text-secondary">insights</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface">Structured Insights</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-1">Ready for Dashboard</span>
+</div>
+</div>
+</section>
+<!-- Bento Grid Layout for Details -->
+<div class="grid grid-cols-12 gap-gutter">
+<!-- Exclusion Breakdown (Spans 8 cols) -->
+<section class="col-span-12 lg:col-span-8 bg-white rounded-xl border border-outline-variant p-6">
+<div class="flex justify-between items-center mb-6">
+<h3 class="font-h2 text-h2 text-on-surface">Exclusion Breakdown</h3>
+<button class="font-label-sm text-label-sm text-primary flex items-center gap-1 hover:underline">
+                                View Logs <span class="material-symbols-outlined text-[16px]">open_in_new</span>
+</button>
+</div>
+<div class="space-y-4">
+<!-- Row 1 -->
+<div class="flex items-center justify-between p-3 rounded-lg border border-surface-variant hover:bg-surface-container-low transition-colors">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-surface-variant flex items-center justify-center">
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">language</span>
+</div>
+<span class="font-body-md text-body-md text-on-surface">Non-English</span>
+</div>
+<span class="font-h2 text-h2 text-on-surface">323</span>
+</div>
+<!-- Row 2 -->
+<div class="flex items-center justify-between p-3 rounded-lg border border-surface-variant hover:bg-surface-container-low transition-colors">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-surface-variant flex items-center justify-center">
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">speaker_notes_off</span>
+</div>
+<span class="font-body-md text-body-md text-on-surface">Empty content</span>
+</div>
+<span class="font-h2 text-h2 text-on-surface">210</span>
+</div>
+<!-- Row 3 -->
+<div class="flex items-center justify-between p-3 rounded-lg border border-surface-variant hover:bg-surface-container-low transition-colors">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-surface-variant flex items-center justify-center">
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">content_copy</span>
+</div>
+<span class="font-body-md text-body-md text-on-surface">Duplicates</span>
+</div>
+<span class="font-h2 text-h2 text-on-surface">88</span>
+</div>
+<!-- Row 4 -->
+<div class="flex items-center justify-between p-3 rounded-lg border border-surface-variant hover:bg-surface-container-low transition-colors">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-surface-variant flex items-center justify-center">
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">report</span>
+</div>
+<span class="font-body-md text-body-md text-on-surface">Spam</span>
+</div>
+<span class="font-h2 text-h2 text-on-surface">9</span>
+</div>
+<!-- Row 5 -->
+<div class="flex items-center justify-between p-3 rounded-lg border border-surface-variant hover:bg-surface-container-low transition-colors">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-surface-variant flex items-center justify-center">
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">more_horiz</span>
+</div>
+<span class="font-body-md text-body-md text-on-surface">Other</span>
+</div>
+<span class="font-h2 text-h2 text-on-surface">10</span>
+</div>
+</div>
+</section>
+<!-- Technical Stats (Spans 4 cols) -->
+<div class="col-span-12 lg:col-span-4 flex flex-col gap-gutter">
+<!-- AI Analysis Status -->
+<section class="bg-inverse-surface rounded-xl p-6 text-on-primary">
+<div class="flex items-center gap-2 mb-6 text-primary-fixed">
+<span class="material-symbols-outlined">terminal</span>
+<h3 class="font-h2 text-h2">AI Execution</h3>
+</div>
+<ul class="space-y-4 font-body-md text-body-md text-surface-variant">
+<li class="flex justify-between border-b border-white/10 pb-2">
+<span>Model</span>
+<span class="font-label-md text-label-md text-white">Qwen 3.8 27B</span>
+</li>
+<li class="flex justify-between border-b border-white/10 pb-2">
+<span>Batch size</span>
+<span class="font-label-md text-label-md text-white">4</span>
+</li>
+<li class="flex justify-between border-b border-white/10 pb-2">
+<span>Final failures</span>
+<span class="font-label-md text-label-md text-white">0</span>
+</li>
+<li class="flex justify-between pb-2">
+<span>Checkpointing</span>
+<span class="font-label-md text-label-md text-primary-fixed-dim">Enabled</span>
+</li>
+</ul>
+</section>
+<!-- Analysis Status Widget -->
+<section class="bg-white rounded-xl border border-outline-variant p-6 flex-1 flex flex-col justify-between">
+<div>
+<h3 class="font-h2 text-h2 text-on-surface mb-2">Analysis Status</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-6">Real-time processing overview</p>
+<div class="mb-2 flex justify-between items-end">
+<span class="font-label-md text-label-md text-on-surface">100% Complete</span>
+<span class="font-micro text-micro text-on-surface-variant uppercase tracking-wider">Done</span>
+</div>
+<div class="w-full h-2 bg-surface-variant rounded-full overflow-hidden mb-4">
+<div class="h-full bg-primary w-full rounded-full"></div>
+</div>
+</div>
+<div class="mt-4 pt-4 border-t border-surface-variant">
+<p class="font-label-md text-label-md text-on-surface mb-1 flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-primary">check_circle</span>
+                                    364 eligible records analyzed
+                                </p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Last run: 14 mins ago</p>
+</div>
+</section>
+</div>
+</div>
+</div>
+</main>
+</div>
+</body></html>

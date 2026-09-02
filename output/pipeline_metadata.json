@@ -1,0 +1,33 @@
+{
+  "raw_records": 1004,
+  "valid_records": 364,
+  "eligible_records": 364,
+  "llm_analyzed": 364,
+  "fallback_analyzed": 0,
+  "failed": 0,
+  "deferred_rate_limit": 0,
+  "deferred_quota": 0,
+  "exclusion_breakdown": {
+    "duplicates": 88,
+    "spam": 9,
+    "other": 10,
+    "empty_content": 210,
+    "non_english": 323
+  },
+  "sources": {
+    "GOOGLE_PLAY": {
+      "raw": 303,
+      "eligible": 303,
+      "analyzed": 303,
+      "failed": 0,
+      "deferred": 0
+    },
+    "YOUTUBE": {
+      "raw": 61,
+      "eligible": 61,
+      "analyzed": 61,
+      "failed": 0,
+      "deferred": 0
+    }
+  }
+}

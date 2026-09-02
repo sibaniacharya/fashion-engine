@@ -1,28 +1,200 @@
 [
   {
-    "theme_name": "High Product Quality and Service",
-    "description": "Customers express high satisfaction with the premium quality, fitting, attractive designs, good value for money, and fast delivery service.",
-    "frequency": 6,
+    "theme_name": "Product Quality",
+    "description": "User feedback related to Product Quality",
+    "frequency": 2,
     "source_distribution": {
-      "GOOGLE_PLAY": 6
+      "GOOGLE_PLAY": 2
     },
     "supporting_evidence": [
-      "Veey Good services",
-      "worst app ever so expensive not good productss",
-      "The quality and fitting of the clothes is best. There are many good clothes brands available. And the price is also quite worth it."
+      {
+        "quote": "the quality of the products are fabulous everything feels so premium",
+        "source": "GOOGLE_PLAY",
+        "trace_id": "61bee6d3-5356-4cb1-9bd8-f3d729679e54",
+        "date": "2026-08-23T22:14:13"
+      },
+      {
+        "quote": "attractive quality product i 👍",
+        "source": "GOOGLE_PLAY",
+        "trace_id": "0ba7208e-1caa-42f2-ac1e-7db25e208d2c",
+        "date": "2026-08-23T22:14:10"
+      }
     ]
   },
   {
-    "theme_name": "Positive Shopping Experience",
-    "description": "Customers expressed general satisfaction, reporting enjoyable and improved overall experiences with the service.",
-    "frequency": 3,
+    "theme_name": "Service Quality",
+    "description": "User feedback related to Service Quality",
+    "frequency": 1,
     "source_distribution": {
-      "GOOGLE_PLAY": 3
+      "GOOGLE_PLAY": 1
     },
     "supporting_evidence": [
-      "good experience",
-      "better experience",
-      "nice exp"
+      {
+        "quote": "Veey Good services",
+        "source": "GOOGLE_PLAY",
+        "trace_id": "79c32eff-5710-4b44-a424-7645a7d6672e",
+        "date": "2026-08-23T22:42:16"
+      }
+    ]
+  },
+  {
+    "theme_name": "Budget Friendly",
+    "description": "User feedback related to Budget Friendly",
+    "frequency": 1,
+    "source_distribution": {
+      "GOOGLE_PLAY": 1
+    },
+    "supporting_evidence": [
+      {
+        "quote": "Friendly App & Budget friendly app like family. 👌❤️",
+        "source": "GOOGLE_PLAY",
+        "trace_id": "d6762aa3-221a-47fe-a76f-2d82dace7534",
+        "date": "2026-08-23T22:21:30"
+      }
+    ]
+  },
+  {
+    "theme_name": "Affordability",
+    "description": "User feedback related to Affordability",
+    "frequency": 1,
+    "source_distribution": {
+      "GOOGLE_PLAY": 1
+    },
+    "supporting_evidence": [
+      {
+        "quote": "good app and affordable and gen z",
+        "source": "GOOGLE_PLAY",
+        "trace_id": "045d6508-04cf-47d5-a655-b9d068e4b100",
+        "date": "2026-08-23T22:28:14"
+      }
+    ]
+  },
+  {
+    "theme_name": "Brand affinity",
+    "description": "User feedback related to Brand affinity",
+    "frequency": 1,
+    "source_distribution": {
+      "GOOGLE_PLAY": 1
+    },
+    "supporting_evidence": [
+      {
+        "quote": "I love Myntra",
+        "source": "GOOGLE_PLAY",
+        "trace_id": "83435c13-7b4a-45cb-bcb7-5495799aeae9",
+        "date": "2026-08-23T22:12:34"
+      }
+    ]
+  },
+  {
+    "theme_name": "Quality and Service",
+    "description": "User feedback related to Quality and Service",
+    "frequency": 1,
+    "source_distribution": {
+      "GOOGLE_PLAY": 1
+    },
+    "supporting_evidence": [
+      {
+        "quote": "so quickly service and best quality i",
+        "source": "GOOGLE_PLAY",
+        "trace_id": "7909d029-a005-4a18-a8e3-3d5a49f524ff",
+        "date": "2026-08-23T22:12:20"
+      }
+    ]
+  },
+  {
+    "theme_name": "Customer Care",
+    "description": "User feedback related to Customer Care",
+    "frequency": 1,
+    "source_distribution": {
+      "GOOGLE_PLAY": 1
+    },
+    "supporting_evidence": [
+      {
+        "quote": "worst app in terms of costomer care",
+        "source": "GOOGLE_PLAY",
+        "trace_id": "5a4a0677-112a-4f99-bfd1-7d1f553e3f52",
+        "date": "2026-08-23T22:05:00"
+      }
+    ]
+  },
+  {
+    "theme_name": "Delivery Issue",
+    "description": "User feedback related to Delivery Issue",
+    "frequency": 1,
+    "source_distribution": {
+      "GOOGLE_PLAY": 1
+    },
+    "supporting_evidence": [
+      {
+        "quote": "worst shopping application I have ever used I ordered 2 products from Myntra but I received only one and it shows both products delivered after I registered complaint they are saying both the products was packed from warehouse and delivered if they was delivered why I had not received that, am I made or what I don't have free money to waste like that, shame on you myntra that is such a shameful thing that you did to me. You will not be able to digest my hard earned money.",
+        "source": "GOOGLE_PLAY",
+        "trace_id": "ad4d5b53-d193-444d-a40b-1d42a3a9e33f",
+        "date": "2026-08-23T22:03:58"
+      }
+    ]
+  },
+  {
+    "theme_name": "Late Delivery",
+    "description": "User feedback related to Late Delivery",
+    "frequency": 1,
+    "source_distribution": {
+      "GOOGLE_PLAY": 1
+    },
+    "supporting_evidence": [
+      {
+        "quote": "late delivery over all price good",
+        "source": "GOOGLE_PLAY",
+        "trace_id": "cbe96c56-5cae-4aa7-961b-d6339ee53a65",
+        "date": "2026-08-23T21:48:28"
+      }
+    ]
+  },
+  {
+    "theme_name": "Login Issue",
+    "description": "User feedback related to Login Issue",
+    "frequency": 1,
+    "source_distribution": {
+      "GOOGLE_PLAY": 1
+    },
+    "supporting_evidence": [
+      {
+        "quote": "Myntra Review Myntra has been my favorite shopping platform for the past 7 years, and overall, I’ve always had a great experience. The product quality is really good, and I’ve been happy with most of my purchases. ❤️ Recently, I faced an issue while trying to create and log in to a new account. The login process isn’t working properly, which is quite frustrating. Please look into this issue and fix it as soon as possible. Apart from this, my overall experience with Myntra has been very good,",
+        "source": "GOOGLE_PLAY",
+        "trace_id": "3a786d2f-6e4b-4899-9652-53f08d71ced6",
+        "date": "2026-08-23T21:48:27"
+      }
+    ]
+  },
+  {
+    "theme_name": "Refund Fraud Issue",
+    "description": "User feedback related to Refund Fraud Issue",
+    "frequency": 1,
+    "source_distribution": {
+      "GOOGLE_PLAY": 1
+    },
+    "supporting_evidence": [
+      {
+        "quote": "I never knew that myntra is such a scam, few days ago I ordered 2 kurta set from myntra & instead i recieved used jogger & know when I'm returned it after so many efforts but only i could return 1 of it even though I didn't recieved any of the money but the myntra said that I have recieved the amount... never ever thought that I could be scammed from myntra like this . I have lost about 1k ruppe & mentally suffered bcoz of the daily complaint",
+        "source": "GOOGLE_PLAY",
+        "trace_id": "6988774a-c42b-4794-8029-59dbf38bd0c3",
+        "date": "2026-08-23T21:45:38"
+      }
+    ]
+  },
+  {
+    "theme_name": "Customer support",
+    "description": "User feedback related to Customer support",
+    "frequency": 1,
+    "source_distribution": {
+      "GOOGLE_PLAY": 1
+    },
+    "supporting_evidence": [
+      {
+        "quote": "customer support is not good",
+        "source": "GOOGLE_PLAY",
+        "trace_id": "000b8a9d-f17f-4d5d-bb3f-d97ecae1fcf2",
+        "date": "2026-08-23T21:45:32"
+      }
     ]
   }
 ]

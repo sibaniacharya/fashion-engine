@@ -1,0 +1,680 @@
+{
+  "/api/data-quality": {
+    "status": 200,
+    "data": {
+      "raw": 1004,
+      "valid": 364,
+      "eligible": 364,
+      "llm_analyzed": 38,
+      "fallback_analyzed": 0,
+      "failed": 0,
+      "deferred_rate_limit": 0,
+      "deferred_quota": 326,
+      "source_coverage": {
+        "GOOGLE_PLAY": {
+          "raw": 303,
+          "eligible": 303,
+          "analyzed": 38,
+          "failed": 0,
+          "deferred": 265
+        },
+        "YOUTUBE": {
+          "raw": 61,
+          "eligible": 61,
+          "analyzed": 0,
+          "failed": 0,
+          "deferred": 61
+        }
+      }
+    }
+  },
+  "/api/dashboard": {
+    "status": 200,
+    "data": {
+      "total_records_processed": 38,
+      "top_opportunities": [
+        {
+          "opportunity_name": "Signal: Price / Value Uncertainty",
+          "problem": "Price / Value Uncertainty",
+          "structured_statement": "Users who show strong product interest -> may postpone purchase when they encounter 'Price / Value Uncertainty' -> during the Evaluation / Purchase Postponement stage -> potentially leading to postponement.",
+          "affected_segment": "Behavioral mapping recommended",
+          "journey_stage": "Evaluation / Purchase Postponement",
+          "classification": "SIGNAL",
+          "scores": {
+            "frequency": 1,
+            "wishlist_relevance": 4,
+            "purchase_impact": 5,
+            "user_pain": 5,
+            "cross_source_consistency": 1,
+            "evidence_confidence": 1
+          },
+          "opportunity_score": 1.9,
+          "supporting_evidence": [
+            {
+              "quote": "worst app ever so expensive not good productss",
+              "source": "Unknown",
+              "trace_id": "Unknown",
+              "date": "Unknown"
+            }
+          ]
+        },
+        {
+          "opportunity_name": "Signal: Login process issue preventing",
+          "problem": "Login process issue preventing account creation and sign-in.",
+          "structured_statement": "Users who show strong product interest -> may postpone purchase when they encounter 'Login process issue preventing account creation and sign-in.' -> during the Evaluation / Purchase Postponement stage -> potentially leading to postponement.",
+          "affected_segment": "Behavioral mapping recommended",
+          "journey_stage": "Evaluation / Purchase Postponement",
+          "classification": "SIGNAL",
+          "scores": {
+            "frequency": 1,
+            "wishlist_relevance": 4,
+            "purchase_impact": 5,
+            "user_pain": 5,
+            "cross_source_consistency": 1,
+            "evidence_confidence": 1
+          },
+          "opportunity_score": 1.9,
+          "supporting_evidence": [
+            {
+              "quote": "Myntra Review Myntra has been my favorite shopping platform for the past 7 years, and overall, I\u2019ve always had a great experience. The product quality is really good, and I\u2019ve been happy with most of my purchases. \u2764\ufe0f Recently, I faced an issue while trying to create and log in to a new account. The login process isn\u2019t working properly, which is quite frustrating. Please look into this issue and fix it as soon as possible. Apart from this, my overall experience with Myntra has been very good,",
+              "source": "Unknown",
+              "trace_id": "Unknown",
+              "date": "Unknown"
+            }
+          ]
+        }
+      ],
+      "top_themes": []
+    }
+  },
+  "/api/themes": {
+    "status": 200,
+    "data": {
+      "data": [],
+      "total": 0,
+      "page": 1,
+      "size": 10
+    }
+  },
+  "/api/evidence": {
+    "status": 200,
+    "data": {
+      "data": [
+        {
+          "record_id": "79c32eff-5710-4b44-a424-7645a7d6672e",
+          "source": "GOOGLE_PLAY",
+          "text": "Veey Good services",
+          "date": "2026-08-23T22:42:16",
+          "analysis_status": "ANALYZED",
+          "model_used": "gemini",
+          "theme": "Service Quality",
+          "wishlist_intent": "Unknown",
+          "purchase_intent": "NO",
+          "purchase_stage": "Unknown",
+          "purchase_barrier": "UNKNOWN",
+          "information_seeking": "No evidence",
+          "user_segment": "Segment unknown",
+          "evidence_strength": "weak"
+        },
+        {
+          "record_id": "3d3b1bb8-f96c-4c75-8c75-64e9a07ec49f",
+          "source": "GOOGLE_PLAY",
+          "text": "worst app ever so expensive not good productss",
+          "date": "2026-08-23T22:38:59",
+          "analysis_status": "ANALYZED",
+          "model_used": "gemini",
+          "theme": "App Dissatisfaction",
+          "wishlist_intent": "Unknown",
+          "purchase_intent": "NO",
+          "purchase_stage": "Unknown",
+          "purchase_barrier": "Expensive pricing",
+          "information_seeking": "No evidence",
+          "user_segment": "Segment unknown",
+          "evidence_strength": "moderate"
+        },
+        {
+          "record_id": "d0459864-5cdf-4a1a-9e24-b9a3daf0ae0d",
+          "source": "GOOGLE_PLAY",
+          "text": "good experience \u2763\ufe0f",
+          "date": "2026-08-23T22:35:48",
+          "analysis_status": "ANALYZED",
+          "model_used": "gemini",
+          "theme": "Positive Experience",
+          "wishlist_intent": "Unknown",
+          "purchase_intent": "NO",
+          "purchase_stage": "Unknown",
+          "purchase_barrier": "UNKNOWN",
+          "information_seeking": "No evidence",
+          "user_segment": "Segment unknown",
+          "evidence_strength": "weak"
+        },
+        {
+          "record_id": "881373f9-32ad-4b63-b196-26563b11b5bd",
+          "source": "GOOGLE_PLAY",
+          "text": "great app",
+          "date": "2026-08-23T22:33:27",
+          "analysis_status": "ANALYZED",
+          "model_used": "gemini",
+          "theme": "App Satisfaction",
+          "wishlist_intent": "Unknown",
+          "purchase_intent": "NO",
+          "purchase_stage": "Unknown",
+          "purchase_barrier": "UNKNOWN",
+          "information_seeking": "No evidence",
+          "user_segment": "Segment unknown",
+          "evidence_strength": "weak"
+        },
+        {
+          "record_id": "03a39b05-fb33-4f09-a328-2a595fa3e7c6",
+          "source": "GOOGLE_PLAY",
+          "text": "better experience",
+          "date": "2026-08-23T22:33:03",
+          "analysis_status": "ANALYZED",
+          "model_used": "gemini",
+          "theme": "User Experience",
+          "wishlist_intent": "Unknown",
+          "purchase_intent": "NO",
+          "purchase_stage": "Unknown",
+          "purchase_barrier": "UNKNOWN",
+          "information_seeking": "No evidence",
+          "user_segment": "Segment unknown",
+          "evidence_strength": "weak"
+        },
+        {
+          "record_id": "4b38b6a9-37da-4ba8-9025-8940242d403e",
+          "source": "GOOGLE_PLAY",
+          "text": "good \ud83d\udc4d",
+          "date": "2026-08-23T22:31:23",
+          "analysis_status": "ANALYZED",
+          "model_used": "gemini",
+          "theme": "Positive Feedback",
+          "wishlist_intent": "Unknown",
+          "purchase_intent": "NO",
+          "purchase_stage": "Post-purchase",
+          "purchase_barrier": "UNKNOWN",
+          "information_seeking": "No evidence",
+          "user_segment": "Segment unknown",
+          "evidence_strength": "weak"
+        },
+        {
+          "record_id": "06afd720-fac5-42e0-bfd3-b4a75f4474e3",
+          "source": "GOOGLE_PLAY",
+          "text": "super",
+          "date": "2026-08-23T22:29:57",
+          "analysis_status": "ANALYZED",
+          "model_used": "gemini",
+          "theme": "General Praise",
+          "wishlist_intent": "Unknown",
+          "purchase_intent": "NO",
+          "purchase_stage": "Post-purchase",
+          "purchase_barrier": "UNKNOWN",
+          "information_seeking": "No evidence",
+          "user_segment": "Segment unknown",
+          "evidence_strength": "weak"
+        },
+        {
+          "record_id": "b720f83e-3aad-4945-8875-464c389ece71",
+          "source": "GOOGLE_PLAY",
+          "text": "nice exp",
+          "date": "2026-08-23T22:24:21",
+          "analysis_status": "ANALYZED",
+          "model_used": "gemini",
+          "theme": "Positive Experience",
+          "wishlist_intent": "Unknown",
+          "purchase_intent": "NO",
+          "purchase_stage": "Unknown",
+          "purchase_barrier": "UNKNOWN",
+          "information_seeking": "No evidence",
+          "user_segment": "Segment unknown",
+          "evidence_strength": "weak"
+        },
+        {
+          "record_id": "d6762aa3-221a-47fe-a76f-2d82dace7534",
+          "source": "GOOGLE_PLAY",
+          "text": "Friendly App & Budget friendly app like family. \ud83d\udc4c\u2764\ufe0f",
+          "date": "2026-08-23T22:21:30",
+          "analysis_status": "ANALYZED",
+          "model_used": "gemini",
+          "theme": "Budget Friendly",
+          "wishlist_intent": "Unknown",
+          "purchase_intent": "NO",
+          "purchase_stage": "Unknown",
+          "purchase_barrier": "UNKNOWN",
+          "information_seeking": "No evidence",
+          "user_segment": "value-conscious shopper",
+          "evidence_strength": "moderate"
+        },
+        {
+          "record_id": "fcf908de-63c9-471d-872d-7e033ac9fbaa",
+          "source": "GOOGLE_PLAY",
+          "text": "\u2b50\u2b50\u2b50\u2b50\u2b50I've been using Myntra for a long time, and my experience has been amazing. The app is easy to use, offers a huge variety of brands and styles, and the quality of products is usually excellent. Deliveries are quick, packaging is neat, and returns or exchanges are hassle-free. I also love the frequent sales and discounts, which make shopping even more enjoyable. Overall, Myntra is one of the best online shopping apps, and I highly recommend it!",
+          "date": "2026-08-23T22:20:45",
+          "analysis_status": "ANALYZED",
+          "model_used": "gemini",
+          "theme": "Overall Satisfaction",
+          "wishlist_intent": "Unknown",
+          "purchase_intent": "NO",
+          "purchase_stage": "Post-purchase",
+          "purchase_barrier": "UNKNOWN",
+          "information_seeking": "No evidence",
+          "user_segment": "Segment unknown",
+          "evidence_strength": "strong"
+        },
+        {
+          "record_id": "b81e0519-ca98-4ae6-a50c-7bd05948a131",
+          "source": "GOOGLE_PLAY",
+          "text": "good",
+          "date": "2026-08-23T22:20:15",
+          "analysis_status": "ANALYZED",
+          "model_used": "gemini",
+          "theme": "Positive Feedback",
+          "wishlist_intent": "Unknown",
+          "purchase_intent": "NO",
+          "purchase_stage": "Post-purchase",
+          "purchase_barrier": "UNKNOWN",
+          "information_seeking": "No evidence",
+          "user_segment": "Segment unknown",
+          "evidence_strength": "weak"
+        },
+        {
+          "record_id": "9bf8adcc-97cf-4733-b570-0149faf115f8",
+          "source": "GOOGLE_PLAY",
+          "text": "Best shopping app for clothes and fashion accessories",
+          "date": "2026-08-23T22:20:00",
+          "analysis_status": "ANALYZED",
+          "model_used": "gemini",
+          "theme": "App appreciation",
+          "wishlist_intent": "Unknown",
+          "purchase_intent": "NO",
+          "purchase_stage": "Unknown",
+          "purchase_barrier": "UNKNOWN",
+          "information_seeking": "No evidence",
+          "user_segment": "Segment unknown",
+          "evidence_strength": "weak"
+        },
+        {
+          "record_id": "b9c69dd9-93cb-4df3-9e28-848c16d9ad98",
+          "source": "GOOGLE_PLAY",
+          "text": "The quality and fitting of the clothes is best. There are many good clothes brands available. And the price is also quite worth it.",
+          "date": "2026-08-23T22:16:55",
+          "analysis_status": "ANALYZED",
+          "model_used": "gemini",
+          "theme": "Product Satisfaction",
+          "wishlist_intent": "Unknown",
+          "purchase_intent": "NO",
+          "purchase_stage": "Post-purchase",
+          "purchase_barrier": "UNKNOWN",
+          "information_seeking": "No evidence",
+          "user_segment": "Segment unknown",
+          "evidence_strength": "strong"
+        },
+        {
+          "record_id": "045d6508-04cf-47d5-a655-b9d068e4b100",
+          "source": "GOOGLE_PLAY",
+          "text": "good app and affordable and gen z",
+          "date": "2026-08-23T22:28:14",
+          "analysis_status": "ANALYZED",
+          "model_used": "gemini",
+          "theme": "Affordability",
+          "wishlist_intent": "Unknown",
+          "purchase_intent": "NO",
+          "purchase_stage": "Unknown",
+          "purchase_barrier": "UNKNOWN",
+          "information_seeking": "No evidence",
+          "user_segment": "value-conscious shopper",
+          "evidence_strength": "weak"
+        },
+        {
+          "record_id": "61bee6d3-5356-4cb1-9bd8-f3d729679e54",
+          "source": "GOOGLE_PLAY",
+          "text": "the quality of the products are fabulous everything feels so premium",
+          "date": "2026-08-23T22:14:13",
+          "analysis_status": "ANALYZED",
+          "model_used": "gemini",
+          "theme": "Product Quality",
+          "wishlist_intent": "Unknown",
+          "purchase_intent": "NO",
+          "purchase_stage": "Post-purchase",
+          "purchase_barrier": "UNKNOWN",
+          "information_seeking": "No evidence",
+          "user_segment": "quality-conscious shopper",
+          "evidence_strength": "strong"
+        },
+        {
+          "record_id": "0ba7208e-1caa-42f2-ac1e-7db25e208d2c",
+          "source": "GOOGLE_PLAY",
+          "text": "attractive quality product i \ud83d\udc4d",
+          "date": "2026-08-23T22:14:10",
+          "analysis_status": "ANALYZED",
+          "model_used": "gemini",
+          "theme": "Product Quality",
+          "wishlist_intent": "Unknown",
+          "purchase_intent": "NO",
+          "purchase_stage": "Post-purchase",
+          "purchase_barrier": "UNKNOWN",
+          "information_seeking": "No evidence",
+          "user_segment": "Segment unknown",
+          "evidence_strength": "weak"
+        },
+        {
+          "record_id": "7b1dd054-394f-4d6f-93c4-3a5367baf3fd",
+          "source": "GOOGLE_PLAY",
+          "text": "Good one",
+          "date": "2026-08-23T22:13:19",
+          "analysis_status": "ANALYZED",
+          "model_used": "gemini",
+          "theme": "UNKNOWN",
+          "wishlist_intent": "Unknown",
+          "purchase_intent": "NO",
+          "purchase_stage": "Post-purchase",
+          "purchase_barrier": "UNKNOWN",
+          "information_seeking": "No evidence",
+          "user_segment": "Segment unknown",
+          "evidence_strength": "weak"
+        },
+        {
+          "record_id": "83435c13-7b4a-45cb-bcb7-5495799aeae9",
+          "source": "GOOGLE_PLAY",
+          "text": "I love Myntra",
+          "date": "2026-08-23T22:12:34",
+          "analysis_status": "ANALYZED",
+          "model_used": "gemini",
+          "theme": "Brand affinity",
+          "wishlist_intent": "Unknown",
+          "purchase_intent": "NO",
+          "purchase_stage": "Unknown",
+          "purchase_barrier": "UNKNOWN",
+          "information_seeking": "No evidence",
+          "user_segment": "Segment unknown",
+          "evidence_strength": "weak"
+        },
+        {
+          "record_id": "9af23730-776b-4027-8570-c704d8d2c4a8",
+          "source": "GOOGLE_PLAY",
+          "text": "best",
+          "date": "2026-08-23T22:12:29",
+          "analysis_status": "ANALYZED",
+          "model_used": "gemini",
+          "theme": "Overall satisfaction",
+          "wishlist_intent": "Unknown",
+          "purchase_intent": "NO",
+          "purchase_stage": "Unknown",
+          "purchase_barrier": "UNKNOWN",
+          "information_seeking": "No evidence",
+          "user_segment": "Segment unknown",
+          "evidence_strength": "weak"
+        },
+        {
+          "record_id": "7909d029-a005-4a18-a8e3-3d5a49f524ff",
+          "source": "GOOGLE_PLAY",
+          "text": "so quickly service and best quality i",
+          "date": "2026-08-23T22:12:20",
+          "analysis_status": "ANALYZED",
+          "model_used": "gemini",
+          "theme": "Quality and Service",
+          "wishlist_intent": "Unknown",
+          "purchase_intent": "NO",
+          "purchase_stage": "Post-purchase",
+          "purchase_barrier": "UNKNOWN",
+          "information_seeking": "No evidence",
+          "user_segment": "quality-conscious shopper",
+          "evidence_strength": "strong"
+        }
+      ],
+      "total": 38,
+      "page": 1,
+      "size": 20
+    }
+  },
+  "/api/journey": {
+    "status": 404,
+    "data": {
+      "detail": "Not Found"
+    }
+  },
+  "/api/wishlist-behavior": {
+    "status": 200,
+    "data": {
+      "total_valid_records": 38,
+      "total_wishlist_mentions": 0,
+      "bookmarking_vs_intent": {
+        "EXPLICIT_WISHLIST": 0,
+        "EXPLICIT_PURCHASE_INTENT": 0,
+        "GENERAL_PRODUCT_INTEREST": 0,
+        "PURCHASE_EVALUATION": 0,
+        "COMPARISON": 0,
+        "POSTPONEMENT": 0,
+        "ABANDONMENT": 0,
+        "BOOKMARKING": 0,
+        "UNKNOWN": 38
+      },
+      "postponement_reasons": {},
+      "by_source": {
+        "GOOGLE_PLAY": {
+          "total": 38,
+          "intents": [
+            "Unknown",
+            "Unknown",
+            "Unknown",
+            "Unknown",
+            "Unknown",
+            "Unknown",
+            "Unknown",
+            "Unknown",
+            "Unknown",
+            "Unknown",
+            "Unknown",
+            "Unknown",
+            "Unknown",
+            "Unknown",
+            "Unknown",
+            "Unknown",
+            "Unknown",
+            "Unknown",
+            "Unknown",
+            "Unknown",
+            "Unknown",
+            "Unknown",
+            "Unknown",
+            "Unknown",
+            "Unknown",
+            "Unknown",
+            "Unknown",
+            "Unknown",
+            "Unknown",
+            "Unknown",
+            "Unknown",
+            "Unknown",
+            "Unknown",
+            "Unknown",
+            "Unknown",
+            "Unknown",
+            "Unknown",
+            "Unknown"
+          ]
+        }
+      },
+      "by_segment": {
+        "Segment unknown": {
+          "total": 33,
+          "intents": []
+        },
+        "value-conscious shopper": {
+          "total": 2,
+          "intents": []
+        },
+        "quality-conscious shopper": {
+          "total": 2,
+          "intents": []
+        },
+        "brand-loyal shopper": {
+          "total": 1,
+          "intents": []
+        }
+      },
+      "by_theme": {
+        "Service Quality": {
+          "total": 1,
+          "intents": []
+        },
+        "App Dissatisfaction": {
+          "total": 1,
+          "intents": []
+        },
+        "Positive Experience": {
+          "total": 2,
+          "intents": []
+        },
+        "App Satisfaction": {
+          "total": 2,
+          "intents": []
+        },
+        "User Experience": {
+          "total": 1,
+          "intents": []
+        },
+        "Positive Feedback": {
+          "total": 2,
+          "intents": []
+        },
+        "General Praise": {
+          "total": 1,
+          "intents": []
+        },
+        "Budget Friendly": {
+          "total": 1,
+          "intents": []
+        },
+        "Overall Satisfaction": {
+          "total": 2,
+          "intents": []
+        },
+        "App appreciation": {
+          "total": 1,
+          "intents": []
+        },
+        "Product Satisfaction": {
+          "total": 2,
+          "intents": []
+        },
+        "Affordability": {
+          "total": 1,
+          "intents": []
+        },
+        "Product Quality": {
+          "total": 2,
+          "intents": []
+        },
+        "UNKNOWN": {
+          "total": 6,
+          "intents": []
+        },
+        "Brand affinity": {
+          "total": 1,
+          "intents": []
+        },
+        "Overall satisfaction": {
+          "total": 1,
+          "intents": []
+        },
+        "Quality and Service": {
+          "total": 1,
+          "intents": []
+        },
+        "Customer Care": {
+          "total": 1,
+          "intents": []
+        },
+        "Delivery Issue": {
+          "total": 1,
+          "intents": []
+        },
+        "General Satisfaction": {
+          "total": 1,
+          "intents": []
+        },
+        "Shopping Experience": {
+          "total": 1,
+          "intents": []
+        },
+        "App experience": {
+          "total": 1,
+          "intents": []
+        },
+        "Late Delivery": {
+          "total": 1,
+          "intents": []
+        },
+        "Login Issue": {
+          "total": 1,
+          "intents": []
+        },
+        "Refund Fraud Issue": {
+          "total": 1,
+          "intents": []
+        },
+        "Customer support": {
+          "total": 1,
+          "intents": []
+        },
+        "General app satisfaction": {
+          "total": 1,
+          "intents": []
+        }
+      }
+    }
+  },
+  "/api/opportunities": {
+    "status": 200,
+    "data": [
+      {
+        "opportunity_name": "Signal: Price / Value Uncertainty",
+        "problem": "Price / Value Uncertainty",
+        "structured_statement": "Users who show strong product interest -> may postpone purchase when they encounter 'Price / Value Uncertainty' -> during the Evaluation / Purchase Postponement stage -> potentially leading to postponement.",
+        "affected_segment": "Behavioral mapping recommended",
+        "journey_stage": "Evaluation / Purchase Postponement",
+        "scores": {
+          "frequency": 1,
+          "wishlist_relevance": 4,
+          "purchase_impact": 5,
+          "user_pain": 5,
+          "cross_source_consistency": 1,
+          "evidence_confidence": 1
+        },
+        "opportunity_score": 1.9,
+        "supporting_evidence": [
+          {
+            "quote": "worst app ever so expensive not good productss",
+            "source": "Unknown",
+            "trace_id": "Unknown",
+            "date": "Unknown"
+          }
+        ]
+      },
+      {
+        "opportunity_name": "Signal: Login process issue preventing",
+        "problem": "Login process issue preventing account creation and sign-in.",
+        "structured_statement": "Users who show strong product interest -> may postpone purchase when they encounter 'Login process issue preventing account creation and sign-in.' -> during the Evaluation / Purchase Postponement stage -> potentially leading to postponement.",
+        "affected_segment": "Behavioral mapping recommended",
+        "journey_stage": "Evaluation / Purchase Postponement",
+        "scores": {
+          "frequency": 1,
+          "wishlist_relevance": 4,
+          "purchase_impact": 5,
+          "user_pain": 5,
+          "cross_source_consistency": 1,
+          "evidence_confidence": 1
+        },
+        "opportunity_score": 1.9,
+        "supporting_evidence": [
+          {
+            "quote": "Myntra Review Myntra has been my favorite shopping platform for the past 7 years, and overall, I\u2019ve always had a great experience. The product quality is really good, and I\u2019ve been happy with most of my purchases. \u2764\ufe0f Recently, I faced an issue while trying to create and log in to a new account. The login process isn\u2019t working properly, which is quite frustrating. Please look into this issue and fix it as soon as possible. Apart from this, my overall experience with Myntra has been very good,",
+            "source": "Unknown",
+            "trace_id": "Unknown",
+            "date": "Unknown"
+          }
+        ]
+      }
+    ]
+  }
+}

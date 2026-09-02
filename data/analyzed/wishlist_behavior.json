@@ -1,11 +1,189 @@
 {
+  "total_valid_records": 38,
   "total_wishlist_mentions": 0,
   "bookmarking_vs_intent": {
-    "bookmarking": 0,
-    "purchase_intent": 0
+    "EXPLICIT_WISHLIST": 0,
+    "EXPLICIT_PURCHASE_INTENT": 0,
+    "GENERAL_PRODUCT_INTEREST": 0,
+    "PURCHASE_EVALUATION": 0,
+    "COMPARISON": 0,
+    "POSTPONEMENT": 0,
+    "ABANDONMENT": 0,
+    "BOOKMARKING": 0,
+    "UNKNOWN": 38
   },
   "postponement_reasons": {},
-  "by_source": {},
-  "by_segment": {},
-  "by_theme": {}
+  "by_source": {
+    "GOOGLE_PLAY": {
+      "total": 38,
+      "intents": [
+        "Unknown",
+        "Unknown",
+        "Unknown",
+        "Unknown",
+        "Unknown",
+        "Unknown",
+        "Unknown",
+        "Unknown",
+        "Unknown",
+        "Unknown",
+        "Unknown",
+        "Unknown",
+        "Unknown",
+        "Unknown",
+        "Unknown",
+        "Unknown",
+        "Unknown",
+        "Unknown",
+        "Unknown",
+        "Unknown",
+        "Unknown",
+        "Unknown",
+        "Unknown",
+        "Unknown",
+        "Unknown",
+        "Unknown",
+        "Unknown",
+        "Unknown",
+        "Unknown",
+        "Unknown",
+        "Unknown",
+        "Unknown",
+        "Unknown",
+        "Unknown",
+        "Unknown",
+        "Unknown",
+        "Unknown",
+        "Unknown"
+      ]
+    }
+  },
+  "by_segment": {
+    "Segment unknown": {
+      "total": 33,
+      "intents": []
+    },
+    "value-conscious shopper": {
+      "total": 2,
+      "intents": []
+    },
+    "quality-conscious shopper": {
+      "total": 2,
+      "intents": []
+    },
+    "brand-loyal shopper": {
+      "total": 1,
+      "intents": []
+    }
+  },
+  "by_theme": {
+    "Service Quality": {
+      "total": 1,
+      "intents": []
+    },
+    "App Dissatisfaction": {
+      "total": 1,
+      "intents": []
+    },
+    "Positive Experience": {
+      "total": 2,
+      "intents": []
+    },
+    "App Satisfaction": {
+      "total": 2,
+      "intents": []
+    },
+    "User Experience": {
+      "total": 1,
+      "intents": []
+    },
+    "Positive Feedback": {
+      "total": 2,
+      "intents": []
+    },
+    "General Praise": {
+      "total": 1,
+      "intents": []
+    },
+    "Budget Friendly": {
+      "total": 1,
+      "intents": []
+    },
+    "Overall Satisfaction": {
+      "total": 2,
+      "intents": []
+    },
+    "App appreciation": {
+      "total": 1,
+      "intents": []
+    },
+    "Product Satisfaction": {
+      "total": 2,
+      "intents": []
+    },
+    "Affordability": {
+      "total": 1,
+      "intents": []
+    },
+    "Product Quality": {
+      "total": 2,
+      "intents": []
+    },
+    "UNKNOWN": {
+      "total": 6,
+      "intents": []
+    },
+    "Brand affinity": {
+      "total": 1,
+      "intents": []
+    },
+    "Overall satisfaction": {
+      "total": 1,
+      "intents": []
+    },
+    "Quality and Service": {
+      "total": 1,
+      "intents": []
+    },
+    "Customer Care": {
+      "total": 1,
+      "intents": []
+    },
+    "Delivery Issue": {
+      "total": 1,
+      "intents": []
+    },
+    "General Satisfaction": {
+      "total": 1,
+      "intents": []
+    },
+    "Shopping Experience": {
+      "total": 1,
+      "intents": []
+    },
+    "App experience": {
+      "total": 1,
+      "intents": []
+    },
+    "Late Delivery": {
+      "total": 1,
+      "intents": []
+    },
+    "Login Issue": {
+      "total": 1,
+      "intents": []
+    },
+    "Refund Fraud Issue": {
+      "total": 1,
+      "intents": []
+    },
+    "Customer support": {
+      "total": 1,
+      "intents": []
+    },
+    "General app satisfaction": {
+      "total": 1,
+      "intents": []
+    }
+  }
 }

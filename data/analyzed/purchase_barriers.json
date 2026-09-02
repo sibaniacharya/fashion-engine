@@ -1,25 +1,49 @@
 {
-  "total_barriers_identified": 1,
+  "total_barriers_identified": 2,
   "top_barriers": {
-    "Poor product quality, high prices, and terrible app experience": 1
+    "Price / Value Uncertainty": {
+      "total_mentions": 1,
+      "percentage_of_relevant": 50.0,
+      "unique_supporting_records": 1,
+      "representative_quotes": [
+        "worst app ever so expensive not good productss"
+      ]
+    },
+    "Login process issue preventing account creation and sign-in.": {
+      "total_mentions": 1,
+      "percentage_of_relevant": 50.0,
+      "unique_supporting_records": 1,
+      "representative_quotes": [
+        "Myntra Review Myntra has been my favorite shopping platform for the past 7 years, and overall, I’ve always had a great experience. The product quality is really good, and I’ve been happy with most of my purchases. ❤️ Recently, I faced an issue while trying to create and log in to a new account. The login process isn’t working properly, which is quite frustrating. Please look into this issue and fix it as soon as possible. Apart from this, my overall experience with Myntra has been very good,"
+      ]
+    }
   },
   "top_uncertainties": {},
   "by_source": {
     "GOOGLE_PLAY": {
-      "total": 1,
+      "total": 2,
       "barriers": [
-        "Poor product quality, high prices, and terrible app experience"
+        "Price / Value Uncertainty",
+        "Login process issue preventing account creation and sign-in."
       ]
     }
   },
   "by_segment": {
-    "Unknown Segment": {
+    "Segment unknown": {
+      "total": 1,
+      "barriers": []
+    },
+    "brand-loyal shopper": {
       "total": 1,
       "barriers": []
     }
   },
   "by_theme": {
-    "Product and Pricing Dissatisfaction": {
+    "App Dissatisfaction": {
+      "total": 1,
+      "barriers": []
+    },
+    "Login Issue": {
       "total": 1,
       "barriers": []
     }
